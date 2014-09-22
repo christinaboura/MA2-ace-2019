@@ -1,4 +1,5 @@
-Class Boilerplate
-=================
+Algèbre Commutative et Effective
+================================
 
-Boilerplate Jekyll code for class material.
+Feuilles de TD pour le cours *Algèbre Commutative et Effective* du
+*Master d'Algèbre Appliquée*, par [Luca De Feo](http://defeo.lu).
