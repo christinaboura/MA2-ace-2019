@@ -12,17 +12,24 @@ Les TDs on lieu le lundi de 13h30 à 16h30 en salle 2106
 
 **Serveurs Sage :**
 
-- Hébergé au département de mathématiques <http://sage.math.uvsq.fr/>,
+- Hébergé au département de mathématiques <http://sage.math.uvsq.fr/>  
+  <small>(pour connaître votre mot de passe, `cat sagepwd` dans un terminal)</small>,
 - SageNB (hébergé à UWSeattle) <http://www.sagenb.org/>,
 - SageMathCloud (hébergé à UWSeattle) <https://cloud.sagemath.com/>.
 
-**Serveur ssh/sftp:** `bourbaki.math.uvsq.fr`
+**Serveur ssh/sftp :** `bourbaki.math.uvsq.fr`
 
 
 ## Liste des TDs
 
 TD 1 (22/09/2014)
-: [Prise en main de Sage](td1)
+: [Introduction à l'environnemnt de travail et à sage](intro),
+: [Structures algèbriques de base en Sage](structures),
+: **Exercises :** [Manipuler les polynômes en Sage](exercises#polynomes--une-variable).
+
+TD 2 (29/09/2014)
+: **Exercises :** [Polynômes](exercises#polynomes--une-variable).
+
 
 ## Ressources
 
