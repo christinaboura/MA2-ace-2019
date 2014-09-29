@@ -66,14 +66,15 @@ Fonctions utiles : `degree`, `leading_coefficient`, `coefficients`,
 
 
 <div class="exercise">
-  Soit $$p$$ un nombre premier. Factoriser $$x^p-p$$ en facteurs
-  irréductibles dans $$\F_p[x]$$.
+  Soit $$p$$ un nombre premier. Factoriser $$x^p-x+c$$ en facteurs
+  irréductibles dans $$\F_p[x]$$ pour $$0\le c<p$$.
 </div>
 
 <div class="exercise">
   Soit $$p$$ un nombre premier. Factoriser le polynôme $$x^{2p}+x^p+1$$
   en facteurs irréductibles dans $$\Z[x]$$.
 </div>
+
 
 ## Polynômes à plusieurs variables
 <div class="exercise">
