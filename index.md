@@ -28,6 +28,8 @@ TD 1 (22/09/2014)
 : **Exercises :** [Manipuler les polynômes en Sage](exercises#polynomes--une-variable).
 
 TD 2 (29/09/2014)
+: [Anneaux de polynômes en Sage](structures#polynmes),
+: [Structures de contrôle en Python](python),
 : **Exercises :** [Polynômes](exercises#polynomes--une-variable).
 
 
