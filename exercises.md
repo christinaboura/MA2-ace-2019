@@ -3,6 +3,10 @@ layout: post
 title: Exercices
 ---
 
+1. TOC
+{:toc}
+
+
 ## Polynômes à une variable
 
 Fonctions utiles : `degree`, `leading_coefficient`, `coefficients`,
@@ -198,8 +202,6 @@ Soient $$f = x^7y^2 + x^3y^2-y-1$$ et l'ensemble ordonné $$F =
 
 ## Représentation matricielle des ordres admissibles.
 <div class="exercise">
-
-#### Matrices de poids
 
 On étend l'ordre lexicographique $$>_{\lex}$$ à $$\R^n$$ de la
 façon évidente.  On définit une relation sur les monômes

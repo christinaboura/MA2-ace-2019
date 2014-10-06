@@ -261,208 +261,82 @@ True
 Lire la documentation de `TermOrder` pour plus de détails.
 
 
-## Types et conversions
+## Idéaux et bases de Gröbner
 
-
-### Parent-élément
-
-Beaucoup de structures algèbriques en Sage sont organisées autour du
-concept de parent-élément.
-
-Par exemple, un anneau de polynômes est un *parent*, à qui
-appartiennent des éléments. La majorité des valeurs en Sage possède un
-parent, qu'on peut interroger avec la méthode `parent()` :
+Sage sait calculer la division Euclidienne entre polynômes
+multivariés :
 
 ~~~
-sage: 1.parent()
-Integer Ring
-sage: (1/2).parent()
-Rational Field
-sage: (0.5).parent()
-Real Field with 53 bits of precision
+sage: A.<x,y> = QQ[]
+sage: (x^2 - y) % (x + y)
+x^2 + x
+sage: (x^2 - y) // (x + y)
+-1
+sage: (x^2 - y).quo_rem(x + y)
+(-1, x^2 + x)
 ~~~
 
-Attention, beaucoup de noms prédéfinis appartiennent à l'*anneau
-symbolique*, même si l'on pourrait imaginer qu'ils appartiennent à un
-parent plus spécifique (réels, complexes, ...).
+Le résultat est bien évidemment dépendant de l'ordre choisi :
 
 ~~~
-sage: i.parent()
-Symbolic Ring
-sage: pi.parent()
-Symbolic Ring
-sage: x.parent()
-Symbolic Ring
+sage: (x^2 - y).quo_rem(x + y)
+(-y + x, y^2 - y)
 ~~~
 
-Sage connaît un bon nombre de *coercitions* automatiques, qui
-permettent de faire des opérations sur des éléments de parents
-différents.
+Le point de départ pour travailler avec les bases de Gröbner est la
+méthode `.ideal()` des anneaux de polynômes.
 
 ~~~
-sage: A.<x> = QQ[]
-sage: x.parent()
-Univariate Polynomial Ring in x over Rational Field
-sage: 2.parent()
-Integer Ring
-sage: (2+x).parent()
-Univariate Polynomial Ring in x over Rational Field
+sage: A.<x,y,z> = QQ[]
+sage: I = A.ideal(x^2 - y*z, x^3*y + 2*y*z - 4*z^2); I
+Ideal (x^2 - y*z, x^3*y + 2*y*z - 4*z^2) of Multivariate Polynomial Ring in x, y, z
+over Rational Field
 ~~~
 
-Parfois Sage ne sait pas trouver de *coercition canonique*, dans ce
-cas il donne une erreur :
+Les idéaux ont une méthode `.groebner_basis()`, dont le résultat
+dépend bien évidemment de l'ordre choisi :
 
 ~~~
-sage: a = GF(7)(2); a
-2
-sage: a.parent()
-Finite Field of size 7
-sage: x + a
-...
-TypeError: unsupported operand parent(s) for '+': 'Univariate Polynomial Ring in
-x over Rational Field' and 'Finite Field of size 7'
+sage: I.groebner_basis()
+[y^3*z^2 + 2*x*y*z - 4*x*z^2, x*y^2*z + 2*y*z - 4*z^2, x^2 - y*z]
 ~~~
 
-Il est possible dans ces cas de *convertir* un élément en l'associant
-à un nouveau parent, Sage appliquera alors d'autres règles, dites de
-*conversion*, qui ne doivent pas être canoniques. Toutes les
-conversions prennent la forme de `parent(élément)`.
+C'est cette base qui est utilisée pour calculer les formes normales de
+polynômes modulo l'idéal. Les méthodes `.mod` (définie sur les
+polynômes) et `.reduce` (définie sur les idéaux et sur les polynômes),
+calculent la forme normale :
 
 ~~~
-sage: x + QQ(a)
-x + 2
-sage: _.parent()
-Univariate Polynomial Ring in x over Rational Field
+sage: (x^6*z - y*z^3 + x*z).mod(I)
+-2*x*y*z^3 + 4*x*z^4 - y*z^3 + x*z
+sage: I.reduce(x^6*z - y*z^3 + x*z)
+-2*x*y*z^3 + 4*x*z^4 - y*z^3 + x*z
+sage: (x^6*z - y*z^3 + x*z).reduce(I)
+-2*x*y*z^3 + 4*x*z^4 - y*z^3 + x*z
 ~~~
 
-Observons cela sur un exemple simple. Il existe un morphisme canonique
-de $$ℤ$$ vers $$ℤ/10$$, Sage peut alors additionner deux éléments
-appartenant à ces deux parents, et le résultat sera un élément de
-$$ℤ/10$$.
+Attention : les méthodes définies sur les polynômes se comportent
+différemment lorsqu'elles reçoivent en paramètre une liste de
+polynômes plutôt qu'un idéal.
 
 ~~~
-sage: a = Zmod(10)(2)
-sage: a.parent()
-Ring of integers modulo 10
-sage: 11.parent()
-Integer Ring
-sage: 11 + a
-3
-sage: _.parent()
-Ring of integers modulo 10
+sage: (x^6*z - y*z^3 + x*z).reduce([x^2 - y*z, x^3*y + 2*y*z - 4*z^2])
+y^3*z^4 - y*z^3 + x*z
+sage: (x^6*z - y*z^3 + x*z).mod([x^2 - y*z, x^3*y + 2*y*z - 4*z^2])
+-2*x*y*z^3 + 4*x*z^4 - y*z^3 + x*z
 ~~~
 
-Le *lift* d'un élément de $$ℤ/10$$ vers $$ℤ$$ n'a rien de canonique,
-mais il est tout de même convenable d'appliquer cette *conversion*
-lorsque elle est demandée par l'utilisateur :
+De manière générale, préférez `I.reduce` en toute occasion.
+
+Lorsque un polynôme appartient à l'idéal, la méthode `lift` permet de
+l'exprimer comme une combinaison linéaire de ses générateurs :
 
 ~~~
-sage: QQ(a).parent()
-Rational Field
-sage: 11 + QQ(a)
-13
-~~~
-
-De façon similaire, il n'existe pas de morphisme naturel de $$ℚ$$ vers
-$$ℤ/10$$. Sage donne donc correctement une erreur ici :
-
-~~~
-sage: 1/3 + a
-...
-TypeError: unsupported operand parent(s) for '+': 'Rational Field' and 'Ring of
-integers modulo 10'
-~~~
-
-Mais, puisque 3 est inversible modulo 10, il est tout de même possible
-de donner un sens à cette conversion :
-
-~~~
-sage: Zmod(10)(1/3) + a
-9
-~~~
-
-### Base
-
-Beaucoup de structures algèbriques en Sage ont une *base*. Par
-exemple, les anneaux de polynômes ont pour base leur anneau de
-coefficients.
-
-~~~
-sage: A.<x> = GF(7)[]
-sage: A.base()
-Finite Field of size 7
-sage: A.base_ring()
-Finite Field of size 7
-~~~
-
-Sage considère aussi les bases lorsque il cherche à trouver une
-*coercition* entre deux éléments. Dans cet exemple, `x` est un
-polynôme à coefficients dans $$𝔽_7$$, alors que 10 est un entier.  Au
-moment de la coercition, Sage transforme 10 en un élément de $$𝔽_7$$,
-puis le en un élément de $$𝔽_7[x]$$.
-
-~~~
-sage: 10.parent()
-Integer Ring
-sage: x + 10
-x + 3
-sage: _.parent()
-Univariate Polynomial Ring in x over Finite Field of size 7
-~~~
-
-Il est possible d'obtenir une copie d'un anneau avec une base
-différente grâce à la méthode `change_ring()` :
-
-~~~
-sage: B = A.change_ring(QQ); B
-Univariate Polynomial Ring in x over Rational Field
-sage: B(x)
-x
-sage: B(x).parent()
-Univariate Polynomial Ring in x over Rational Field
-sage: x.parent()
-Univariate Polynomial Ring in x over Finite Field of size 7
-~~~
-
-
-### Classes, types
-
-Chaque objet mathématique est représenté par une *classe*
-Python. L'opérateur Python `type` permet d'interroger la classe
-d'un objet :
-
-~~~
-sage: type(1)
-<type 'sage.rings.integer.Integer'>
-~~~
-
-Souvent, différentes classes Python réalisent le même objet
-mathématique, ce qui permet d'avoir plusieurs implantations pour un
-même objet. Cela est particulièrement évident pour les corps finis, où
-différents sous-systèmes sont choisis selon la cardinalité.
-
-~~~
-sage: A.<x> = GF(2)[]
-sage: B.<y> = GF(3)[]
-sage: C.<z> = GF(3^2,'a')[]
-sage: type(x)
-<type 'sage.rings.polynomial.polynomial_gf2x.Polynomial_GF2X'>
-sage: type(y)
-<type 'sage.rings.polynomial.polynomial_zmod_flint.Polynomial_zmod_flint'>
-sage: type(z)
-<type 'sage.rings.polynomial.polynomial_zz_pex.Polynomial_ZZ_pEX'>
-~~~
-
-Voici un autre exemple où deux classes différentes réalisent le même
-objet mathématique, mais avec un code différent :
-
-~~~
-sage: A = matrix([[1,1],[1,1]])
-sage: B = matrix([[1,1],[1,1]], sparse=True)
-sage: A == B
+sage: p = 2*x^3*y^3 - x*y^4*z + 2*y^3*z - 4*y^2*z^2
+sage: I.reduce(p)
+0
+sage: p.lift(I)
+[x*y^3, y^2]
+sage: _[0] * I.0 + _[1] * I.1 == p
 True
-sage: type(A)
-<type 'sage.matrix.matrix_integer_dense.Matrix_integer_dense'>
-sage: type(B)
-<type 'sage.matrix.matrix_integer_sparse.Matrix_integer_sparse'>
 ~~~

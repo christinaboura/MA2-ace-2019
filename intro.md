@@ -48,7 +48,9 @@ title: Introduction à l'environnemnt de travail et à Sage
 Référence : chapitre 1 du [Sagebook]({{ site.data.bib.sagebook }}).
 
 - Utilisation du notebook : créer une feuille de calcul, cellules,
-  affichage du résultat, instruction `print`, *typesetting*.
+  insérer une cellule, insérer du texte riche, *typesetting*.
+- Affichage du résultat, instruction `print`, commande
+  `show`.
 - Syntaxe Python, objets, propriétés, méthodes.
 - Aide, recherche et exploration : completion automatique (touche
   **tab**), aide en ligne (clef magique `?`), exploration du code source
