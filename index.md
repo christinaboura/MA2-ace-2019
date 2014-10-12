@@ -37,7 +37,7 @@ TD 3 (06/10/2014)
 : [Types en Sage](types),
 : **Exercises :** [Polynômes multivariés](exercises#polynmes--plusieurs-variables).
 
-TD 3 (06/10/2014)
+TD 4 (13/10/2014)
 : [Bases de Gröbner](structures#idaux-et-bases-de-grbner),
 : **Exercises :** [Bases de Gröbner](exercises#calcul-de-bases-de-grbner).
 
