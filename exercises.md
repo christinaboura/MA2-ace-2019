@@ -769,6 +769,23 @@ a^3+b^3+c^3 & =7
 <!-- % Cox Litlle O'Shea p.99 ex.11 -->
 </div>
 
+<div class="exercise"> ([Sagebook]({{ site.data.bib.sagebook }}),
+exercice 36) Soit $$J$$ un idéal de dimension zéro de $$ℚ[x,y]$$. Soit
+$$χ_x$$ le polynôme caractéristique de l'application linéaire
+
+$$
+\begin{aligned}
+m_x : ℚ[x,y]/J &\;→\; ℚ[x,y]/J\\
+       p + J   &\;↦\; xp + J
+\end{aligned}
+$$
+
+Calculer $$χ_x$$ dans le cas $$J =〈x^2 + y^2 - 1, 4x^2y^2 - 1〉$$.
+Montrer que toute racine de $$χ_x$$ est l’abscisse d’un point de la
+variété $$V_ℂ(J)$$.
+
+</div>
+
 
 ## Théorème d'élimination
 
