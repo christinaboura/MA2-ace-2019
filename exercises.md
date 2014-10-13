@@ -319,7 +319,7 @@ $$I=\langle x^2y^2-x,xy^3+y\rangle.$$
 
 <div class="exercise">
   Soit $$G$$ une base de Gröbner pour l'idéal $$I\subset
-  k[x_1,\ldots,x_n]$$ (avec l'ordre lexicographique) et supposons qu'il
+  k[x_1,\ldots,x_n]$$ et supposons qu'il
   existe $$P\not=Q\in G$$ tels que $$\LT(P)$$ divise $$\LT(Q)$$. Montrer que
   $$G\setminus\{Q\}$$ est encore une base de Gröbner pour $$I$$.
   <!-- notes cours lemme 3.5.3 -->
@@ -327,8 +327,8 @@ $$I=\langle x^2y^2-x,xy^3+y\rangle.$$
 
 
 <div class="exercise">
-  Le polynôme $$x^3+1$$ est-il combinaison algébrique (dans $$\Q[x,
-  y,z]$$) de $$x + y + z, xy + yz + zx$$ et $$xyz+1$$ ?
+  Le polynôme $$x^3+1$$ est-il dans l'idéal engendré par
+  $$x + y + z$$, $$xy + yz + zx$$ et $$xyz+1$$ ?
 </div>
 
 
