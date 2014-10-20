@@ -629,6 +629,7 @@ On considère la courbe plane d'équation rationnelle
 $$\Big\{\Big(x=a(t)/b(t),y=c(t)/d(t)\Big)\in\R^2, t\in\R\Big\}.$$
 
 1. Comment trouver une équation implicite de la courbe ?
+
 1. On considère la paramétrisation rationnelle
    
    $$
@@ -638,13 +639,13 @@ $$\Big\{\Big(x=a(t)/b(t),y=c(t)/d(t)\Big)\in\R^2, t\in\R\Big\}.$$
     z & = u
    \end{aligned}\right.
    $$
+   
+   Vérifier que les points $$(x,y,z)$$ sont sur la surface $$x^2y = z^3$$.
+   
+1. Soit $$I$$ l'idéal $$\left\langle vx-u^2, uy-v^2,z-u
+   \right\rangle$$. Calculer $$I_2=I\cap\R[x,y,z]$$.
 
-
-1. Vérifier que les points $$(x,y,z)$$ sont sur la surface $$x^2y = z^3$$.
-1. Soit $$I$$ l'idéal $$\left\langle vx-u^2, uy-v^2,z-u \right\rangle$$. Calculer $$I_2=I\cap\R[x,y,z]$$.
-
-
-1. Expliciter l'exemple $$x=t^2+t+1$$, $$y=(t^2-1)/(t^2+1)$$.
+1. Impliciter l'exemple $$x=t^2+t+1$$, $$y=(t^2-1)/(t^2+1)$$.
 
 
 </div>
