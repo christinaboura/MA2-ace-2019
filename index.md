@@ -41,6 +41,13 @@ TD 4 (13/10/2014)
 : [Bases de Gröbner](structures#idaux-et-bases-de-grbner),
 : **Exercises :** [Bases de Gröbner](exercises#calcul-de-bases-de-grbner).
 
+TD 5 (20/10/2014)
+: [Résultants, Élimination](structures#rsultants-et-limination),
+: [Tracer des courbes et des surfaces](plots),
+: **Exercises :** [Résultants et élimination](exercises#rsultants-et-limination).
+
+TD 6-7 (10/11/2014)
+: 
 
 ## Ressources
 

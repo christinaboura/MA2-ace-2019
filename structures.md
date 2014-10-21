@@ -340,3 +340,53 @@ sage: p.lift(I)
 sage: _[0] * I.0 + _[1] * I.1 == p
 True
 ~~~
+
+
+## Résultants et élimination
+
+Le résultant de deux polynômes est calculé par la méthode `.resultant()`
+
+~~~
+sage: A.<x> = QQ[]
+sage: (x^2+1).resultant(2*x)
+4
+~~~
+
+Dans les anneaux à plusieurs variables, Sage élimine par défaut la
+première variable :
+
+~~~
+sage: A.<x,y,z> = QQ[]
+sage: (x*y + z).resultant(x+z+y)
+y^2 + y*z - z
+~~~
+
+Il est aussi possible d'indiquer la variable que l'on souhaite
+éliminer :
+
+~~~
+sage: (x*y + z).resultant(x+z+y, z)
+-x*y + x + y
+~~~
+
+Des éliminations plus complexes peuvent être réalisées grâce aux bases
+de Gröbner, en effet on a déjà vu plus haut que Sage supporte le
+calcul de bases de Gröbner pour l'ordre *lex*, ce qui permet de
+calculer les idéaux d'élimination. Cette même fonctionnalité est
+encapsulée dans la méthode `.elimination_ideal()`, que voici à l'œuvre
+sur le même exemple :
+
+~~~
+sage: I = A.ideal(x*y + z, x+z+y)
+sage: I.elimination_ideal(z)
+Ideal (x*y - x - y) of Multivariate Polynomial Ring in x, y, z over Rational Field
+~~~
+
+`.elimination_ideal()` peut aussi prendre une liste de variables à éliminer :
+
+~~~
+sage: A.<w,x,y,z> = QQ[]
+sage: I = A.ideal(x*y + w*z, x*z + w*y, x*w + y*z, x^2 + y^2 + z^2 + w^2)
+sage: I.elimination_ideal([x,y]).gens()
+[3*w^2*z + z^3, w^3 + 3*w*z^2, w*z^3, z^5]
+~~~
