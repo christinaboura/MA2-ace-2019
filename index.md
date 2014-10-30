@@ -54,6 +54,9 @@ TD 6-7 (10/11/2014)
 Devoir maison 2014
 : [Cryptanalyse algébrique](dm2014)
 
+Devoir maison 2013
+: [FGLM](dm2013)
+
 ## Ressources
 
 [*Calcul mathématique avec Sage*](http://sagebook.gforge.inria.fr/)
