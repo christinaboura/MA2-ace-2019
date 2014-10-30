@@ -25,7 +25,7 @@ Les TDs on lieu le lundi de 13h30 à 16h30 en salle 2106
 TD 1 (22/09/2014)
 : [Introduction à l'environnemnt de travail et à sage](intro),
 : [Structures algèbriques de base en Sage](structures),
-: **Exercises :** [Manipuler les polynômes en Sage](exercises#polynomes--une-variable).
+: **Exercises :** [Manipuler les polynômes en Sage](exercises#polynmes--une-variable).
 
 TD 2 (29/09/2014)
 : [Anneaux de polynômes en Sage](structures#polynmes),
@@ -48,6 +48,11 @@ TD 5 (20/10/2014)
 
 TD 6-7 (10/11/2014)
 : 
+
+## Devoirs maison
+
+Devoir maison 2014
+: [Cryptanalyse algébrique](dm2014)
 
 ## Ressources
 

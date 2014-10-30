@@ -319,3 +319,66 @@ python: reduce(operator.add, range(10))
 À partir de l'opérateur `reduce`, il est facile de définir quelques
 autres fonctions très utiles : `sum`, `all`, `any`, `max`, `min`,
 `join`. Vous êtes invités à en lire la documentation.
+
+
+
+## Fonctions
+
+Source : <https://docs.python.org/2/tutorial/controlflow.html>
+
+Les fonctions Python sont définies par le mot clef `def`. Elles
+peuvent prendre un nombre arbitraire de paramètres, et renvoyent une
+valeur à l'aide du mot clef `return`. Toute fonction renvoye une
+valeur, les fonctions qui n'ont pas de `return` renvoient la valeur
+spéciale `None`.
+
+~~~
+def max(x, y):
+    if x > y:
+        return x
+    else:
+        return y
+~~~
+
+Certains paramètres peuvent prendre des valeurs par défaut. Si un
+paramètre prend une valeur par défaut, tous ceux qui le suivent
+doivent aussi en prendre.
+
+~~~
+python: def test(a, b, c=0, d=False):
+.......    return a, b, c, d
+
+python: test(1, 2)
+(1, 2, 0, False)
+python: test(1, 2, 3)
+(1, 2, 3, False)
+python: test(1, 2, 3, 4)
+(1, 2, 3, 4)
+python: test(1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: test() takes at least 2 arguments (1 given)
+~~~
+
+Les paramètres d'une fonction peuvent être assignés hors ordre avec la
+notation `paramètre=valeur` :
+
+~~~
+python: test(b=1, a=2)
+(2, 1, 0, False)
+python: test(1, 2, d=4)
+(1, 2, 0, 4)
+~~~
+
+Python fournit deux opérateurs unaires pour transformer des objets en
+paramètres d'une fonction. L'opérateur `*` transforme une liste ou un
+tuple, tandis que l'opérateur `**` transforme un dictionnaire :
+
+~~~
+python: l = range(4)
+python: test(*a)
+(0, 1, 2, 3)
+python: d = { 'a' : 3, 'b' : 5, 'd' : 1 }
+python: test(**d)
+(3, 5, 0, 1)
+~~~
