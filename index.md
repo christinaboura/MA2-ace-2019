@@ -47,7 +47,8 @@ TD 5 (20/10/2014)
 : **Exercises :** [Résultants et élimination](exercises#rsultants-et-limination).
 
 TD 6-7 (10/11/2014)
-: 
+: **Exercises :** [Variétés affines, dimension](exercises#varits-affines).
+
 
 ## Devoirs maison
 

@@ -845,6 +845,20 @@ $$\begin{cases}x^2+2y^2-y-2z & =0\\x^2-8y^2+10z-1 & =0\\ x^2-7xy & =0.
 
 </div>
 
+
+<div class="exercise">
+
+Soit $$f=  x^{4} y^{2} + x^{2} y^{4} - x^{2} y^{2} \in\Q[x,y]$$. On cherche à calculer les valeurs critiques de $$f$$ vu comme fonction
+polynomiale de $$\R^2$$ dans $$\R$$.
+
+1. Soit $$J$$ l'ideal $$\displaystyle \left\langle \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \right\rangle$$. Quelle est la
+  dimension de $$J$$ ? Peut-on calculer simplement les points critiques de $$f$$ ?
+1. En considérant l'idéal $$\displaystyle \left\langle \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, f-t
+  \right\rangle\subset\Q[x,y,t]$$, trouver un polynôme de $$\Q[t]$$ dont l'ensemble des racines contient les valeurs critiques de $$f$$.
+
+</div>
+
+
 <div class="exercise">
   <!-- Becker Weispfenning p.259 -->
   
@@ -1008,32 +1022,6 @@ est racine commune aux $$f_1,\ldots,f_m$$ ce qui est absurde.
 Ainsi $$a_0,\ldots, a_{k}$$ n'ont pas de zéro commun dans $$k^{n-1}$$. Par hypothèse de récurrence,
 $$1\in\left\langle a_0,\ldots,a_k \right\rangle$$. Or $$a_i\in\left\langle f_1,\ldots,f_m \right\rangle$$, donc $$1\in\left\langle f_1,\ldots,f_m \right\rangle$$.
 -->
-
-## Élimination
-
-<div class="exercise">
-
-Utiliser le théorème d'élimination pour résoudre le système suivant
-dans $$\R^3$$ puis dans $$\C^3$$ :
-
-$$\left\{\begin{aligned}x^2+2y^2-y-2z & =0\\x^2-8y^2+10z-1 & =0\\
-x^2-7xy & =0.  \end{aligned}\right.$$
-  
-</div>
-
-
-
-<div class="exercise">
-
-Soit $$f=  x^{4} y^{2} + x^{2} y^{4} - x^{2} y^{2} \in\Q[x,y]$$. On cherche à calculer les valeurs critiques de $$f$$ vu comme fonction
-polynomiale de $$\R^2$$ dans $$\R$$.
-
-1. Soit $$J$$ l'ideal $$\displaystyle \left\langle \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \right\rangle$$. Quelle est la
-  dimension de $$J$$ ? Peut-on calculer simplement les points critiques de $$f$$ ?
-1. En considérant l'idéal $$\displaystyle \left\langle \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, f-t
-  \right\rangle\subset\Q[x,y,t]$$, trouver un polynôme de $$\Q[t]$$ dont l'ensemble des racines contient les valeurs critiques de $$f$$.
-
-</div>
 
 
 
