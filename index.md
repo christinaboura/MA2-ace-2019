@@ -20,6 +20,8 @@ Les TDs on lieu le lundi de 13h30 à 16h30 en salle 2106
 
 **Serveur ssh/sftp :** `bourbaki.math.uvsq.fr`
 
+**Commande pour ecran partagé :** `vncviewer localhost -passwd ~defeo/.vnc/vo-passwd`
+
 
 ## Liste des TDs
 
