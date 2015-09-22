@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Introduction à l'environnemnt de travail et à Sage
+title: Introduction à l'environnemnt de travail et à SageMath
 ---
 
 ## Environnement de travail
@@ -10,16 +10,14 @@ title: Introduction à l'environnemnt de travail et à Sage
 - Accès distant à `bourbaki.math.uvsq.fr` via ssh/scp/sftp.
 
 
-## Prise en main de Sage
+## Prise en main de SageMath
 
-- Présentation de Sage : histoire, buts, modèle de développement, architecture.
+- Présentation de SageMath : histoire, buts, modèle de développement, architecture.
 
 
-### Interfaces pour l'utilisation de Sage
+### Interfaces pour l'utilisation de SageMath
 
-- Notebook *classique* :
-  - Espace de cours sur <http://sage.math.uvsq.fr/>,
-  - Notebook publique à <http://sagenb.org/> (UWashington).
+- Notebook *classique* : espace de cours sur <http://sage.math.uvsq.fr/>,
 
 - SageMathCloud : <https://cloud.sagemath.com/> (UWashington).
 
@@ -43,7 +41,7 @@ title: Introduction à l'environnemnt de travail et à Sage
     d'un système Linux préconfiguré depuis clef USB ou CD).
 
 
-### Premiers pas avec Sage
+### Premiers pas avec SageMath
 
 Référence : chapitre 1 du [Sagebook]({{ site.data.bib.sagebook }}).
 
