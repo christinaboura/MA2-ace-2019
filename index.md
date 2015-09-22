@@ -7,7 +7,7 @@ title: Home
 
 ## Info pratiques
 
-Les TDs on lieu le lundi de 13h30 à 16h30 en salle 2106
+Les TDs on lieu le mardi de 9h30 à 12h30 en salle 2106
 
 **Chargé des TDs :** Luca De Feo <http://defeo.lu/>
 
@@ -26,31 +26,31 @@ Les TDs on lieu le lundi de 13h30 à 16h30 en salle 2106
 
 ## Liste des TDs
 
-TD 1 (22/09/2014)
+TD 1 (22/09/2015)
 : [Introduction à l'environnemnt de travail et à SageMath](intro),
 : [Structures algèbriques de base en SageMath](structures),
 : **Exercises :** [Manipuler les polynômes en SageMath](exercises#polynmes--une-variable).
 
-TD 2 (29/09/2014)
+TD 2 (06/10/2015)
 : [Anneaux de polynômes en SageMath](structures#polynmes),
 : [Structures de contrôle en Python](python),
 : **Exercises :** [Polynômes](exercises#polynmes--une-variable).
 
-TD 3 (06/10/2014)
+TD 3 (13/10/2015)
 : [Anneaux de polynômes multivariés](structures#polynmes),
 : [Types en SageMath](types),
 : **Exercises :** [Polynômes multivariés](exercises#polynmes--plusieurs-variables).
 
-TD 4 (13/10/2014)
+TD 4 (20/10/2015)
 : [Bases de Gröbner](structures#idaux-et-bases-de-grbner),
 : **Exercises :** [Bases de Gröbner](exercises#calcul-de-bases-de-grbner).
 
-TD 5 (20/10/2014)
+TD 5 (10/11/2015)
 : [Résultants, Élimination](structures#rsultants-et-limination),
 : [Tracer des courbes et des surfaces](plots),
 : **Exercises :** [Résultants et élimination](exercises#rsultants-et-limination).
 
-TD 6-7 (10/11/2014)
+TD 6-7 (17/11/2015)
 : **Exercises :** [Variétés affines, dimension](exercises#varits-affines).
 
 
