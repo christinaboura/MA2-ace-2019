@@ -1,5 +1,6 @@
 ---
-layout: index
+layout: default
+title: Home
 ---
 
 # TDs d'Algèbre Commutative et Effective
