@@ -23,10 +23,6 @@ Les TDs on lieu le mardi de 9h30 à 12h30 en salle 2106
 
 **Commande pour ecran partagé :** `vncviewer localhost -passwd ~defeo/.vnc/vo-passwd`
 
-### Ressources
-
-- [Le poly de Arianne Mézard](http://webusers.imj-prg.fr/~ariane.mezard/Grobner.pdf).
-- Les définitions des ordres [monomiaux dans Sage](http://doc.sagemath.org/html/en/reference/polynomial_rings/sage/rings/polynomial/term_order.html).
 
 ## Liste des TDs
 
@@ -81,3 +77,8 @@ P. Zimmermann. <http://sagebook.gforge.inria.fr/>
 [*Doc officielle de Python*](https://docs.python.org/2/)
 : <https://docs.python.org/2/>
 
+[*Poly*](http://webusers.imj-prg.fr/~ariane.mezard/Grobner.pdf), par Arianne Mézard
+: <http://webusers.imj-prg.fr/~ariane.mezard/Grobner.pdf>
+
+Les définitions des [ordres monomiaux dans Sage](http://doc.sagemath.org/html/en/reference/polynomial_rings/sage/rings/polynomial/term_order.html)
+: <http://doc.sagemath.org/html/en/reference/polynomial_rings/sage/rings/polynomial/term_order.html>
