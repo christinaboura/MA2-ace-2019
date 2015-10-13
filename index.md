@@ -23,6 +23,10 @@ Les TDs on lieu le mardi de 9h30 à 12h30 en salle 2106
 
 **Commande pour ecran partagé :** `vncviewer localhost -passwd ~defeo/.vnc/vo-passwd`
 
+### Ressources
+
+- [Le poly de Arianne Mézard](http://webusers.imj-prg.fr/~ariane.mezard/Grobner.pdf).
+- Les définitions des ordres [monomiaux dans Sage](http://doc.sagemath.org/html/en/reference/polynomial_rings/sage/rings/polynomial/term_order.html).
 
 ## Liste des TDs
 
@@ -45,14 +49,16 @@ TD 4 (20/10/2015)
 : [Bases de Gröbner](structures#idaux-et-bases-de-grbner),
 : **Exercises :** [Bases de Gröbner](exercises#calcul-de-bases-de-grbner).
 
-TD 5 (10/11/2015)
+TD 5 (22/102015)
 : [Résultants, Élimination](structures#rsultants-et-limination),
 : [Tracer des courbes et des surfaces](plots),
 : **Exercises :** [Résultants et élimination](exercises#rsultants-et-limination).
 
-TD 6-7 (17/11/2015)
+TD 6 (10/11/2015)
 : **Exercises :** [Variétés affines, dimension](exercises#varits-affines).
 
+TD 7 (17/11/2015)
+: **Exercises :** [Variétés affines, dimension](exercises#varits-affines).
 
 ## Devoirs maison
 
