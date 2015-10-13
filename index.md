@@ -26,7 +26,7 @@ Les TDs on lieu le mardi de 9h30 à 12h30 en salle 2106
 ### Ressources
 
 - [Le poly de Arianne Mézard](http://webusers.imj-prg.fr/~ariane.mezard/Grobner.pdf).
-
+- Les définitions des ordres [monomiaux dans Sage](http://doc.sagemath.org/html/en/reference/polynomial_rings/sage/rings/polynomial/term_order.html).
 
 ## Liste des TDs
 
