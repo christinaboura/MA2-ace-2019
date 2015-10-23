@@ -58,6 +58,9 @@ TD 7 (17/11/2015)
 
 ## Devoirs maison
 
+Devoir maison 2015
+: [Résultants successifs](dm2015)
+
 Devoir maison 2014
 : [Cryptanalyse algébrique](dm2014)
 
