@@ -45,15 +45,15 @@ TD 4 (20/10/2015)
 : [Bases de Gröbner](structures#idaux-et-bases-de-grbner),
 : **Exercises :** [Bases de Gröbner](exercises#calcul-de-bases-de-grbner).
 
-TD 5 (22/102015)
+TD 5 (20/102015)
 : [Résultants, Élimination](structures#rsultants-et-limination),
 : [Tracer des courbes et des surfaces](plots),
 : **Exercises :** [Résultants et élimination](exercises#rsultants-et-limination).
 
-TD 6 (10/11/2015)
+TD 6 (06/11/2015)
 : **Exercises :** [Variétés affines, dimension](exercises#varits-affines).
 
-TD 7 (17/11/2015)
+TD 7 (10/11/2015)
 : **Exercises :** [Variétés affines, dimension](exercises#varits-affines).
 
 ## Devoirs maison
