@@ -21,40 +21,40 @@ Les TDs on lieu le mardi de 9h30 à 12h30 en salle 2106
 
 **Serveur ssh/sftp :** `bourbaki.math.uvsq.fr`
 
-**Commande pour ecran partagé :** `vncviewer localhost -passwd ~defeo/.vnc/vo-passwd`
+**Commande pour écran partagé :** `vncviewer localhost -passwd ~defeo/.vnc/vo-passwd`
 
 
 ## Liste des TDs
 
 TD 1 (22/09/2015)
-: [Introduction à l'environnemnt de travail et à SageMath](intro),
-: [Structures algèbriques de base en SageMath](structures),
-: **Exercises :** [Manipuler les polynômes en SageMath](exercises#polynmes--une-variable).
+: [Introduction à l'environnement de travail et à SageMath](intro),
+: [Structures algébriques de base en SageMath](structures),
+: **Exercices :** [Manipuler les polynômes en SageMath](exercises#polynmes--une-variable).
 
 TD 2 (06/10/2015)
 : [Anneaux de polynômes en SageMath](structures#polynmes),
 : [Structures de contrôle en Python](python),
-: **Exercises :** [Polynômes](exercises#polynmes--une-variable).
+: **Exercices :** [Polynômes](exercises#polynmes--une-variable).
 
 TD 3 (13/10/2015)
 : [Anneaux de polynômes multivariés](structures#polynmes),
 : [Types en SageMath](types),
-: **Exercises :** [Polynômes multivariés](exercises#polynmes--plusieurs-variables).
+: **Exercices :** [Polynômes multivariés](exercises#polynmes--plusieurs-variables).
 
 TD 4 (20/10/2015)
 : [Bases de Gröbner](structures#idaux-et-bases-de-grbner),
-: **Exercises :** [Bases de Gröbner](exercises#calcul-de-bases-de-grbner).
+: **Exercices :** [Bases de Gröbner](exercises#calcul-de-bases-de-grbner).
 
 TD 5 (20/102015)
 : [Résultants, Élimination](structures#rsultants-et-limination),
 : [Tracer des courbes et des surfaces](plots),
-: **Exercises :** [Résultants et élimination](exercises#rsultants-et-limination).
+: **Exercices :** [Résultants et élimination](exercises#rsultants-et-limination).
 
 TD 6 (06/11/2015)
-: **Exercises :** [Variétés affines, dimension](exercises#varits-affines).
+: **Exercices :** [Variétés affines, dimension](exercises#varits-affines).
 
 TD 7 (10/11/2015)
-: **Exercises :** [Variétés affines, dimension](exercises#varits-affines).
+: **Exercices :** [Variétés affines, dimension](exercises#varits-affines).
 
 ## Devoirs maison
 
