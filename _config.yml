@@ -1,3 +1,4 @@
+# Settings
 baseurl: /MA2-ace
 permalink: /:categories/:title
 
@@ -6,25 +7,29 @@ title: MA2 ACE
 tagline: Algèbre Commutative et Effective
 authors:
   - name: Luca De Feo
-    url: 'http://defeo.lu'
+    url: 'http://defeo.lu/'
 created: 2014
 license:
   name: Creative Commons 4.0 Attribution-ShareAlike
   shortname: CC-BY-SA 4.0
   url: http://creativecommons.org/licenses/by-sa/4.0/
   badge: http://i.creativecommons.org/l/by-sa/4.0/80x15.png
-  
-# Collections
-collections:
-  addons:
-    output: true
 
-# Default values
+# Display a log in the top bar
+#logo: assets/logo/eLeMentS.svg
+
+# Display a GitHub fork me logo in the lower right corner
+forkme: yes
+
+# Default configuration for pages.
+# Can be used to activate addons on all pages.
 defaults:
   - scope:
       path: ''
     values:
+      layout: default
       addons:
+        favicon: yes
         mathjax: yes
         highlightjs: yes
         print-link: yes
@@ -36,11 +41,12 @@ create:
 kramdown:
   parse_block_html: true
 
-prose:
-   ignore:
-     - _addons
-     - _includes
-     - _layouts
-     - .gitignore
-     - _config.yml
-   media: assets
+# Kramdown configuration (markdown parser)
+kramdown:
+  parse_block_html: true
+
+# SASS configuration.
+# Better not touch this
+sass:
+  sass_dir: assets/css
+  style: compressed
