@@ -1,5 +1,4 @@
 ---
-layout: post
 title: La hyérarchie des types en Sage
 ---
 

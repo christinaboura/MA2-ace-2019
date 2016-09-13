@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Introduction à l'environnemnt de travail et à SageMath
 ---
 

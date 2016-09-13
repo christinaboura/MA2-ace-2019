@@ -1,6 +1,7 @@
 ---
-layout: post
 title: Exercices
+addons:
+  style_goodies: yes
 ---
 
 1. TOC
@@ -12,7 +13,7 @@ title: Exercices
 Fonctions utiles : `degree`, `leading_coefficient`, `coefficients`,
   `coeffs`, `expand`, `factor`, `gcd`, `quo`, `rem`.
 
-<div class="exercise">
+**–**{:.exercise}
   Soient les polynômes $$P_1=x^6+2x^5-2x^4+2x^2-2x-1$$ et
   $$P_2=x^5+x^4-2x^3+x^2+x-2$$.
   
@@ -23,9 +24,9 @@ Fonctions utiles : `degree`, `leading_coefficient`, `coefficients`,
   1. Calculer $$Q=\PGCD(P_1,P_2)$$.
   1. Factoriser $$P$$. Calculer $$P(2)$$.
 
-</div>
 
-<div class="exercise">
+
+**–**{:.exercise}
   Que fait la procédure suivante ?  Quels sont les arguments de la
   procédure ? Comment les variables sont elles initialisées ?
   Quelle est la condition d'arrêt de la boucle ? Que doit renvoyer
@@ -41,10 +42,10 @@ Fonctions utiles : `degree`, `leading_coefficient`, `coefficients`,
             U = S1; S1 = S0 - Q*S1; S0 = U
             U = T1; T1 = T0 - Q*T1; T0 = U
         return (A0,S0,T0)
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
   Soit le polynôme $$P=x^{11}+x^{10}+x^9+2x^8+2x^6+2x^4+x^2+x^3+x$$.
   
 
@@ -54,9 +55,9 @@ Fonctions utiles : `degree`, `leading_coefficient`, `coefficients`,
   1. Factoriser $$P$$ dans $$\F_4[x]$$.
   
 
-</div>
 
-<div class="exercise">
+
+**–**{:.exercise}
   Soit le polynôme $$P=x^7+x^5+2x^3+2x^2+3x+2$$.
   
 
@@ -66,22 +67,22 @@ Fonctions utiles : `degree`, `leading_coefficient`, `coefficients`,
   1. Vérifier l'irréductibilité de $$P$$ avec Sage.
   
 
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
   Soit $$p$$ un nombre premier. Factoriser $$x^p-x+c$$ en facteurs
   irréductibles dans $$\F_p[x]$$ pour $$0\le c<p$$.
-</div>
 
-<div class="exercise">
+
+**–**{:.exercise}
   Soit $$p$$ un nombre premier. Factoriser le polynôme $$x^{2p}+x^p+1$$
   en facteurs irréductibles dans $$\Z[x]$$.
-</div>
+
 
 
 ## Polynômes à plusieurs variables
-<div class="exercise">
+**–**{:.exercise}
   Soit le polynôme $$P=xy^5+2y^4+3y^3x^3+4x^2y^2+5x^1y^2+6yx^3+7y.$$
   
 
@@ -89,10 +90,10 @@ Fonctions utiles : `degree`, `leading_coefficient`, `coefficients`,
   1. Écrire $$P$$ comme polynôme en $$x$$.
   
 
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
   Transformer le polynôme $$P=(x^2+xy+x+y)(x+y)$$ avec Sage
   sous les formes suivantes:
   
@@ -103,12 +104,12 @@ Fonctions utiles : `degree`, `leading_coefficient`, `coefficients`,
   1. $$x^3+x^2+(2x^2+2x)y+(x+1)y^2$$.
   
 
-</div>
+
 
 
 ## Préliminaires sur les ordres admissibles
 
-<div class="exercise">
+**–**{:.exercise}
 1. Soit le polynôme
    $$P=xy^5+2y^4+3y^3x^3+4x^2y^2+5x^1y^2+6yx^3+7y$$.
    
@@ -124,27 +125,27 @@ Fonctions utiles : `degree`, `leading_coefficient`, `coefficients`,
    1. Ordonner $$Q$$ à la main pour l'ordre lexicographique gradué.
    1. Ordonner $$Q$$ à la main pour l'ordre lexicographique inverse
       gradué.
-</div>
 
 
 
-<div class="exercise">
+
+**–**{:.exercise}
   Soit $$\succ$$ un ordre total compatible avec la
   multiplication. Montrer que $$\succ$$ est un ordre admissible si, et
   seulement si, pour tout monôme $$m$$ non constant, $$m\succ 1$$.
-</div>
 
 
 
 
-<div class="exercise">
+
+**–**{:.exercise}
 
 Montrer que l'ordre lexicographique est un ordre admissible. (voir
 aussi la proposition 4, p.55 du Cox, Little & O'Shea)
 
-</div>
 
-<div class="exercise">
+
+**–**{:.exercise}
 1. Soient $$g=x-y$$, $$h=x-y^2$$ et $$p=xy-x$$ dans $$\Q[x,y]$$ muni de
    l'ordre lexicographique.
    
@@ -157,11 +158,11 @@ aussi la proposition 4, p.55 du Cox, Little & O'Shea)
 	  puis celle de $$p$$ par $$[h,g]$$.
    1. Comparer avec `p.reduce([g, h])` et `p.reduce([h, g])`.
 
-</div>
 
 
 
-<div class="exercise">
+
+**–**{:.exercise}
 
 Déterminer quel ordre monomial (`lex`, `deglex`, `degrevlex`) a été
 utilisé pour ordonner les termes des polynômes suivants :
@@ -170,11 +171,11 @@ utilisé pour ordonner les termes des polynômes suivants :
 1. $$f(x, y, z) = xy^3z + xy^2z^2 + x^2z^3$$.
 1. $$f(x, y, z) = x^4y^5z + 2x^3y^2z-4xy^2z^4$$.
 
-</div>
 
 
 
-<div class="exercise">
+
+**–**{:.exercise}
 
 Soient $$f = x^7y^2 + x^3y^2-y-1$$ et l'ensemble ordonné $$F =
 \{f_1 = xy^2-x, f_2 = x-y^3\}$$.
@@ -183,9 +184,9 @@ Soient $$f = x^7y^2 + x^3y^2-y-1$$ et l'ensemble ordonné $$F =
    lexicographique gradué.
 1. Effectuer les mêmes calculs en inversant l'ordre de $$F$$.
 
-</div>
 
-<div class="exercise">
+
+**–**{:.exercise}
 
 1. Montrer que tout polynôme $$f\in k[x, y, z]$$ peut s'écrire
    sous la forme
@@ -197,11 +198,11 @@ Soient $$f = x^7y^2 + x^3y^2-y-1$$ et l'ensemble ordonné $$F =
    h_1(y-x^2) + h_2(z-x^3)$$.
   
 
-</div>
+
 
 
 ## Représentation matricielle des ordres admissibles.
-<div class="exercise">
+**–**{:.exercise}
 
 On étend l'ordre lexicographique $$>_{\lex}$$ à $$\R^n$$ de la
 façon évidente.  On définit une relation sur les monômes
@@ -238,7 +239,7 @@ $$
    `degrevlex`, un ordre produit (avec à chaque fois
    $$x_1>\cdots> x_n$$).
 
-</div>
+
 
 
 
@@ -246,15 +247,15 @@ $$
 
 Fonction utiles : `lc`, `lm`, `lt`.
 
-<div class="exercise">
+**–**{:.exercise}
   Soit $$I=\left\langle x^\alpha, \alpha\in A \right\rangle$$ un idéal
   monomial et $$S$$ l'ensemble des exposants qui apparaissent dans
   $$I$$. On considère un ordre monomial. Montrer que le plus petit
   élément de $$S$$ appartient à $$A$$.
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
 
 Dans l'anneau $$k[x_1,\dots,x_n,y_1,\dots,y_m]$$, on considère l'ordre
 $$\preccurlyeq$$ défini par l'ordre lexicographique sur les $$x_i$$ et
@@ -264,9 +265,9 @@ $$x^\alpha y^\beta\preccurlyeq x^\gamma y^\delta \iff x^\alpha \prec_{\operatorn
 
 Montrer que $$\preccurlyeq$$ est un ordre monomial.
 
-</div>
 
-<div class="exercise">
+
+**–**{:.exercise}
   Nous allons adopter une représentation distribuée creuse pour les
   polynômes : un monôme sera représenté par une liste à deux
   éléments. Le premier est le coefficient et le second la liste des
@@ -281,10 +282,10 @@ Montrer que $$\preccurlyeq$$ est un ordre monomial.
     énumère les monômes dans l'ordre croissant pour l'ordre
     lexicographique.
 
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
   Soit l'idéal $$I=\langle x^2-2xz+5,xy^2+yz^3,3y^2-8z^3\rangle$$ de
   $$\Q[x,y,z]$$.
   
@@ -294,11 +295,11 @@ Montrer que $$\preccurlyeq$$ est un ordre monomial.
   1. Même question pour l'ordre degrevlex.
   
 
-</div>
+
 
 ## Calcul de bases de Gröbner
 
-<div class="exercise">
+**–**{:.exercise}
 
 Soit l'idéal $$I$$ de $$\Q[x,y]$$ défini par
   
@@ -310,36 +311,36 @@ $$I=\langle x^2y^2-x,xy^3+y\rangle.$$
    à $$I$$.
 1. Soit $$P=x^3y^2+2xy^4$$. Calculer $$\overline{P}^G$$.
 
-</div>
 
-<div class="exercise">
+
+**–**{:.exercise}
   Dans $$k[x,y,z]$$, on choisit l'ordre degrevlex. Calculer une base de
   Gröbner de l'idéal $$I=(xyz+z^3,y^2)$$.
-</div>
 
-<div class="exercise">
+
+**–**{:.exercise}
   Soit $$G$$ une base de Gröbner pour l'idéal $$I\subset
   k[x_1,\ldots,x_n]$$ et supposons qu'il
   existe $$P\not=Q\in G$$ tels que $$\LT(P)$$ divise $$\LT(Q)$$. Montrer que
   $$G\setminus\{Q\}$$ est encore une base de Gröbner pour $$I$$.
   <!-- notes cours lemme 3.5.3 -->
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
   Le polynôme $$x^3+1$$ est-il dans l'idéal engendré par
   $$x + y + z$$, $$xy + yz + zx$$ et $$xyz+1$$ ?
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
   Soit $$I\in k[x_1,\ldots,x_n]$$ un idéal principal. Montrer que tout
   sous-ensemble fini contenant un générateur de $$I$$ est une base
   de Gröbner pour $$I$$.
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
 
 Soit l'ideal
 
@@ -354,10 +355,10 @@ de $$k[x, y, z, t]$$.
    z^{11}, yz^2, y^3t^2, y^4t, y^5, x^2y^2t^3, x^4yt^4
    \right\rangle$$ soit $$\left\langle\LT(I) \right\rangle$$.
 
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
   On se place dans un anneau $$R=k[x_1,\ldots,x_n]$$ où $$k$$ est un
   corps commutatif.  Soit $$I$$ un idéal de $$R$$ non nul. Une base de
   Gröbner universelle est un ensemble qui est une base de Gröbner
@@ -366,9 +367,9 @@ de $$k[x, y, z, t]$$.
   $$x-y^2$$ et $$xy-x$$.
 
 <!-- $$\{x-y^2,xy-x,y^3-y^2,x^2-x\}$$ -->
-</div>
 
-<div class="exercise">
+
+**–**{:.exercise}
   <!-- Strurmfels p.2 example 1.4 -->
   
   Soit l'anneau $$A$$ des polynômes à $$2m$$ indéterminées
@@ -382,11 +383,11 @@ de $$k[x, y, z, t]$$.
   1. Pour $$m≥3$$, montrer que les $$D_{k,\ell}$$ forment une base
     de Gröbner universelle de $$I$$.
 
-</div>
+
 
 
  
-<div class="exercise">
+**–**{:.exercise}
   <!-- Sturmfels P.3 example 1.5 voir livre sur matroid theory -->
 	
 Soit $$V$$ un sous-espace vectoriel de $$k^n$$ de dimension
@@ -412,12 +413,12 @@ $$(a_{ij})_{i,j\in\{j_1,\ldots,j_d\}}$$ associée est non nul.
    linéaires. Montrer que l'ensemble des circuits dans $$I$$ est une
    base de Gröbner universelle de $$I$$.
    
-</div>
+
 
  
 ## Critère de Buchberger
 
-<div class="exercise">
+**–**{:.exercise}
   Soient les polynômes $$P_1= x^3y-2x^2y^2+x$$ et $$P_2= 3x^4-y$$ de
   $$\Q[x,y]$$ avec l'ordre lexicographique.
   
@@ -432,9 +433,9 @@ $$(a_{ij})_{i,j\in\{j_1,\ldots,j_d\}}$$ associée est non nul.
  divisible par LT(P_1),ni par LT(P_2)
 -->
 
-</div>
 
-<div class="exercise">
+
+**–**{:.exercise}
   Déterminer si les ensembles suivants sont des bases de Gröbner
   des idéaux qu'ils engendrent.
   
@@ -445,14 +446,14 @@ $$(a_{ij})_{i,j\in\{j_1,\ldots,j_d\}}$$ associée est non nul.
   1. $$\{xy^2-xz+y,xy-z^2,x-yz^4\}$$ avec l'ordre lexicographique.
   
 <!-- ex 9 et 12 p.85 Cox Little O'Shea Ideals -->
-</div>
 
-<div class="exercise">
+
+**–**{:.exercise}
   La fonction $$\Syz(f,g)$$ dépend-elle du choix de l'ordre monomial ?
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
   Soit $$I\subset k[x_1,\ldots, x_n]$$ un idéal et $$G=\{g_1,\dots, g_m\}$$ une 
   base de Gröbner de $$I$$.
   
@@ -465,12 +466,12 @@ $$(a_{ij})_{i,j\in\{j_1,\ldots,j_d\}}$$ associée est non nul.
     $$\overline{f_1f_2}^G=\overline{\overline{f_1}^G\overline{f_2}^G}^G$$.
   
 
-</div>
+
 
 
 ## Algorithme de Buchberger, Bases de Gröbner réduite
 
-<div class="exercise">
+**–**{:.exercise}
   Déterminer une base de Gröbner des idéaux suivants :
   
 
@@ -484,12 +485,12 @@ $$(a_{ij})_{i,j\in\{j_1,\ldots,j_d\}}$$ associée est non nul.
     les ordres lexicographique et lexicographique inverse gradué.
   
 
-</div>
 
 
 
 
-<div class="exercise">
+
+**–**{:.exercise}
 Montrer que pour tout $$m≥1$$, la base de Gröbner réduite de
 
 $$I_m=\left\langle x^{m+1}-yz^{m-1}t,xy^{m-1}-z^m,x^mz-y^mt
@@ -500,9 +501,9 @@ $$f_m=z^{m^2+1}-y^{m^2}t$$. En déduire la base de Gröbner réduite de
 $$I_m$$.
 
 <!-- Kreuzer Robbiano p.129 tutorial 24 -->
-</div>
 
-<div class="exercise">
+
+**–**{:.exercise}
 
 Soient $$2≤n'≤n$$.
 
@@ -521,10 +522,10 @@ Soient $$2≤n'≤n$$.
     formée de polynômes homogènes. Donner une condition
     nécessaire et suffisante pour que l'on ait $$I\cap (X_n)=X_n I$$.
 
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
   Soit l'idéal $$I=\left\langle
     y^4x+3x^3-y^4-3x^2,x^2y-2x^2,2y^4x-x^3-2y^4+x^2 \right\rangle$$.
   
@@ -533,10 +534,10 @@ Soient $$2≤n'≤n$$.
     \right\rangle$$.
   1. Montrer que $$I\cap \Q[y]=\left\langle y^5-2y^4 \right\rangle$$.
 
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
   Soient $$f$$ et $$g$$ deux polynômes non nuls sans facteur commun et
   $$I$$ l'idéal qu'ils engendrent.  On suppose que $$(f,g)$$ est une
   base de Gröbner de $$I$$.
@@ -559,11 +560,11 @@ Soient $$2≤n'≤n$$.
     $$(f,g)$$ soit une base de Gröbner de $$I$$.
   
 
-</div>
+
 
 ## Résultants et élimination
 
-<div class="exercise">
+**–**{:.exercise}
 
 1. Calculer une base de Gröbner réduite de l'idéal engendré par $$(x +
     y- z; x^2- 2t^2; y^2 -5t^2)$$ pour l'ordre lexicographique induit
@@ -578,10 +579,10 @@ Soient $$2≤n'≤n$$.
     $$\sqrt{2}$$ et $$\sqrt{5}$$ en fonction de $$\sqrt{2}+
     \sqrt{5}$$.
 
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
   Soient $$A$$ et $$B$$ deux polynômes de $$K[X]$$, où $$K$$ est un corps.
   
   1. Fabriquer un polynôme dont les racines sont les sommes d'une
@@ -590,9 +591,9 @@ Soient $$2≤n'≤n$$.
   1. Fabriquer un polynôme à coefficients entiers qui a
      $$2^{1/2}+7^{1/3}$$ pour racine.
 
-</div>
 
-<div class="exercise">
+
+**–**{:.exercise}
 
 Le degré (resp. le poids) du monôme non nul $$ax_1^{\alpha_1}\cdots
 x_n^{\alpha_n}$$ est $$\sum \alpha_i$$ (resp. $$\sum i\alpha_i$$).  Le
@@ -611,18 +612,18 @@ symétrique élémentaire.
 $$P(x_1,\ldots,x_n)=F(S_1,\ldots,S_n)$$
 où $$F$$ est de poids $$d$$ et de degré le degré partiel de $$P$$.
 
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
   Déterminer à l'aide d'un résultant l'intersection des courbes de $$\R^2$$ définies par
 
 $$f(X,Y) = X^4 + Y^4- 1,\;
 g(X, Y ) = X^5Y^2-4X^3Y^3 + X^2Y^5-1.$$
 
-</div>
 
-<div class="exercise">
+
+**–**{:.exercise}
 
 On considère la courbe plane d'équation rationnelle
 
@@ -648,15 +649,15 @@ $$\Big\{\Big(x=a(t)/b(t),y=c(t)/d(t)\Big)\in\R^2, t\in\R\Big\}.$$
 1. Impliciter l'exemple $$x=t^2+t+1$$, $$y=(t^2-1)/(t^2+1)$$.
 
 
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
   Donner l'aire d'un triangle en fonction des longueurs $$a,b,c$$ de ses trois côtés.
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
   Soit $$K$$ un corps infini, $$P\in K[X_1,\ldots,X_n]$$ un polynôme non nul de degré $$d$$.
 
   1. Montrer qu'il existe $$(a_1, . . . , a_{n-1})$$ dans $$K^{n-1}$$ tel que le polynôme $$P(X_1 + a_1X_n,\cdots, X_{n-1} +
@@ -666,13 +667,13 @@ $$\Big\{\Big(x=a(t)/b(t),y=c(t)/d(t)\Big)\in\R^2, t\in\R\Big\}.$$
   1. En utilisant un résultant en déduire le théorème des zéros de Hilbert.
   
 
-</div>
+
 
 
 
 
 ## Variétés affines
-<div class="exercise">
+**–**{:.exercise}
   En utilisant Sage, donner les solutions des équations suivantes :
   
 
@@ -682,10 +683,10 @@ $$\Big\{\Big(x=a(t)/b(t),y=c(t)/d(t)\Big)\in\R^2, t\in\R\Big\}.$$
   
 <!-- solve(eqn,x) -->
 
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
   En utilisant Sage, donner les solutions des systèmes d'équations suivants :
   
 
@@ -694,17 +695,17 @@ $$\Big\{\Big(x=a(t)/b(t),y=c(t)/d(t)\Big)\in\R^2, t\in\R\Big\}.$$
   1. $$\left\{\begin{array}{cc} cx+xy^2+xz^2=1,\cr cy+yx^2+yz^2=1,\cr cz+zx^2+zy^2=1.\cr\end{array}\right.$$ où $$c$$ est un paramètre réel.
   
 
-</div>
 
 
 
-<div class="exercise">
+
+**–**{:.exercise}
   Résoudre l'équation suivante dans $$\Z/7\Z$$ :
 $$y^2=x^3-28.$$
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
   On considère la surface $$S$$ paramétrée par
 
 $$\left\{\begin{aligned}
@@ -726,20 +727,20 @@ z & = \sin 2s.
 1. Vérifier à l'aide de ces équations que $$C\subset S$$.
 
 
-</div>
 
 
 
-<div class="exercise">
+
+**–**{:.exercise}
   Soient les idéaux de $$k[x,y]$$ :
 
 $$I = \left\langle x^2y + xy^2 -2y; x^2 + xy- x + y^2 -2y; xy^2 - x - y + y^3 \right\rangle \mbox{ et }
 J = \left\langle x- y^2; xy- y; x^2-y \right\rangle.$$
 
 Montrer que $$I=J$$.
-</div>
 
-<div class="exercise">
+
+**–**{:.exercise}
   Soient les idéaux de $$k[x,y,z]$$ :
   
 $$I = \left\langle x^2 + xz; y + y^4 + xz^2- 3z; y + 2x^2y^2 + xz^2 \right\rangle \mbox{ et }
@@ -750,11 +751,11 @@ J = \left\langle x^3 + yz + xy; xyz + 2y^2z^2 - 3x; x^3y -z^2 \right\rangle.$$
 1. A-t-on $$J\subset I$$ ?
 
 
-</div>
 
 
 
-<div class="exercise">
+
+**–**{:.exercise}
   Soient $$a,b,c$$ satisfaisant le système :
 
 $$\left\{\begin{aligned}
@@ -768,9 +769,9 @@ a^3+b^3+c^3 & =7
 1. Que valent $$a^5+b^5+c^5$$ et $$a^6+b^6+c^6$$ ?
 
 <!-- % Cox Litlle O'Shea p.99 ex.11 -->
-</div>
 
-<div class="exercise"> ([Sagebook]({{ site.data.bib.sagebook }}),
+
+**–**{:.exercise} ([Sagebook]({{ site.data.bib.sagebook }}),
 exercice 36) Soit $$J$$ un idéal de dimension zéro de $$ℚ[x,y]$$. Soit
 $$χ_x$$ le polynôme caractéristique de l'application linéaire
 
@@ -785,12 +786,12 @@ Calculer $$χ_x$$ dans le cas $$J =〈x^2 + y^2 - 1, 4x^2y^2 - 1〉$$.
 Montrer que toute racine de $$χ_x$$ est l’abscisse d’un point de la
 variété $$V_ℂ(J)$$.
 
-</div>
+
 
 
 ## Théorème d'élimination
 
-<div class="exercise">
+**–**{:.exercise}
   Soit $$I\subseteq k[x_1,\ldots,x_n]$$ un idéal.
   
 
@@ -803,10 +804,10 @@ variété $$V_ℂ(J)$$.
     éliminer plusieurs variables.
   
 
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
   Soient le système d'équations
 
 $$\begin{cases}x^2+2y^2 & =3\\x^2+xy+y^2 & =3\end{cases}$$
@@ -818,10 +819,10 @@ $$\begin{cases}x^2+2y^2 & =3\\x^2+xy+y^2 & =3\end{cases}$$
   1. En déduire l'ensemble des solutions de ce système.
   
 
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
   Soit $$I$$ l'idéal déterminé par les équations
 
 $$x^5+y^2+z^2=4,\; x^2+2y^2=5,\; xz=1.$$
@@ -831,10 +832,10 @@ $$x^5+y^2+z^2=4,\; x^2+2y^2=5,\; xz=1.$$
   1. Combien le système associé admet-il de solutions $$(x,y,z)\in\Q^3$$ ?
   1. Combien le système associé admet-il de solutions $$(x,y,z)\in\C^3$$ ?
   
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
 <!-- % ex 1-4 les deux livres de Cox -->
 
 Utiliser le théorème d'élimination pour résoudre le système suivant
@@ -843,10 +844,10 @@ dans $$\R^3$$ puis dans $$\C^3$$ :
 $$\begin{cases}x^2+2y^2-y-2z & =0\\x^2-8y^2+10z-1 & =0\\ x^2-7xy & =0.
   \end{cases}$$
 
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
 
 Soit $$f=  x^{4} y^{2} + x^{2} y^{4} - x^{2} y^{2} \in\Q[x,y]$$. On cherche à calculer les valeurs critiques de $$f$$ vu comme fonction
 polynomiale de $$\R^2$$ dans $$\R$$.
@@ -856,20 +857,20 @@ polynomiale de $$\R^2$$ dans $$\R$$.
 1. En considérant l'idéal $$\displaystyle \left\langle \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, f-t
   \right\rangle\subset\Q[x,y,t]$$, trouver un polynôme de $$\Q[t]$$ dont l'ensemble des racines contient les valeurs critiques de $$f$$.
 
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
   <!-- Becker Weispfenning p.259 -->
   
   Soient $$I$$ et $$I'$$ deux idéaux de $$k[x_1,\ldots,x_n]=k[\underline{x}]$$. Soit
   $$J=\left\langle yI,(y-1)I' \right\rangle\in k[y,\underline{x}]$$. Montrer que
   $$I\cap I'$$ est l'idéal d'élimination $$J_{\underline{x}}$$.
 
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
   <!-- Becker Weispfenning p.260 -->
   
   Calculer, dans $$\Q[x,y]$$, l'intersection des idéaux
@@ -877,21 +878,21 @@ polynomiale de $$\R^2$$ dans $$\R$$.
   $$I=\left\langle x^2-2,x+y \right\rangle,\; I'=\left\langle x^2-2,x-y
   \right\rangle.$$
 
-</div>
 
 
 
-<div class="exercise">
+
+**–**{:.exercise}
   <!-- Becker Weispfenning p.260 -->
   
   Écrire un algorithme qui détermine l'intersection de deux idéaux.
 
-</div>
+
 
 
 ## Rappel sur les idéaux
 
-<div class="exercise">
+**–**{:.exercise}
   <!-- Becker Weispfenning 274 -->
   
 Soit $$I$$ un idéal non trivial de $$k[x_1,\ldots,x_n]$$ et soit
@@ -925,32 +926,32 @@ Soit $$I$$ un idéal propre de $$k[x_1,\ldots,x_n]$$.
    finie.
 {: start="2" }
 
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
 <!-- Becker Weispfenning 317 -->
 
 Soit $$I$$ l'idéal de $$\Q[x,y]$$ engendré par $$y^2+x^2$$ et $$x^2-2$$. Montrer
   que $$I$$ est un idéal de dimension zéro.
-</div>
 
-<div class="exercise">
+
+**–**{:.exercise}
 <!-- Becker Weispfenning exemple 6.48 -->
 
   Quelle est la dimension de l'idéal $$I$$ de $$\Q[x_1,x_2,x_3]$$ engendré par
   $$x_1x_3+x_3, x_2x_3+x_3$$ ?
 
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
 
 Écrire un algorithme qui teste si un idéal est de dimension $$0$$.
 
-</div>
 
-<div class="exercise">
+
+**–**{:.exercise}
 <!-- Becker Weispfenning p.330 -->
 
   À un $$n$$-uplet $$f=(f_1,\ldots,f_n)\in k[x_1,\ldots,x_n]^n$$ on associe une
@@ -996,7 +997,7 @@ $$g_i(f_1,\ldots,f_n)=x_i,\; 1\leq i\leq n.$$
    1. En déduire que $$\varphi_g\circ\varphi_f=\mathrm{Id}_{k^n}$$ implique
       $$\varphi_f\circ\varphi_g=\mathrm{Id}_{k^n}$$.
     
-</div>
+
 
 <!-- REPONSE A UNE QUESTION...
 Le polynôme $$P\in k[x_1,\ldots,x_n]$$ de degré $$d$$ s'écrit $$P=P_1+P_2$$ avec $$P_1$$ polynôme homogène de degré $$d$$ (non nul) et
@@ -1028,7 +1029,7 @@ $$1\in\left\langle a_0,\ldots,a_k \right\rangle$$. Or $$a_i\in\left\langle f_1,\
 ## Dimension d'un idéal
 
 
-<div class="exercise">
+**–**{:.exercise}
 
 Soit $$I \subset k\left[x_1,\dots,x_n\right]$$ un idéal monomial tel
 que $$\mathbb{V}\left(I\right)=n-1$$.
@@ -1044,10 +1045,10 @@ que $$\mathbb{V}\left(I\right)=n-1$$.
    1. Quelle est la valeur maximale que peut prendre $$p$$ ?
    1. Donner un exemple où ce $$p$$ maximum est atteint.
 
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
 
 Soit $$I$$ un idéal monomial de $$k\left[x_1,\dots,x_n\right]$$.
 
@@ -1055,9 +1056,9 @@ Soit $$I$$ un idéal monomial de $$k\left[x_1,\dots,x_n\right]$$.
   1. Montrer que $$\mathbb{V}\left(I\right)$$ est de dimension $$0$$ si et seulement si pour tout $$i\in\left\{1,\dots,n\right\}$$, il existe
     $$ℓ_i\geq 1$$ tel que  $$x_i^{ℓ_i}\in I$$.
   
-</div>
 
-<div class="exercise">
+
+**–**{:.exercise}
 
 Soit $$I$$ l'idéal de $$k[x,y]$$ :
 
@@ -1066,10 +1067,10 @@ $$I=\left\langle x^3y,xy^2 \right\rangle.$$
 Calculer la fonction de Hilbert $$^aHF_I(s)$$ de plusieurs façons
 différentes avec et sans Sage.
 
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
 
 Soit $$I$$ l'idéal de $$k[x,y,z]$$ :
 
@@ -1077,10 +1078,10 @@ $$I=\left\langle x^3yz^5,xy^3z^2 \right\rangle.$$
 
 Calculer la fonction de Hilbert $$^aHF_I(s)$$.
 
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
 
 Soit $$I$$ l'idéal de $$k[x_1,\ldots x_4]$$ :
 
@@ -1088,10 +1089,10 @@ $$I=\left\langle x_1x_3,x_1x_4^2,x_2x_3,x_2x_4^3 \right\rangle.$$
 
 Calculer la fonction de Hilbert $$^aHF_I(s)$$.
 
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
 
 Soit $$I_1\subset I_2$$ des idéaux de $$k[x_1,\ldots,x_n]$$.
 
@@ -1099,21 +1100,21 @@ Soit $$I_1\subset I_2$$ des idéaux de $$k[x_1,\ldots,x_n]$$.
   1. Montrer que pour tout $$s\geq 0$$, $$^aHF_{I_2}(s)\leq ^aHF_{I_1}(s).$$
   1. Montrer que $$\deg ^aHP_{I_2}\leq \deg ^aHP_{I_1}.$$
 
-</div>
 
 
 
-<div class="exercise">
+
+**–**{:.exercise}
 
 Soit $$k$$ un corps algébriquement clos. Calculer la dimension des variétés affines définies par les idéaux suivants :
 
 1. $$I=\left\langle xz,xy-1 \right\rangle$$.
 1. $$J=\left\langle zw-y^2,xy-z^3 \right\rangle$$.
 
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
 
 On se donne des entiers $$a_1,\dots,a_n$$ strictement positifs et on
 considère l'idéal monomial $$J=(X_1^{a_1},\dots,X_n^{a_n})$$.  On se
@@ -1128,16 +1129,16 @@ négatifs.
 1. Calculer $$h$$ quand $$a_i=2$$ pour tout $$i\in [1,n]$$.
 1. Calculer $$h$$ quand $$n=2$$, $$a_1\leq a_2$$.
  
-</div>
 
-<div class="exercise">
+
+**–**{:.exercise}
 
 Montrer qu'un point $$p=(a_1,\ldots,a_n)\in k^n$$ est une variété affine de dimension zéro.
 
-</div>
 
 
-<div class="exercise">
+
+**–**{:.exercise}
 
 Soit $$k$$ un corps algébriquement clos et $$I=\left\langle xy,wz
 \right\rangle\in k[x,y,z]$$.
@@ -1147,4 +1148,4 @@ Soit $$k$$ un corps algébriquement clos et $$I=\left\langle xy,wz
 1. Montrer que $$I\cap k[y,z]=0$$ mais que $$I\cap k[x,y,z]\not=0$$.
 1. Quelle est la dimension de $$V(I)$$ ?
 
-</div>
+

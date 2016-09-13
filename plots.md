@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Tracer des courbes et des surfaces en Sage
 ---
 

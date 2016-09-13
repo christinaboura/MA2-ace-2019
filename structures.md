@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Anneaux, corps, polynômes, expressions
 ---
 

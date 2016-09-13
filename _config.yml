@@ -27,7 +27,7 @@ defaults:
   - scope:
       path: ''
     values:
-      layout: default
+      layout: article
       addons:
         favicon: yes
         mathjax: yes
@@ -37,6 +37,15 @@ defaults:
 
 create:
   pages: yes
+
+
+# Collections
+collections:
+  # Leave that addons collection like this
+  # if you want to use addons
+  addons:
+    output: true
+    permalink: /:collection/:path:output_ext
   
 kramdown:
   parse_block_html: true
