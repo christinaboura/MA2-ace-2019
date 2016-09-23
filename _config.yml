@@ -50,10 +50,6 @@ collections:
 kramdown:
   parse_block_html: true
 
-# Kramdown configuration (markdown parser)
-kramdown:
-  parse_block_html: true
-
 # SASS configuration.
 # Better not touch this
 sass:
