@@ -75,9 +75,9 @@ Univariate Polynomial Ring in x over Rational Field
 ~~~
 
 Observons cela sur un exemple simple. Il existe un morphisme canonique
-de $$ℤ$$ vers $$ℤ/10$$, Sage peut alors additionner deux éléments
+de $$\Z$$ vers $$\Z/(10)$$, Sage peut alors additionner deux éléments
 appartenant à ces deux parents, et le résultat sera un élément de
-$$ℤ/10$$.
+$$\Z/(10)$$.
 
 ~~~
 sage: a = Zmod(10)(2)
@@ -91,7 +91,7 @@ sage: _.parent()
 Ring of integers modulo 10
 ~~~
 
-Le *lift* d'un élément de $$ℤ/10$$ vers $$ℤ$$ n'a rien de canonique,
+Le *lift* d'un élément de $$\Z/(10)$$ vers $$\Z$$ n'a rien de canonique,
 mais il est tout de même convenable d'appliquer cette *conversion*
 lorsque elle est demandée par l'utilisateur :
 
@@ -102,8 +102,8 @@ sage: 11 + QQ(a)
 13
 ~~~
 
-De façon similaire, il n'existe pas de morphisme naturel de $$ℚ$$ vers
-$$ℤ/10$$. Sage donne donc correctement une erreur ici :
+De façon similaire, il n'existe pas de morphisme naturel de $$\Q$$ vers
+$$\Z/(10)$$. Sage donne donc correctement une erreur ici :
 
 ~~~
 sage: 1/3 + a
@@ -136,9 +136,9 @@ Finite Field of size 7
 
 Sage considère aussi les bases lorsque il cherche à trouver une
 *coercition* entre deux éléments. Dans cet exemple, `x` est un
-polynôme à coefficients dans $$𝔽_7$$, alors que 10 est un entier.  Au
-moment de la coercition, Sage transforme 10 en un élément de $$𝔽_7$$,
-puis le en un élément de $$𝔽_7[x]$$.
+polynôme à coefficients dans $$\F_7$$, alors que 10 est un entier.  Au
+moment de la coercition, Sage transforme 10 en un élément de $$\F_7$$,
+puis le en un élément de $$\F_7[x]$$.
 
 ~~~
 sage: 10.parent()

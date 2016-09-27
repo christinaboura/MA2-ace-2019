@@ -16,7 +16,9 @@ title: Introduction à l'environnemnt de travail et à SageMath
 
 ### Interfaces pour l'utilisation de SageMath
 
-- Notebook *classique* : espace de cours sur <http://sage.math.uvsq.fr/>,
+- Notebook
+  [*Jupyter*](http://jupyter.readthedocs.io/en/latest/index.html) :
+  espace de cours sur <https://bourbaki.math.uvsq.fr/>,
 
 - SageMathCloud : <https://cloud.sagemath.com/> (UWashington).
 
@@ -25,9 +27,8 @@ title: Introduction à l'environnemnt de travail et à SageMath
 - Installation locale sur machine personnelle (notebook *classique* et terminal) :
   - Instructions générales : <http://www.sagemath.org/download.html>
   - Linux :
-	- Distribution précompilée (méthode conseillée) :
-      [64 bits](http://www-ftp.lip6.fr/pub/math/sagemath/linux/64bit/index.html),
-      [32 bits](http://www-ftp.lip6.fr/pub/math/sagemath/linux/32bit/index.html)
+	- [Distribution précompilée](http://www-ftp.lip6.fr/pub/math/sagemath/linux/64bit/index.html)
+      (méthode conseillée).
 	- Compiler à partir du
       [code source](http://www.sagemath.org/download-source.html).
   - MacOS,
@@ -36,19 +37,24 @@ title: Introduction à l'environnemnt de travail et à SageMath
   - Windows : [Image virtualisée](http://www.sagemath.org/download-windows.html)
       (pour [VirtualBox](https://www.virtualbox.org/)).
   - Toute architecture (**méthode conseillée pour toute plateforme**) :
-    [Sage Debian Live](http://sagedebianlive.metelu.net/) (démarrage
+    [Sage Debian Live](https://sagedebianlive.metelu.net/) (démarrage
     d'un système Linux préconfiguré depuis clef USB ou CD).
-
+  - Toute architecture : système Linux complet virtualisé de
+    l'[UFR de Sciences](http://www.cartnum.uvsq.fr/telechargements-302338.kjsp?RH=1385032066334&RF=1385032066334)
+    (choisir la
+    [VM 2](https://transfert.uvsq.fr/recupIMAGEfree.php?f=/cartnumf/lubuntu_16.04_amd64_cn_201609.ova)).
 
 ### Premiers pas avec SageMath
 
 Référence : chapitre 1 du [Sagebook]({{ site.data.bib.sagebook }}).
 
-- Utilisation du notebook : créer une feuille de calcul, cellules,
-  insérer une cellule, insérer du texte riche, *typesetting*.
-- Affichage du résultat, instruction `print`, commande
-  `show`.
+- Utilisation du notebook Jupyter : créer une feuille de calcul,
+  cellules, insérer une cellule, insérer du texte riche (format
+  [Markdown](https://guides.github.com/features/mastering-markdown/)).
+- Affichage du résultat, instruction `print`, rappeler un résultat
+  précédent, commandes *magiques* `%display latex` et `%display
+  plain`.
 - Syntaxe Python, objets, propriétés, méthodes.
 - Aide, recherche et exploration : completion automatique (touche
-  **tab**), aide en ligne (clef magique `?`), exploration du code source
-  (clef magique `??`).
+**tab**), aide en ligne (clef magique `?`), exploration du code source
+(clef magique `??`).

@@ -33,7 +33,8 @@
 TD 1 (13/09/2016)
 : [Introduction à l'environnement de travail et à SageMath](polytd#introduction--lenvironnemnt-de-travail-et--sagemath),
 : [Structures algébriques de base en SageMath](polytd#anneaux-corps-polynmes-expressions),
-: **Exercices :** [Manipuler les polynômes en SageMath](exercises#polynmes--une-variable).
+: **Exercices :** [Manipuler les polynômes en SageMath](exercises#polynmes--une-variable),
+: Le [Jupyter notebook](http://nbviewer.jupyter.org/gist/defeo/4adb727f7608dfd2c75eb7699d670fb7){:target="_blank"} de la séance.
 
 TD 2 (27/09/2016)
 : [Anneaux de polynômes en SageMath](polytd#polynmes),
