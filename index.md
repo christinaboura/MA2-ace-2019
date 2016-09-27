@@ -38,10 +38,11 @@ TD 1 (13/09/2016)
 
 TD 2 (27/09/2016)
 : [Anneaux de polynômes en SageMath](polytd#polynmes),
-: [Structures de contrôle en Python](polytd#syntaxe-pythonsage),
 : **Exercices :** [Polynômes](exercises#polynmes--une-variable).
+: Le [Jupyter notebook](http://nbviewer.jupyter.org/gist/defeo/d0cab064cbc539ab96a3130a3832ac66){:target="_blank"} de la séance.
 
 TD 3 (04/10/2016)
+: [Structures de contrôle en Python](polytd#syntaxe-pythonsage),
 : 
 
 TD 4 (11/10/2016)

@@ -61,7 +61,7 @@ Fonctions utiles : `degree`, `leading_coefficient`, `coefficients`,
 
 
 **–**{:.exercise}
-  Soit le polynôme $$P=x^{11}+x^{10}+x^9+2x^8+2x^6+2x^4+x^2+x^3+x$$.
+  Soit le polynôme $$P=x^{11}+x^{10}+x^9+2x^8+2x^6+2x^4+x^3+x^2+x$$.
   
 
   1. Factoriser $$P$$ dans $$\Z[x]$$.
