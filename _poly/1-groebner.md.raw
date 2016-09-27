@@ -1,0 +1,999 @@
+---
+title: Théorème de Hilbert et bases de Gröbner
+---
+
+### Quelques rappels
+
+#### Polynômes, notations et rappels
+
+> Soit $$\kk$$ un corps.
+> 
+> 1. On note $$R = \kk[x_1,\cdots,x_n]$$ l'anneau de polynômes à coefficients dans $$\kk$$. Un élément de cet anneau est appelé **polynôme**. 
+> 
+> 2. On note $$\kk(x_1,\cdots;x_n)$$ le corps des fractions de $$R$$ (rappelons que $$R$$ est un anneau intègre). C'est le corps des 
+> **fractions rationelles**. Rapellons que l'on a
+>
+> $$\kk(x_1,\cdots,x_n) = \left\{ \frac{P}{Q} \ \Big\vert \ P,Q\in R \text{ avec } Q \neq 0 \right\}.$$
+{:.theorem.defi}
+
+> Un **monôme** est un polynôme de la forme $$x_1^{\a_1} \cdots x_n^{\a_n}$$ avec $$\a_i \in \N$$ pour tout $$i \in [1,n]$$. On le note également $$x^\a$$ avec $$\a = ( \a_1,\cdots,\a_n) \in \N^n$$. Le **degré total** de $$x^\a$$ est $$\vert\a\vert = \a_1 + \cdots + \a_n$$.
+{:.theorem.defi}
+
+> 1. Pour $$\a = (0,\cdots,0)$$ on a $$x^\a = 1$$ l'unité de l'anneau $$R$$.
+> 
+> 2. Les monômes forment une base du $$\kk$$-espace vectoriel $$R$$ : tout polynôme $$P$$ s'écrit de manière unique comme somme finie de monômes :
+>
+>    $$P = \sum_\a a_\a x^\a$$
+>
+>    avec $$a_\a \in \kk$$ et $$a_\a = 0$$ sauf pour un nombre fini de $$\a \in \N$$. 
+{:.theorem.rema}
+
+>   1.  Dans l'écriture, $$P = \sum_\a a_\a x^\a$$, le scalaire $$a_\a$$ est appelé **coefficient** du monôme $$x^\a$$ dans $$P$$.
+> 
+> 2. Le **degré total** de $$P$$ est défini par
+>
+>    $$\deg(P) = \sup\{\vert\a\vert \ \vert \ a_\a \neq 0\}.$$ 
+> 
+> 3. Un polynôme est dit **homogène** si tous les monômes apparaissant avec un coefficient non nul ont le même degré total.
+{:.theorem.defi}
+
+> Le polynôme $$x_1x_2x_3 + x_2^3 - 10 x_1^2 x_3$$ est homogène. Le polynôme $$x-1^2 + x_2$$ n'est pas homogène.
+{:.theorem.exem}
+
+#### Idéaux, notations et rappels
+
+>   Dans un anneau (commutatif) $$A$$, un **idéal** est un sous-ensemble $$I$$ qui est un sous-groupe pour l'addition et tel que l'implication suivante est satisfaite: $$a \in A, b \in I \Rightarrow ab \in I$$.
+{:.theorem.defi}
+
+>   L'exemple typique d'un idéal est obtenu à partir d'une combinaison linéaire déléments de l'anneau: soit $$(a_\lambda)_{\lambda} \in \Lambda$$ une famille d'éléments de $$A$$ (cette famille est indexée par l'ensemble $$\Lambda$$ et peut être infinie). On définit $$(a_\lambda \ \vert \ \lambda \in \Lambda)$$ **l'idéal engendré par la famille** $$(a_\lambda)_{\lambda} \in \Lambda$$ comme l'ensemble des combinaisons linéaires finies des $$(a_\lambda)_{\lambda} \in \Lambda$$ à coefficients dans $$A$$. Explicitement
+>
+>   $$(a_\lambda \ \vert \ {\lambda} \in \Lambda)
+>   = \left\{ \sum_{\lambda \in \Lambda} b_\lambda a_\lambda \ \Big\vert \ b_\lambda \in A \text{ et } b_\a = 0 \text{ sauf pour un nombre fini de } \lambda \in \Lambda \right\}.$$
+{:.theorem.exem #exem-ideal}
+
+>   Soir $$A$$ un anneau.
+> 
+> 1. Vérifier que $$(a_\lambda \ \vert \ {\lambda} \in \Lambda)$$ est un idéal de $$A$$.
+> 
+> 2. Vérifiez que tout idéal de $$A$$ est de cette forme.
+{:.theorem.exer}
+
+>   Un cas particulier de [l'exemple](#exem-ideal){:.crossref} précédent est le cas d'une famille $$(a_\lambda)_{\lambda} \in \Lambda$$ finie. Dans ce cas on indexe les élements de la famille par des entiers, typiquement $$a_1,\cdots,a_r \in A$$ avec $$r \in \N$$, $$r\geq 1$$. Dans ce cas on note $$(a_1,\cdots,a_r)$$ l'idéal engendré par cette famille.
+{:.theorem.exem}
+
+>   Dans l'anneau des polynômes $$R$$, voici quelque exemples de tels idéaux.
+> 
+>   1. L'idéal nul : $$(0) = \{ 0 \}$$.
+> 
+>   2. L'anneau lui-même : $$(1) = R$$.
+> 
+>   3. L'idéal "irrelevant" : $$(x_1,\cdots,x_n) = R \setminus (\kk^\times)$$ où $$\kk^\times$$ est l'ensemble des éléments inversibles de $$\kk$$ c'est-à-dire $$\kk \setminus \{0\}$$. 
+{:.theorem.exem}
+
+>   Soit $$A$$ un anneau
+> 
+>   1. Un idéal $$I$$ de $$A$$ est dit de **type fini** s'il existe une famille finie d'éléments $$a_1,\cdots,a_r \in A$$ telle que $$I = (a_1,\cdots,a_r)$$.
+>   
+>  2. Un anneau $$A$$ est dit **noethérien** si tout idéal de $$A$$ est de type fini.
+{:.theorem.defi}
+
+Le premier objectif de ce cours sera de donner une preuve constructive d'un théorème classique dû à Hilbert.
+
+> L'anneau $$R$$ est noethérien.
+{:.theorem.theo title="Théorème de Hilbert"}
+
+L'objectif n'est pas tant le résultat en lui même mais plutôt la méthode, completement effective, ainsi que les outils développés qui serviront par la suite pour d'autres problèmes algébro-géométriques.
+
+Avant celà, nous rappelons quelques résultats qui donnent une caractérisation de l'idéal $$(a_\lambda)_{\lambda \in \Lambda}$$ ainsi qu'un critère effectif d'égalité entre idéaux.
+
+> Une intersection quelconque d'idéaux est un idéal.
+{:.theorem.lemm}
+
+> Donner une preuve du lemme précédent.
+{:.theorem.exer}
+
+> Pour tout sous-ensemble $$E$$ d'un anneau $$A$$ il existe un unique plus petit idéal contenant $$E$$. C'est l'idéal $$(E)$$ engendré par la famille des éléments de $$E$$.
+{:.theorem.prop}
+
+> Donner une preuve de la proposition précédente.
+{:.theorem.exer}
+
+>   Soit $$A$$ un anneau et $$I$$ un idéal. Soient $$a_1,\cdots a_r$$ des éléments de $$A$$. Alors on a l'équivalence
+>
+>   $$(a_1,\cdots,a_r) \subset I \Leftrightarrow a_i \in I, \text{ pour tout } i \in [1,r].$$ 
+{:.theorem.coro}
+
+> Donner une preuve du corollaire précédent.
+{:.theorem.exer}
+
+On obtient enfin un critère simple d'égalité d'idéaux.
+
+>   Soit $$A$$ un anneau et soient $$a_1,\cdots a_r, b_1,\cdots,b_\ell$$ des éléments de $$A$$. Alors on a l'équivalence
+>
+>   $$(a_1,\cdots,a_r) = (b_1,\cdots,b_\ell) \Leftrightarrow
+>   \begin{cases}
+>     a_i \in (b_1,\cdots,b_\ell) &\text{pour tout } i \in [1,r], \text { et } \\
+>     b_j \in (a_1,\cdots,a_r) &\text{pour tout } j \in [1,\ell].
+>     \end{cases}$$ 
+{:.theorem.coro}
+
+> Donner une preuve du corollaire précédent.
+{:.theorem.exer}
+
+>   Pour un corps $$\kk$$ de caractéristique différente de $$2$$, on a l'égalité $$(x+y,x-y)=(x,y)$$. En effet, l'inclusion de gauche à droite est claire et valable pour tout corps. Par contre, on a
+>
+>   $$x = \frac{1}{2}(x+y) + \frac{1}{2}(x-y) \text{ et } x = \frac{1}{2}(x+y) - \frac{1}{2}(x-y).$$
+>
+>   En caractéristique $$2$$, on a l'inclusion stricte $$(x+y,x-y) = (x+y) \subsetneq (x,y)$$.
+{:.theorem.exem}
+
+>   Dans l'anneau $$\kk[x_1,x_2]$$, pour quels corps de base $$\kk$$ a-t-on l'égalité d'idéaux $$(2x_1^2 + 3x_2^2 - 11 , x_1^2 - x_2^2 - 3) = (x_1^2 - 4 , x_2^2 - 1)$$ ?
+{:.theorem.exer}
+
+#### Théorème de Hilbert pour les polynômes à une variable
+
+C'est un résultat bien connu que l'anneau des polynômes à une variable est principal. Nous en presentons une preuve constructive qui sera le modèle de la preuve du théorème de Hilbert dans le cas général.
+
+>   Soit $$P \in \kk[x]$$ un polynôme. Pour $$P \neq 0$$, il existe des scalaires $$a_0,\cdots,a_r \in \kk$$ avec $$a_r \neq 0$$ tels que $$P = a_r x^r + \cdots + a_0$$. On a $$\deg(P) = r$$. Le polynôme $$a_r x^r$$ est appelé **terme dominant** de $$P$$. On écrira $$\LT(P) = a_r x^r$$.
+{:.theorem.defi}
+
+> On a $$\deg(P) = \deg(\LT(P))$$.
+{:.theorem.rema}
+
+> Soit $$P = 2 x^3 + 4 x^7 - x^4$$. On a $$\LT(P) = 4 x^7$$.
+{:.theorem.exem}
+
+>   1. Il est très simple de tester si un monôme $$a x^r$$ non nul de $$\kk[x]$$ divise un autre monôme non nul $$b x^\ell$$ de $$\kk[x]$$. En effet $$a x^r$$ divise $$b x^\ell$$ si et seulement si $$r \leq \ell$$.
+>
+>      En particulier $$a x^r$$ divise $$b x^\ell$$ si et seulement si $$\deg(a x^r) \leq \deg(b x^\ell)$$.
+> 
+> 2. La même chose est vraie pour les polynômes à plusieures variables. Le monôme $$a x^\a$$ divise $$b x^\beta$$ si et seulement si $$\a \leq \beta$$ pour l'ordre (non total) qui compare chaque coefficient.
+{:.theorem.rema title="Divisibilité des monômes"}
+
+>   Soit $$P_1 \in \kk[x]$$ un polynôme non nul.
+> 
+>   Pour tout $$P \in \kk[x]$$, il existe un unique couple $$(Q,S)$$ d'éléments de $$\kk[x]$$ tels que $$P = QP_1 + S$$ avec $$S = 0$$ ou $$\deg(S) < \deg(P_1)$$.
+{:.theorem.prop title="Division euclidienne"}
+
+On donne une preuve sous forme d'algorithme.
+
+> **Entrée :** $$P,P_1$$.
+> **Sortie :** $$Q,S$$.
+>
+> $$Q  := 0$$ et $$S := P$$.
+> Tant que $$S \neq 0$$ et que $$\LT(P_1)$$ divise $$\LT(S)$$ faire :
+> 	$$Q := Q + \LT(S)/\LT(P_1)$$,
+> 	$$S := S - (\LT(P)/\LT(P_1)) P_1$$.
+> Donner $$(Q,S)$$.
+{:.theorem.algo}
+
+>   Vérifions que cet algorithme fait ce qu'on lui demande. À chaque tour de l'algorithme, on a toujours l'égalité
+>
+>   $$P = QP_1 + S = (Q + \LT(S)/\LT(P_1))P_1 + (S - (\LT(S)/\LT(P_1))P_1.$$
+>
+>   Par ailleurs, l'algorithme s'arrète lorsque $$(S \neq 0 \text{ et } \LT(P_1) \text{ divise } \LT(S))$$ est fausse. On a donc en sortie l'alternative $$S = 0$$ ou $$\LT(P_1)$$ ne divise pas $$\LT(S))$$ c'est-à-dire l'alternative $$S = 0$$ ou $$\deg(\LT(P_1)) > \deg(\LT(S))$$ c'est-à-dire l'alternative $$S = 0$$ ou $$\deg(P_1) > \deg(S)$$.
+> 
+>   Il reste à verifier que l'algorithme termine. À chaque étape, soit $$S$$ devient nul, soit son degré diminue. En effet, l'opération $$S := S - (\LT(S)/\LT(P_1)) P_1$$ consiste à éliminer grâce à $$P_1$$ le terme dominant de $$S$$. Au bout d'un nombre fini d'opérations, si $$S$$ n'est pas nul, son degré sera donc plus petit que celui de $$P_1$$.
+> 
+>   Vérifions enfin que cette écriture est unique. Si on a deux écritures $$P = QP_1 +S$$ et $$P = Q'P_1 + S'$$, alors on a $$P_1(Q-Q') = S' - S$$. Si $$S \neq S'$$, alors $$P_1(Q-Q') \neq 0$$ et on a
+>
+>   $$\deg(P_1) \leq \deg(P_1(Q-Q')) = \deg(S' - S) \leq \max(\deg(S),\deg(S')) < \deg(P_1).$$
+>
+>   Une contradiction. On en déduit $$S = S'$$ et comme $$\kk[x]$$ est intègre et $$P_1 \neq 0$$, on a $$Q = Q'$$.
+{:.proof}
+
+> Tout idéal de $$\kk[x]$$ est principal : tout idéal $$I$$ est de la forme $$I = (P)$$ avec $$P \in \kk[X]$$. De plus $$P$$ est unique à multiplication par un scalaire non nul près.
+{:.theorem.coro}
+
+>   Si $$I = (0)$$, on a fini. On suppose donc que $$I$$ contient au moins un élément non nul et on pose
+>
+>   $$r = \min\{ \deg(Q) \ \vert \ Q \in I \text{ et } Q \neq 0\}.$$
+>
+>   Par hypothèse l'ensemble ci-dessus est non vide et admet donc un minimum. Soit alors $$Q \in I$$ tel que $$Q \neq 0$$ et $$\deg(Q) = r$$. On montre l'égalité $$I = (Q)$$. Comme $$Q \in I$$, on a l'inclusion $$(Q) \subset I$$. Soit donc $$P \in I$$. La division euclidienne nous donne des polynômes $$R$$ et $$S$$ tels que $$P = QR + S$$ avec $$S = 0$$ ou $$\deg(S) < \deg(Q)$$. On peut réécrire $$S = P - QR$$ et comme $$P,Q \in I$$, on obtient $$S \in I$$. Par minimalité de $$r = \deg(Q)$$, on déduit $$S = 0$$ donc $$P = QR \in (Q)$$.
+> 
+>   Il reste à monter l'unicité. Si $$(P) = (P')$$ alors $$P = QP'$$ et $$P' = Q'P$$. On obtient $$P = QQ'P$$ et donc $$QQ' = 1$$ (lanneau est intègre). En particulier $$\deg(Q) + deg(Q') = 0$$ donc $$\deg(Q) = \deg(Q') = 0$$ donc $$Q$$ et $$Q'$$ sont des constantes non nulles.
+{:.proof}
+
+### Division des polynomes
+
+#### Ordres admissibles
+
+On a vu qu'un point crucial de la preuve du théorème de Hilbert pour les polynômes à une variable est l'utilisation de l'ordre pour comparer les monômes et déterminer la divisibilité. Les choses sont plus complexes lorsqu'on a au moins deux variables et nous aurons besoin de choisir des ordres ayant de bonnes propriétés sur l'ensemble des exposants des monômes.
+
+Rappelons la notion d'ordre et d'ordre total.
+
+>   Soit $$E$$ un ensemble et $$\mathfrak{R}$$ une relation.
+> 
+>   1. La relation $$\mathfrak{R}$$ est une **relation d'ordre** si elle est réflexive (pour tout $$e \in E$$, on a $$e \mathfrak{R} e$$), antisymétrique (si $$e \mathfrak{R} f$$ et $$f \mathfrak{R} e$$ alors $$e = f$$) et transitive (si $$e \mathfrak{R} f$$ et $$f \mathfrak{R} g$$ alors $$e \mathfrak{R} g$$).
+> 
+>   En général, on note une relation d'ordre avec le symbole $$\leq$$. La relation ($$ a \leq b$$ et $$a \neq b$$) est notée $$a < b$$.
+> 
+>   2. Une relation d'ordre $$\leq$$ est dite **totale** si pour tout $$e,f \in E$$, on a $$e \leq f$$ ou $$f \leq e$$.
+>   {:start="2"}
+{:.theorem.defi}
+
+>   Un **ordre admissible** sur $$R = \kk[x_1,\cdots,x_n]$$ est une relation d'ordre $$<$$ sur l'ensemble des monômes (ou de manière équivalente sur l'ensemble $$\N^n$$ des exposants) vérifiant des conditions suivantes:
+>   
+>   1. L'ordre $$<$$ est total.
+>   2. L'ordre $$<$$ est compatible avec la multiplication: si $$x^\a < x^\beta$$ alors $$x^{\a + \gamma} < x^{\beta + \gamma}$$.
+>   3. L'ordre $$<$$ est bien ordonné : tout ensemble non vide de monômes a un élément minimal pour $$<$$.
+>  
+{:.theorem.defi}
+
+> 1. La première condition permet d'écrire tout polynôme comme une suite strictement décroissante de monômes.
+> 
+> 2. La seconde condition parle d'elle même : compatibilité avec la multiplication, si $$x^\a < x^\beta$$ alors $$x^\a x^\gamma =
+>     x^{\a + \gamma} < x^{\beta + \gamma} = x^\beta x^\gamma
+>     $$.
+> 
+> 3. La troisième condition impose la propriété très utile suivante : l'ensemble des monômes inférieurs à un monôme donné est fini. En effet, s'il un tel ensemble était infini, on pourrait construire une suite décroissante infinie contredisant la condition d'ordre bien ordonné.
+{:.theorem.rema}
+
+#### Exemples d'ordres admissibles
+
+>   L'**ordre lexicographique** $$<_{lex}$$ est défini par :
+>
+>   $$x^\a <_{lex} x^\beta \Leftrightarrow \text{le premier coefficient non nul de } \beta - \a \text{ est } >0.$$
+>
+>   Il est à noter que l'on "lit" les éléments $$\a$$ et $$\beta$$ de gauche à droite.
+{:.theorem.defi}
+
+>   L'**ordre lexicographique inversé** $$<_{revlex}$$ est défini par :
+>
+>   $$x^\a <_{revlex} x^\beta \Leftrightarrow \text{le dernier coefficient non nul de } \beta - \a \text{ est } >0.$$
+>
+>   On peut voir cet ordre comme un ordre lexicographique où on "lit" les éléments $$\a$$ et $$\beta$$ de droite à gauche.
+{:.theorem.defi}
+
+>   L'**ordre lexicographique gradué** est défini par :
+>
+>   $$x^\a <_{deglex} x^\beta \Leftrightarrow
+>     \begin{cases}
+>     \vert\a\vert < \vert\beta\vert,\\
+>     \text{ou} \\
+>     \vert\a\vert = \vert\beta\vert
+>     \text{ et } x^\a <_{lex} x^\beta.
+>   \end{cases}$$
+>
+>   On compare d'abord les degrés puis on applique l'ordre lexicographique.
+{:.theorem.defi}
+
+>   L'**ordre lexicographique gradué inversé** est défini par :
+>
+>   $$x^\a <_{degrevlex} x^\beta \Leftrightarrow
+>     \begin{cases}
+>     \vert\a\vert < \vert\beta\vert,\\
+>     \text{ou}\\
+>     \vert\a\vert = \vert\beta\vert
+>     \text{ et } x^\a >_{revlex} x^\beta.
+>   \end{cases}$$
+>
+>   On compare d'abord les degrés puis on applique l'opposé de ordre lexicographique inversé.
+{:.theorem.defi}
+
+>   Une définition équivalente de l'ordre lexicographique gradué inverse est la suivante :
+>
+>   $$x^\a <_{degrevlex} x^\beta \Leftrightarrow
+>     \begin{cases}
+>     \vert\a\vert < \vert\beta\vert,\\
+>     \text{ou}\\
+>     \vert\a\vert = \vert\beta\vert
+>     \text{ et le dernier coefficient non nul de } \beta - \a \text{ est } <0.
+>   \end{cases}$$
+{:.theorem.rema}
+
+>   Soit $$n$$ un entier et $$R = \kk[x_1,\cdots,x_n]$$.
+>   
+>   1. On a les ordres suivants sur les monômes de degrés $$1$$.
+>
+>      | Pour $$<_{lex}$$ | $$x_1 > x_2 > \cdots > x_n$$.
+>      | Pour $$<_{revlex}$$ | $$x_1 < x_2 < \cdots < x_n$$.
+>      | Pour $$<_{deglex}$$ | $$x_1 > x_2 > \cdots > x_n$$.
+>      | Pour $$<_{degrevlex}$$ | $$x_1 > x_2 > \cdots > x_n$$.
+>      {:.pretty}
+> 
+>   2. Pour $$n = 3$$, on a les ordres suivants sur les monômes de degrés $$2$$.
+>
+>      | Pour $$<_{lex}$$ | $$x_1^2 > x_1 x_2 > x_1 x_3 > x_2^2 > x_2 x_3 > x_3^2$$.
+>      | Pour $$<_{revlex}$$ | $$x_1^2 < x_1 x_2 < x_2^2 < x_1x_3 < x_2 x_3 < x_3^2$$.
+>      | Pour $$<_{deglex}$$ | $$x_1^2 > x_1 x_2 > x_1 x_3 > x_2^2 > x_2 x_3 > x_3^2$$.
+>      | Pour $$<_{degrevlex}$$ | $$x_1^2 > x_1 x_2 > x_2^2 > x_1x_3 > x_2 x_3 > x_3^2$$.
+>      {:.pretty}
+>
+>   3. On a $$x_1^2 x_2^4 x_3^6 <_{lex} x_1^5 x_2^4 x_3^2$$ et $$x_1^2 x_2^4 x_3^6 >_{deglex} x_1^5 x_2^4 x_3^2$$.
+{:.theorem.exem}
+
+>   Les ordres $$<_{lex}$$, $$<_{revlex}$$, $$<_{deglex}$$ et $$<_{degrevlex}$$ sont admissibles.
+{:.theorem.lemm}
+
+>   Donner une preuve du lemme précédent.
+{:.theorem.exer}
+
+#### Algorithme de division des polynomes
+
+Nous suppeserons désormais que l'anneau des polynômes $$R$$ est muni d'un ordre admissible $$<$$.
+
+>   Soit $$P \in R$$ non nul. On écrit $$P = \sum_\a a_\a x^\a$$.
+> 
+>   1. Le **multidegré** de $$P$$ est $$\mdeg(P) = \max\{\beta \ \vert \ a_\a \neq 0 \}$$.
+> 
+>   Soit $$\a = \mdeg(P)$$.
+> 
+>   2. Le **monôme dominant** de $$P$$ est le monôme $$\LM(P) = x^\a$$.
+> 
+>   3. Le **coefficient dominant** de $$P$$ est le scalaire $$\LC(P) = a_\a$$.
+>   
+>   4. Le **terme dominant** de $$P$$ est le polynôme $$\LT(P) = a_\a x^\a$$.
+>   {:start="2"}
+{:.theorem.defi}
+
+> Le multidegré, le monôme dominant et le terme dominant du polynôme nul $$0$$ ne sont pas définis.
+> 
+> Il est à noter que le monôme dominant $$\LM(P)$$ et le terme dominant $$\LT(P)$$ dépendent de l'ordre $$<$$ choisi. On les note parfois $$\LM_<(P)$$ et $$\LT_<(P)$$.  
+{:.theorem.rema}
+
+>   Pour $$P = 5x_1^2 x_3 + 2 x_1 x_2 x_3^2 \in \C[x_1,x_2,x_3]$$, on a
+>
+>   $$\LT_{<_{lex}}(P) = 5x_1^2x_3 \text{ et } \LT_{<_{degrevlex}}(P) = 2 x_1 x_2 x_3^2.$$
+{:.theorem.exem}
+
+>   Soient $$P,Q \in R$$ des polynômes non nuls.
+> 
+>   1. On a $$\mdeg(PQ) = \mdeg(P) + \mdeg(Q)$$ et $$\LT(PQ) = \LT(P)\LT(Q)$$.
+> 
+>   2. Si $$P+Q \neq 0$$, on a $$\mdeg(P+Q) \leq \max(\mdeg(P),\mdeg(Q))$$.
+> 
+>   3. Si $$\mdeg(P) < \mdeg(Q)$$ alors $$\LT(P+Q) = \LT(Q)$$. 
+{:.theorem.lemm #lemm-mdeg}
+
+>   Donner une preuve du lemme précédent.
+{:.theorem.exer}
+
+Nous donnons maintenant un algorithme de division semblable à la division euclidienne.
+
+>   Soit $$F=(P_1,\cdots,P_r)$$ une famille ordonnée de polynômes non nuls.
+> 
+>   Pour tout $$P \in R$$, il existe des polynômes $$(Q_1,\cdots,Q_r,S)$$ dans $$R$$ tels que
+>
+>   $$P = P_1Q_1 + \cdots + P_rQ_r + S$$
+>
+>   et que les deux conditions suivantes soient satisfaites :
+>   
+>   1. pour tout $$i \in [1,r]$$, on a $$P_iQ_i = 0$$ ou $$\LT(P_iQ_i) \leq \LT(P)$$. 
+>   2. $$S = 0$$ ou $$S$$ est une combinaison linéaires de monômes dont aucun n'est divisible par $$\LT(P_1),\cdots,\LT(P_r)$$.
+>   
+{:.theorem.prop title="Algorithme de division"}
+
+>   Dans la proposition
+>   ci-dessus, le polynôme $$S$$ est appelé **reste de la division** de $$P$$ par $$F$$. Il est noté $$S = \overline{P}^F$$
+{:.theorem.defi}
+
+On donne une preuve sous forme d'algorithme.
+
+> **Entrée :** $$P,P_1,\cdots,P_r$$.
+> **Sortie :** $$Q_1,\cdots,Q_r,S$$.
+>
+> $$Q_i  := 0$$ pour $$i \in [1,r]$$ et $$S := 0$$.
+> $$T := P$$.
+> *(On introduit une variable locale $$T$$ qui désigne le polynôme intermédiaire des divisions à chaque étape.)*
+> Tant que $$T \neq 0$$ faire :
+> 	$$i := 1$$
+> 	division $$:=$$ faux.
+> 	Tant que $$i \leq r$$ et division $$=$$ faux faire :
+> 		Si $$\LT(P_i)$$ divise $$\LT(T)$$ alors *(On divise $$T$$ par $$P_i$$ et on arrête)*
+> 			$$Q_i := Q_i + \LT(T)/\LT(P_i)$$
+> 			$$T := T - (\LT(T)/\LT(P_i))P_i$$
+> 			division := vrai.
+> 		Sinon $$i := i+1$$ *(On essaie le polynôme suivant de $$F$$)*
+> 	Si division $$=$$ faux faire : *(si aucun élément de $$F$$ n'a marché, on regarde le coefficient suivant de $$T$$)*
+> 		$$S := S + \LT(T)$$
+> 		$$T := P - \LT(T)$$.
+> Donner $$(Q_1,\cdots,Q_r,S)$$.
+{:.theorem.algo}
+
+> Vérifions que cet algorithme fait ce qu'on lui demande.
+> 
+> 1. Commençons par montrer qu'à chaque tour de l'algorithme, on a toujours l'égalité :
+>
+>    $$P = Q_1P_1 + \cdots + Q_r P_r + S + T.$$
+> 
+>    On a deux cas à considerer. Si $$\LT(P_i)$$ divise $$\LT(T)$$ alors on a l'égalité $$P_iQ_i + T = P_i(Q_i + \LT(T)/LT(P_i) + T - (\LT(T)/\LT(P_i))P_i$$. Les autres termes de l'égalité restant inchangés, le résultat en résulte. Si on a aucune divisibilité et que la variable "division" a encore la valeur "faux" alors on a l'égalité : $$S + T = (S + \LT(T)) + (T - \LT(T))$$ les autres termes sont inchangés.
+> 
+> 2. On voit donc qu'en fin d'algorithme, comme $$T=0$$, on aura l'égalité voulue.
+> 
+> 3. Montrons maintenant que l'algorithme s'arrête effectivement. Pour celà il suffit de montrer que le multi-degré de la variable locale $$T$$ diminue à chaque étape. On a les deux même cas à considerer. Si $$\LT(P_i)$$ divise $$\LT(T)$$ alors $$T$$ devient $$T - (\LT(T)/\LT(P_i))P_i$$ et on a éliminé son terme dominant. Si on a aucune divisibilité et que la variable "division" a encore la valeur "faux" alors $$T$$ devient $$T - \LT(T)$$ et le multi-degré a encore diminué.
+> 
+> 4. La condition sur $$S$$ est claire : on ne change $$S$$ que lorsque la variable "division" a la valeur "faux" c'est-à-dire qu'aucun des $$\LT(P_i)$$ ne divise $$\LT(T)$$ et on ajour alors $$\LT(T)$$ a $$S$$.
+> 
+> 5. Il reste à montrer les conditions sur $$P_iQ_i$$. Mais on a vu que le multi-degré de $$T$$ est décroissant au cours de l'algorithme avec $$T = P$$ en début d'algorithme. On a donc toujours $$\LT(T) \leq \LT(P)$$ Comme les monômes apparaissant dans $$Q_i$$ sont de la forme $$\LT(T)/\LT(P_i)$$, si $$P_iQ_i$$ est non nul, on a toujours $$\LT(P_iQ_i) \leq \LT(T) \leq \LT(P)$$.
+{:.proof}
+
+> Soit $$<$$ l'ordre lexicographique et soient $$P_1 = x_1x_2 + 1$$ et $$P_2 = x_2^2 -1$$. Soit enfin $$P = x_1x_2^2 - x_1$$.
+> 
+> 1. Pour $$F = (P_1,P_2)$$, l'algorithme de division donne le résultat suivant:
+>
+>    $$P = x_1 x_2^2 - x_1 = x_2(x_1x_2 + 1) + 0 \cdot (x_2^2 - 1) + (-x_1 - x_2).$$
+> 
+> 2. Pour $$F = (P_2,P_1)$$, l'algorithme de division donne le résultat suivant:
+>
+>    $$P = x_1 x_2^2 - x_1 = x_1(x_2^2 - 1) + 0 \cdot (x_1x_2 + 1) + 0.$$
+> 
+> En particulier, on voit deux choses :
+>
+> -  L'algorithme de division depend de l'ordre de la famille.
+> -  La condition $$P^F = 0$$ est une condition suffisante pour l'appartenance $$P \in (P_1,\cdots,P_r)$$ mais non nécessaire.
+>
+> Nous verrons que les bases de Gröbner fournissent une solution à ces deux problèmes : la division ne depend plus de l'ordre et l'annulation du reste est une condition nécessaire et suffisante à l'appartenance à un idéal.
+{:.theorem.exem}
+
+> Soit $$<$$ l'ordre lexicographique et soit $$P = x_1^2x_2 + x_1x_2^2 + x_2^2$$.
+> 
+> 1. Soit $$F = (P_1,P_2)$$ avec $$P_1 = x_1x_2 - 1$$ et $$P_2 = x_2^2 - 1$$. L'algorithme de division nous donne :
+>
+>    $$\begin{aligned}
+>     P & = x_1^2x_2 + x_1x_2^2 + x_2^2\\
+>     & = x_1(x_1x_2 - 1) + x_1x_2^2 + x_1 + x_2^2\\
+>     & = x_1(x_1x-2 -1) + x_2(x_1x_2 - 1) + x_1 + x_2^2 + x_2\\
+>     & = (x_1 + x_2)(x_1x-2 -1) + 1 \cdot (x_2^2 - 1) + x_1 + x_2 +1.
+>    \end{aligned}$$
+> 
+> 2. Soit $$F = (P_1,P_2)$$ avec $$P_1 = x_2^2 - 1$$ et $$P_2 = x_1x_2 - 1$$. L'algorithme de division nous donne :
+>
+>    $$P = x_1^2x_2 + x_1x_2^2 + x_2^2 = (x_1 + 1)(x_2^2 - 1) + x_1(x_1x_2 - 1) + 2x_1 + 1.$$
+{:.theorem.exem}
+
+>  Calculer le reste de la division du polynôme $$P = x_1^7x_2^2 + x_1^3x_2^2 - x_2 + 1$$ dans les cas suivants.
+>
+>  1. Avec l'ordre $$>_{deglex}$$ et la famille $$F = (x_1x_2^2 - x_1 , x_1 - x_2^3)$$.
+>
+>  2. Avec l'ordre $$>_{lex}$$ et la famille $$F = (x_1x_2^2 - x_1 , x_1 - x_2^3)$$.
+>
+>  3. Avec l'ordre $$>_{deglex}$$ et la famille $$F = (x_1 - x_2^3 , x_1x_2^2 - x_1)$$. 
+>
+>  4. Avec l'ordre $$>_{lex}$$ et la famille $$F = (x_1 - x_2^3 , x_1x_2^2 - x_1)$$.
+{:.theorem.exer}
+
+### Théorème de Hilbert
+
+Fixons un ordre admissible $$<$$.
+
+#### Idéaux monomiaux
+
+Les idéaux monomiaux sont une classe d'idéaux pour lesquels les problèmes de division, appartenance, existence d'une base, etc. sont très facile à résoudre.
+
+>   Un idéal $$I$$ de $$R$$ est dit **monomial** s'il existe un sous-ensemble $$A \subset \N^n$$ d'exposants (eventuellement infini) tel que $$I = (x^\a \ \vert \ \a \in A )$$.
+{:.theorem.defi}
+
+Le premier problè auquel on se consacre est le problème d'appartenance : pour $$I$$ un idéal monomial et $$P \in R$$, à quelle condition a-t-on $$P \in I$$ ?
+
+On commence par le cas où $$P$$ est un monôme.
+
+>   Soient $$I = (x^\a \ \vert \ \a \in A )$$ un idéal monômial et $$x^\beta$$ un monôme. On a alors l'équivalence ($$x^\beta \in I \Leftrightarrow$$ il existe $$\a \in A$$ tel que $$x^\a$$ divise $$x^\beta$$).
+{:.theorem.lemm #lemm-app-mon}
+
+>   L'implication de droite à gauche est claire. Réciproquement, on écrit $$x^\beta = \sum_{\a \in A} P_\a x^\a$$ avec $$P_\a \in R$$ et $$P_\a = 0$$ sauf pour un nombre fini d'entre eux. En développant les $$P_\a x^\a$$ en monômes, on voit que $$x^\beta$$ doit apparaître dans l'un d'entre eux au moins. Il existe donc un $$x^\a$$ qui divise $$x^\beta$$.
+{:.proof}
+
+Le cas général en découle.
+
+>   Soit $$I = (x^\a \ \vert \ \a \in A )$$ un idéal monômial et soit $$P \in R$$. On a équivalence entre les propositions suivantes :
+>
+>   1. $$P \in I$$.
+>   2. Tous les monômes de $$P$$ appartiennent à $$I$$.
+>   3. $$P$$ est une combinaison linéaire de monômes de $$I$$.
+{:.theorem.lemm}
+
+>   Les implications (2. $$\Rightarrow$$ 3.) et (3. $$\Rightarrow$$ 1.) sont claires. On montre (1. $$\Rightarrow$$ 2.). On procède par récurrence sur le nombre de monômes de $$P$$. Si $$P$$ est un monôme, le résultat est clair. Sinon, on écrit $$\LT(P) = c x^\beta$$ et $$P = c x^\beta + (P - \LT(P))$$. On écrit $$P = \sum_{\a \in A} P_\a x^\a$$ avec $$P_\a \in R$$ et $$P_\a = 0$$ sauf pour un nombre fini d'entre eux. En développant les $$P_\a x^\a$$ en monômes, on voit que $$x^\beta$$ doit apparaître dans l'un d'entre eux au moins. Il existe donc un $$x^\a$$ qui divise $$x^\beta$$ donc $$\LT(P) \in I$$. On en déduit $$P - LT(P) \in I$$ et le résultat en découle par récurrence.
+{:.proof}
+
+On obtient un critère d'égalité pour les idéaux monomiaux.
+
+> Deux idéaux monomiaux sont égaux si et seulement si ils contiennent les même monomes.
+{:.theorem.coro}
+
+On en déduit le théorème de Hilbert pour les idéaux monomiaux.
+
+>   Soit $$I = (x^\a \ \vert \ \a \in A )$$ un idéal monomial. Alors il existe un sous-ensemble fini $$\a_1,\cdots,\a_r \in A$$ tel que $$I = (x^{\a_1}, \cdots , x^{\a_r})$$. En particulier $$I$$ est de type fini.
+{:.theorem.theo title="Lemme de Dickson"}
+
+>   On procède par récurrence sur le nombre de variables $$n$$. Si $$n = 1$$, alors $$I = (x_1^\a \ \vert \ \a \in A)$$. On pose $$\beta = \min\{\a \in A\}$$ (il est à noter que dans ce cas $$A$$ est un ensemble d'entiers). Pour tout $$\a \in A$$, on a $$\beta \leq \a$$ donc $$x_1^\beta$$ divise $$x_1^\a$$ et donc $$x_1^\a \in (x_1^\beta)$$. On en déduit $$I = (x_1^\beta)$$.
+> 
+>   Supposons le résultat prouvé pour $$n-1$$ variables. On écrit les monômes en les variables $$x_1,\cdots,x_{n-1},x_n$$ sous la forme $$x^\a ym$$ où $$x^\a$$ est un monôme en les $$n-1$$ première variables $$x_1,\cdots,x_{n-1}$$ et $$\a \in \N^{n-1}$$. On considère l'idéal $$J \subset \kk[x_1,\cdots,x_{n-1}]$$ suivant (obtenu par "projection" de $$I$$ sur $$\kk[x_1,\cdots,x_{n-1}]$$) :
+>
+>   $$J = (x^\a \ \vert \ \text{il existe } m \text{ tel que } x^\a y^m \in I).$$
+>
+>   Il est clair que $$J$$ est un idéal monomial. Par hypothèse de récurrence, il existe des exposants $$\a_1,\cdots,\a_r$$ de $$\N^{n-1}$$ tels que $$J = (x^{\a_1},\cdots,x^{\a_r})$$.
+> 
+>   Pour chaque $$i \in [1,r]$$, il existe, par définition de $$J$$,  un entier $$m_i \in \N$$ tel que $$x^{\a_i}y^{m_i} \in I$$. On pose $$m_0 = \max\{m_1,\cdots,m_r\}$$. Maintenant pour chaque $$k \in [0,m_0-1]$$, on considère l'idéal $$J_k \subset \kk[x_1,\cdots,x_{n-1}]$$ défini par (la "section" de $$I$$ engendré par les monômes où $$y$$ apparaît à la puissance $$k$$) :
+>
+>   $$J_k = (x^\a \ \vert \ x^\a y^k \in I ).$$
+>
+>   Il est clair que $$J_k$$ est un idéal monomial pour tout $$k \in [0,m_0-1]$$. Par hypothèse de récurrence, il existe des exposants $$\a_{k,1},\cdots,\a_{k,r_k}$$ de $$\N^{n-1}$$ tels que $$J_k = (x^{\a_{k,1}},\cdots,x^{\a_{k,r_k}})$$. Nous allons maintenant montrer l'égalité :
+>
+>   $$I = (x^{\a_i}y^{m_0} , x^{\a_{k,j}}y^k \ \vert \ i \in [1,r] , k \in [0,m_0-1] , j \in [1,r_k] ).$$
+>
+>   On commence par montrer que les monômes de droites sont dans $$I$$. Pour $$i \in [1,r]$$, on a $$x^{\a_i}y^{m_i} \in I$$. Et comme $$m_0 \geq m_i$$, on a en déduit $$x^{\a_i}y^{m_0} = x^{\a_i}y^{m_i}y^{m_0-m-i} \in I$$. Pour $$k \in [0,m_0-1]$$ et $$j \in [1,r_k]$$, on a $$x^{\a_{k,j}} \in J_k$$ et par définition $$x^{\a_{k,j}} y^k \in I$$.
+> 
+>   Réciproquement, montrons que tout monôme de $$I$$ est divisible par l'un des monômes de droite. Soit donc $$x^\a y^\ell \in I$$. De deux choses l'une : soit $$\ell \geq m_0$$, soit $$\ell \in [0,m_0-1]$$. Dans le premier cas, on a par définition $$x^\a \in J$$ donc il existe un $$i \in [1,r]$$ tel que $$x^{\a_i}$$ divise $$x^\a$$. Par ailleurs comme $$\ell \geq m_0$$, le monôme $$y^{m_0}$$ divise $$y^\ell$$. On en déduit que $$x^{\a_i}y^{m_0}$$ divise $$x^\a y^\ell$$. Dans le second cas, on a $$\ell \in [0,m_0-1]$$ et $$x^\a \in J_\ell$$. En particulier, il existe un $$j \in [1,r_\ell]$$ tel que $$x^{\a_{\ell,j}}$$ divise $$x^\a$$. On en déduit que $$x^{\a_{\ell,j}}y^\ell$$ divise $$x^\a y^\ell$$.
+> 
+>   On a donc montré que $$I$$ est de type fini $$I = (x^{\beta_1},\cdots,x^{\beta_r})$$. Il reste à vérifier que l'on peut prendre pour générateurs des éléments de $$A$$. Mais pour tout $$i$$, on a $$x^{\beta_i} \in I$$ donc par le [Lemme](#lemm-app-mon){:.crossref}, il existe $$\a_i \in A$$ tel que $$x^{\a_i}$$ divise $$x^{\beta_i}$$. On peut donc remplacer $$x^{\beta_i}$$ par $$x^{\a_i}$$ ce qui prouve le résultat.
+{:.proof}
+
+> Voici quelques exemples de base obtenues à partir de la méthode développée dans la preuve ci-dessus.
+> 
+> 1. Soit $$I = (x_1^3x_2^3, x_1^4x_2^2,x_1^2x_2^5)$$. On applique la méthode du théorème précédent. On a tout d'abord $$J = (x_1^3,x_1^4,x_1^2) = (x_1^2)$$. On a donc $$m_1 = 5 = m_0$$. On a ensuite
+>
+>    $$J_0 = J_1 = (0), J_2 = (x_1^4), J_3 = (x_1^3) \text{ et } J_4 = (0).$$
+>
+>    On en déduit une base pour $$I$$ :
+>
+>    $$I = (x_1^2x_2^5,x_1^4x_2^2,x_1^3x_2^3).$$
+> 
+> 2. Soit $$I = (x_1^4x_2^2, x_1^3x_2^4,x_1^2x_2^5)$$. On applique la méthode du théorème précédent. On a tout d'abord $$J = (x_1^4,x_1^3,x_1^2) = (x_1^2)$$. On a donc $$m_1 = 5 = m_0$$. On a ensuite
+>
+>    $$J_0 = J_1 = (0), J_2 = (x_1^4) = J_3 \text{ et } J_4 = (x_1^3).$$
+>
+>    On en déduit une base pour $$I$$ :
+>
+>    $$I = (x_1^2x_2^5,x_1^4x_2^2,x_1^4x_2^3,x_1^3x_2^4).$$
+{:.theorem.exem}
+
+> Soit $$<$$ un ordre sur $$\N^n$$ (ou sue les monômes de $$R$$) satifaisant les deux premières conditions pour être un ordre admissible (c'est-à-dire que l'ordre est total et compatible avec la multiplication). Alors $$<$$ est admissible si et seulement si $$x^\a \geq x^0$$ pour tout $$\a \in \N^n$$.
+{:.theorem.coro}
+
+>   Supposons que l'ordre est admissible et soit $$x^\a$$ le plus petit monôme pour l'ordre $$<$$. On doit montrer que $$\a = 0$$. Si ce n'est pas le cas, on a $$x^\a < x^0$$ et en multipliant par $$x^\a$$ on obtient $$x^{2\a} < x^\a$$ contredisant la minimalité de $$x^\a$$.
+> 
+>   Réciproquement, il nous faut montrer que tout ensemble non vide de monômes a un élément minimal. Soit $$\{x^\a \ \vert \ \a \in A \}$$ un tel ensemble de monômes avec $$A$$ non vide. On pose $$I = (x^\a \ \vert \ \a \in A)$$. Par le lemme de Dickson, il existe des éléments $$\a_1,\cdots,\a_r \in A$$ tels que $$I = (x^{\a_1},\cdots,x^{\a_r})$$. Quitte à réordonner les termes, on peut supposer que l'on a $$x^{\a_1} < \cdots < x^{\a_r}$$. Nous allons montrer que $$x^{\a_1}$$ est le minimum de $$\{x^\a \ \vert \ \a \in A \}$$. Soit donc $$x^\a$$ avec $$\a \in A$$ un élément de cet ensemble. On a $$x^\a \in I$$ et donc il existe un $$i$$ tel que $$x^{\a_i}$$ divise $$x^\a$$. On a donc $$\a = \a_i + \beta$$ avec $$\beta \in \N^n$$. Par hypothèse, on a $$\beta \geq 0$$ et donc $$\a = \a_i + \beta \geq \a_i \geq \a_1$$ ce qui prouve le résultat.
+{:.proof}
+
+#### Le théorème de Hilbert
+
+Nous allons maintenant montrer le théorème de la base de Hilbert de manière effective. Un outil essentiel et qui servira également plus tard est l'idéal des termes dominants (encore une fois on a choisi un ordre admissible $$<$$).
+
+> Soit $$I \subset R$$ un idéal.
+> 
+> 1. L'**ensemble des termes dominants** $$\LT(I)$$ de $$I$$ est défini par :
+>
+>    $$\LT(I) = \{ \LT(P) \ \vert \ P \in I \}.$$
+> 
+> 2. L'**idéal des termes dominants** de $$I$$ est l'idéal $$(\LT(I))$$ engendré par $$\LT(I)$$.
+{:.theorem.defi}
+
+>   L'idéal $$(\LT(I))$$ est monomial (on peut remplacer $$\LT(P)$$ par $$\LM(P)$$ dans la définition).
+{:.theorem.rema}
+
+> Soit $$I \subset \kk[x_1,x_2]$$ et $$<$$ l'odre lexicographique.
+> 
+> 1. Pour $$I = (x_1+x_2)$$, on a $$(LT(I)) = (x_1)$$. On remarque en particulier que l'on a $$(\LT(I)) \nsubseteq I$$ et $$I \nsubseteq (\LT(I))$$.
+> 
+> 2. Pour $$I = (P_1,P_2)$$ avec $$P_1 = x_1^3 - 2 x_1x_2$$ et $$P_2 = x_1^2x_2 - 2 x_2^2 + x_1$$, remarquons que l'on a pas $$(\LT(I)) = (\LT(P_1),\LT(P_2))$$. En effet, $$(\LT(P_1),\LT(P_2)) = (x_1^3,x_1^2x_2)$$. Cependant, on a
+>
+>    $$x_1P_2 - x_2P_1 = x_1(x_1^2x_2 - 2 x_2^2 + x_1) - x_2(x_1^3 - 2x_1x_2) = x_1^2$$
+>
+>    et donc $$x_1^2 \in I$$. En particulier $$x_1^2 = \LT(x_1^2) \in \LT(I)$$ mais $$x_1^2 \notin (\LT(P_1),\LT(P_2))$$. Dans cet exemple, on a donc une inclusion stricte $$(\LT(P_1),\LT(P_2)) \subsetneq (\LT(I))$$.
+{:.theorem.exem #exem-ideal-LT}
+
+>   Soit $$I\subset R $$ un idéal. Alors il existe $$P_1,\cdots,P_r$$ dans $$I$$ tels que $$(\LT(I)) = (\LT(P_1),\cdots,\LT(P_r))$$.
+{:.theorem.prop #prop-base-LT}
+
+> L'idéal $$(\LT(I))$$ est monomial engendré par la famille $$\{\LT(P) \ \vert \ P \in I\}$$. Le lemme de Dickson nous donne le résultat.
+{:.proof}
+
+> Tout idéal $$I \subset R$$ est de type fini.
+{:.theorem.theo title="Théorème de la base de Hilbert"}
+
+>   On peut supposer $$I \neq (0)$$. On écrit alors $$(\LT(I)) = (\LT(P_1),\cdots,\LT(P_r))$$ avec $$P_1,\cdots,P_r \in I$$. Nous suffit de montrer que l'on a l'égalité : $$I = (P_1,\cdots,P_r)$$.
+> 
+>   L'inclusion $$(P_1,\cdots,P_r) \subset I$$ est claire. Soit donc $$P \in I$$. En utilisant l'algorithme de division, on écrit
+>
+>   $$P = P_1Q_1 + \cdots + P_rQ_r + S.$$
+>
+> Si $$S = 0$$, on a terminé. Supposons donc $$S \neq 0$$. On a alors par construction que pour tout $$i \in [1,r]$$, le polynôme $$\LT(P_i)$$ ne divise aucun monôme de $$S$$. Mais on a $$S = P - Q_1P_1 - \cdots - P_rQ_r \in I$$. En particulier $$\LT(S) \in (\LT(I)) = (\LT(P_1),\cdots,\LT(P_r))$$ et donc l'un des $$\LT(P_i)$$ divise $$\LT(S)$$. Une contradiction.
+{:.proof}
+
+On en déduit le corollaire habituel qui affirme que $$R$$ est noethérien.
+
+> Toute suite croissante d'idéaux de $$R$$ est stationnaire.
+{:.theorem.coro}
+
+> Soit $$I_1 \subset I_2 \cdots \subset I_n \subset \cdots$$ une suite croissante d'idéaux. On voit alors que $$I = \cup_n I_n$$ est un idéal. Il existe donc $$P_1,\cdots,P_r \in I$$ tels que $$I = (P_1,\cdots,P_r)$$. Pour chaque $$i$$, il existe $$n_i$$ tel que $$P_i \in I_{n_i}$$. Soit $$N = \max\{n_i \ \vert \ i \in [1,r]\}$$. On a alors $$I = (P_1 \cdots P_r) \subset I_N \subset I$$ et donc $$I = I_N$$. La suite est stationnaire.
+{:.proof}
+
+> Soit $$I_1 \subset I_2 \cdots \subset I_n \subset \cdots$$ une suite croissante d'idéaux, montrer que la réunion $$I = \cup_n I_n$$ est un idéal.
+{:.theorem.exer}
+
+### Bases de Gröbner
+
+#### Définition
+
+La base construite dans la preuve précédente du théorème de Hilbert a des propriétés très spéciales. On fixe toujours un ordre admissible $$<$$.
+
+>   Soit $$I \subset R$$ un idéal. Un sous-ensemble fini $$\{P_1,\cdots,P_r\}$$ de $$I$$ est appelé **base de Gröbner** de $$I$$ si on a
+>
+>   $$(\LT(I)) = (\LT(P_1),\cdots,\LT(P_r)).$$
+{:.theorem.defi}
+
+>   Soit $$I \subset R$$ un idéal.
+>
+>   1. [L'exemple](#exem-ideal-LT){:.crossref}.2 avec $$I = (P_1,P_2)$$ mais $$(\LT(P_1),\LT(P_2)) \subsetneq (\LT(I))$$ où $$P_1 = x_1^3 - 2 x_1x_2$$ et $$P_2 = x_1^2x_2 - 2 x_2^2 + x_1$$, montre que tout sous-ensemble générateur de $$I$$ n'est pas nécessairement une base de Gröbner de $$I$$.
+> 
+> 2. Soit $$n = 3$$, $$\kk = \R$$ et $$I = (x_1 + x_3,x_2 - x_3)$$. Nous allons montrer que $$(x_1 + x_3,x_2 - x_3)$$ est une base de Gröbner de $$I$$ pour l'ordre lexicographique.
+> 
+> Nous devons donc montrer l'égalité $$(\LT(I)) = (\LT(x_1 +x_3),\LT(x_2-x_3)) = (x_1,x_2)$$. On a toujours l'inclusion $$(x_1,x_2) \subset (\LT(I))$$.
+> 
+> Soit donc $$P \in I$$ non nul. Il existe $$P_1,P_2 \in R$$ tels que $$P = (x_1+x_3)P_1 + (x_2-x_3)P_2$$. Si le monôme $$\LM(P) = x_1^{\a_1}x_2^{\a_2}x_3^{\a_3}$$ n'est pas dans l'idéal $$(x_1,x_2)$$, alors $$\LM(P) = x_3^{\a_3}$$. Mais alors par définition de l'ordre lexicographique, on a $$P \in \kk[x_3]$$. Mais $$P$$ s'annule sur les points $$(t,-t,t)$$ pour tout $$t \in R$$. Comme $$P$$ est un polynôme en la seule variable $$x_3$$ qui s'annule pour tous les réels, $$P$$ doit être le polynôme nul. Une contradiction.
+{:.theorem.exem #exem-grob}
+
+>   Tout idéal $$I \subset R$$ admet une base de Gröbner et pour toute base de Gröbner $$(P_1,\cdots,P_r)$$, on a $$I = (P_1,\cdots,P_r)$$.
+{:.theorem.prop}
+
+>   L'existence d'une base de Gröbner est donnée par la [Proposition](#prop-base-LT){:.crossref} : on choisit $$P_1,\cdots,P_r \in I$$ tels que $$(\LT(I)) = (\LT(P_1),\cdots,\LT(P_r))$$. La preuve du théorème de Hilbert nous donne une preuve de la dernière assertion car on a alors aussi $$I = (P_1,\cdots,P_r)$$.
+{:.proof}
+
+Nous allons maintenant étudier les propriétés des bases de Gröbner plus en détails. Nous verrons ainsi qu'elles peuvent être utilisées pour bien plus qu'une simple preuve du théorème de Hilbert. Nous donnerons également de algorihmes pour construire des bases de Gröbner. 
+
+Nous commençons par montrer que les bases de Gröbner sont bien adaptées à l'algorithme de division.
+
+>   Soit $$G = (P_1,\cdots,P_r)$$ une base de Gröbner pour un idéal $$I \subset R$$ et soit $$P \in R$$ un polynôme. Alors il existe un unique polynôme $$S$$ tel que
+>
+>   1. il existe $$Q \in I$$ tel que $$P = Q + S$$ ;
+>   2. $$S = 0$$ ou $$S$$ est une combinaison linéaire de monômes dont aucun n'est divisible par $$\LT(P_1),\cdots,\LT(P_r)$$.
+> 
+> En particulier, le reste de la division de $$P$$ par $$G$$ est indépendant de l'ordre de la base. 
+{:.theorem.prop}
+
+>   L'algorithme de division nous donne des polynômes $$Q_1,\cdots,Q_r,S$$ tels que $$P = Q_1P_1 + \cdots + Q_rP_r + S$$ et tels que $$S$$ vérifie la condition 2. ci-dessus. En posant $$Q = Q_1P_1 + \cdots + Q_rP_r$$, on a la condition 1. et l'existence.
+> 
+>   Montrons maintenant l'unicité. Soient donc $$P = Q + S = Q' + S'$$ deux décompositions vérifiant les conditions 1; et 2. ci-dessus. On a $$S - S' = Q' - Q \in I$$. Si $$S \neq S'$$ alors $$S - S' \neq 0$$ et $$\LT(S-S') \in \LT(I) = (\LT(P_1),\cdots,\LT(P_r))$$. Il existe donc un indice $$i$$ tel que $$\LT(P_i)$$ divise $$\LT(S-S')$$. C'est impossible car aucun monôme de $$S$$ ni de $$S'$$ n'est divisible par $$\LT(P_i)$$. On a donc $$S = S'$$ et $$Q = Q'$$.
+> 
+>   De la dernière assertion découle directement de l'unicité de $$S$$.
+{:.proof}
+
+On en déduit un critère effectif (au moins si on a une base de Gröbner) d'appartenance à un idéal.
+
+> Si $$G$$ est une base de Gröbner de $$I$$ et $$P \in R$$. Alors $$P \in I$$ si et seulement si le reste $$\overline{P}^{G}$$ de la division de $$P$$ par $$G$$ est nul.
+{:.theorem.coro}
+
+>   Soit $$G = (P_1,\cdots,P_r)$$ et $$I = (P_1,\cdots,P_r)$$.
+>
+>   On a montré au corollaire précédent que si $$G$$ est une base de Gröbner d'un idéal $$I$$, alors on a l'équivalence $$P \in I$$ si et seulement si $$\overline{P}^{G} = 0$$.
+> 
+>   Montrer que la réciproque est vraie, à savoir que si pour tout polynôme $$P \in R$$ on a l'équivalence $$P \in I$$ si et seulement si $$\overline{P}^{G} = 0$$, alors $$G$$ est une base de Gröbner de $$I$$.
+{:.theorem.exer}
+ 
+
+### Critère de Buchberger
+
+[L'exemple](#exem-grob){:.crossref}.2 montre qu'il n'est pas simple en général de prouver qu'une famille d'éléments est une base de Gröbner. Nous allons introduire dans ce paragraphe une méthode pour décider si une famille est une base de Gröbner.
+
+Pour ce faire, on introduit une nouvelle opération sur les polynômes.
+ 
+>   Soient $$P,Q \in R$$ des polynômes non nuls. Soit $$\LT(P) = a x^\a$$ et $$\LT(Q) = b x^\beta$$.
+> 
+>   1. Le plus petit commun multiple de $$\LT(P)$$ et $$\LT(Q)$$ est le monôme $$x^\gamma$$ avec $$\gamma = (\gamma_1,\cdots,\gamma_n)$$ défini par $$\gamma_i = \max(\a_i,\beta_i$$ pour tout $$i \in [1,n]$$.
+> 
+>   2. Le **$$S$$-polynôme** $$S(P,Q)$$ de $$P$$ et $$Q$$ est défini par
+>
+>   $$S(P,Q) = (x^\gamma/\LT(P))P - (x^\gamma/\LT(Q))Q.$$
+{:.theorem.defi}
+
+> Le principe du $$S$$-polynôme est de produire à partir d'une combinaison linéaire de $$P$$ et $$Q$$ un polynôme où l'on a éliminé les termes dominants de $$P$$ et $$Q$$ et donc avec un "nouveau terme dominant".
+{:.theorem.rema}
+
+>   Reprenons l'idéal de [l'exemple](#exem-ideal-LT){:.crossref}.2. On a $$I = (P_1,P_2)$$ avec $$P_1 = x_1^3 - 2 x_1x_2$$ et $$P_2 = x_1^2x_2 - 2 x_2^2 + x_1$$ et on prend l'ordre lexicographique. On a alors pour plus petit commun multiple $$x^\gamma = x_1^3x_2$$ et
+>
+>   $$S(P_1,P_2) = x_2P_1 - x_1P_2 = x_2(x_1^3 - 2x_1x_2) - x_1(x_1^2x_2 - 2 x_2^2 + x_1)  = - x_1^2.$$
+>
+>   C'est en utilisant l'opposé de cet élément qu'on a montré que $$(P_1,P_2)$$ n'est pas une base de Gröbner de $$I$$ car on a $$x_1^2 \in I$$, en particulier $$x_1^2 = \LT(x_1^2) \in \LT(I)$$ mais $$x_1^2 \notin (\LT(P_1),\LT(P_2))$$.
+{:.theorem.exem}
+
+> On a toujours $$S(P,Q) \in (P,Q)$$ et $$\overline{S(P,Q)}^{\{P,Q\}} \in (P,Q)$$. Cette opération permet donc de construire de nouveaux éléments de l'idéal avec de nouveaux termes dominants ce qui permettra de completer la famille en une base de Gröbner.
+{:.theorem.rema}
+
+> Soit $$R = \Q[x_1,x_2]$$ et $$<$$ l'ordre lexicographique.
+> 
+> 1. Soient $$P = x_1^5x_2 + x_1^2 + 1$$ et $$Q = 2x_1^3x_2^2 + x_1x_2$$. On a $$x^\gamma = x_1^5x_2^2$$ et
+>
+>    $$S(P,Q) = x_2P - 1/2 x_1^2Q = x_1^2x_2 + x_2 - 1/2 x_1^3x_2.$$
+> 
+> 2. Soient $$P = x_1^3x_2 - 2x_1^2x_2^2 + x$$ et $$Q = 3x_1^4 - x_2$$. On a $$x^\gamma = x_1^4x_2$$ et
+>
+>    $$S(P,Q)= x_1P - 1/3 x_2Q = - 2 x_1^3 x_2^2 + x_1^2 + 1/3 x_2^2.$$
+>
+>    On en déduit
+>
+>    $$\overline{S(P,Q)}^{\{P,Q\}} = - 4x_1^2x_2^3 + x_1^2 + 2x_1x_2 + 1/3 x_2^2.$$
+>
+>    En particulier $$\LT(\overline{S(P,Q)}^{\{P,Q\}}) =  4 x_1^2x_2^3 \in \LT(P,Q)$$
+>  n'est pas divisible par $$\LT(P)$$ ni par $$\LT(Q)$$. Donc $$\LT(\overline{S(P,Q)}^{\{P,Q\}}) \notin (\LT(P),\LT(Q))$$.
+{:.theorem.exem}
+
+>   Soit $$P = c_1P_1 + \cdots + c_rP_r$$ avec $$c_i \in \kk$$ et $$P_i \in R$$ tels que $$\mdeg(P_i) = \gamma$$ pour tout $$i \in [1,r]$$.
+> 
+>   Si $$\mdeg(P) < \gamma$$, alors $$P$$ est une combinaison linéaire à coefficients dans $$\kk$$ des $$S$$-polynômes $$(S(P_i,P_j))_{i,j \in [1,r]}$$ et on a $$S(P_i,P_j)  = 0$$ ou $$\mdeg(S(P_i,P_j)) < \gamma$$ pour tout $$i,j \in [1,r]$$.
+{:.theorem.lemm #lemm-prep-buch}
+
+>   Soit $$d_i = \LC(P_i)$$ le coefficient dominant de $$P_i$$ de telle sorte que l'on a $$\LT(P_i) = d_i x^\beta$$ pour tout $$i \in [1,r]$$. Remarquons que par hypothèse on a $$\sum_i c_i d_i = 0$$.
+> 
+>   On commence par calculer $$S(P_i,P_j)$$. Le plus grand commun multiple des termes dominants est $$x^\gamma = x^\beta$$ et on obtient
+>
+>   $$S(P_i,P_j) = (x^\beta/\LT(P_i))P_i - (x^\beta/\LT(P_j))P_j = P_i/d_i - P_j/d_j.$$
+>
+> On pose $$Q_i = P_i/d_i$$ de telle sorte que $$\LC(Q_i) = 1$$, $$\LT(Q_i) = x^\beta$$,  $$P = \sum_{i} c_id_i Q_i$$ et $$S(P_i,P_j) = Q_i-Q_j$$. On écrit
+>
+> $$\begin{aligned}
+>   P &= c_1d_1(Q_1-Q_2)\\
+>   & + (c_1d_1+c_2d_2)(Q_2-Q_3)\\
+>   & + \cdots\\
+>   & + (c_1d_1 + \cdots + c_{r-1}d_{r-1})(Q_{r-1}-Q_r)\\
+>   & + (c_1d_1 + \cdots + c_{r}d_{r})Q_r.\\
+> \end{aligned}$$
+>
+> Le dernier terme s'annule et $$Q_i - Q_{i+1} = S(P_i,P_{i+1})$$. On obtient donc
+>
+> $$P = c_1d_1 S(P_1,P_2) + \cdots + (c_1d_1 + \cdots + c_{r-1}d_{r-1}) S(P_{r-1},P_r).$$
+>
+> Le résultat en découle. Pour montrer la dernière assertion, il suffit de remarquer que $$\LT(Q_i) = x^\beta = \LT(Q_j)$$ donc si $$S(P_i,P_j) = Q_i - Q_j$$ est non nul, son terme dominant est strictement inférieur à $$x^\beta$$.
+{:.proof}
+
+Nous pouvons maintenant donner un critère pour qu'une famille de polyômes forme une base de Gröbner.
+
+> Soit $$I = (P_1,\cdots,P_r)$$ un idéal. Alors $$G = \{P_1,\cdots,P_r\}$$ est une base de Gröbner pour $$I$$ si et seulement si $$\overline{S(P_i,P_j)}^{G} = 0$$ pour toute paire $$(i,j)$$ d'éléments de $$[1,r]$$ avec $$i \neq j$$.
+{:.theorem.theo title="Critère de Buchberger"}
+
+>   Si $$G$$ est une base de Gröbner alors $$S(P_i,P_i) \in (P_i,P_j) \subset I$$ etxs $$\overline{S(P_i,P_j)}^{G} = 0$$.
+> 
+>   Réciproquement, on suppose que l'on a $$\overline{S(P_i,P_j)}^{G} = 0$$ pour toute paire $$(i,j)$$ d'éléments de $$[1,r]$$ avec $$i \neq j$$. Soit $$P \in I$$ non nul, on veut montrer $$\LT(P) \in (\LT(P_1),\cdots,\LT(P_r))$$. Comme $$P \in I$$, on peut écrire
+>
+>   $$P = P_1Q_1 + \cdots = P_r Q_r$$
+>
+>   avec $$Q_i \in R$$. On pose $$m_i = \mdeg(P_iQ_i)$$ et $$\beta = \max\{ \mdeg(P_iQ_i) \ \vert \ i \in [1,r] \}$$.
+>   D'après le [Lemme](#lemm-mdeg){:.crossref}, on a $$\mdeg(P) \leq \beta$$.
+> 
+>   On considère maintenant toutes les écritures $$P = P_1Q_1 + \cdots + P_rQ_r$$ possibles et pour chacune de ces écritures le multi-degré $$\beta = \max\{ \mdeg(P_iQ_i) \ \vert \ i \in [1,r] \}$$. Comme l'ordre $$<$$ est admissible, l'ensemble de ces multi-degrés a un minimum et on choisit $$Q_1,\cdots,Q_r$$ pour lesquels ce minimum est atteind. On cherche à montrer que $$\mdeg(P) = \beta$$.
+> 
+>   En effet, si $$\mdeg(P) = \beta$$, il existe alors $$i \in [1,r]$$ tel que $$\mdeg(f) = \mdeg(P_iQ_i)$$ donc $$\LT(P) = \LT(P_iQ_i)$$ et $$\LT(P_i)$$ disive $$\LT(P)$$ ce qui impose $$\LT(P) \in (\LT(P_1),\cdots,\LT(P_r))$$.
+> 
+>   Il reste à montrer que la condition de minimalité impose $$\mdeg(P) = \beta$$. Par l'absurde, supposons que l'on a $$\mdeg(P) < \beta$$. On sépare alors les termes de degré $$\beta$$ dans l'écriture ci-dessus :
+>
+>   $$\begin{aligned}
+>     P & = \sum_{m_i = \beta}P_iQ_i + \sum_{m_i = \beta}P_iQ_i\\
+>     & = \sum_{m_i = \beta}P_i\LT(Q_i)
+>     + \sum_{m_i = \beta}P_i(Q_i - \LT(Q_i)) +
+>     \sum_{m_i = \beta}P_iQ_i.
+>   \end{aligned}$$
+>
+>   Les monômes qui apparaissent dans les deux dernières sommes sont de multi-degré strictement inférieur à $$\beta$$ ce qui signifie que la première somme est de multi-degré strictement inférieur à $$\beta$$. Pour les indices $$i$$ tels que $$m_i = \beta$$, on écrit, $$\LT(Q_i) = c_i x^{\a_i}$$. La somme
+>
+>   $$\sum_{m_i = \beta}P_i\LT(Q_i) = \sum_{m_i = \beta}c_i(x^{\a_i}P_i)$$
+>
+>   satisfait alors les hypothèses du [Lemme](#lemm-prep-buch){:.crossref} et il existe des scalaires $$c_{j,k}$$ tels que
+>
+>   $$\sum_{m_i = \beta}P_i\LT(Q_i)
+>   = \sum_{m_j,m_k = \beta}c_{j,k}S(x^{\a_j}P_j,x^{\a_k}P_k).$$
+>
+>   On calcule maintenant les $$S$$-polynôme ci-dessus. On a $$\LM(x^{\a_j}P_j) = x^\beta$$ pour tout $$j$$ tel que $$m_j = \beta$$. On en déduit
+>
+>   $$\begin{aligned}
+>     S(x^{\a_j}P_j,x^{\a_k}P_k)
+>       & = \dfrac{x^\beta}{x^{\a_j}\LT(P_j)} x^{\a_j}P_j - \dfrac{x^\beta}{x^{\a_k}\LT(P_k)} x^{\a_k}P_k \\
+>       & = \dfrac{x^\beta}{\LT(P_j)} P_j - \dfrac{x^\beta}{\LT(P_k)} P_k\\
+>     & = x^{\beta - \beta_{j,k}} S(P_j,P_k),
+>   \end{aligned}$$
+>
+>   avec $$\beta_{j,k} = \max(\mdeg(P_j),\mdeg(P_k))$$. Il est à noter que comme $$x^{\a_j}P_j$$ et $$x^{\a_k}P_k$$ ont le même multi-degré (égal à $$\beta$$), on a $$\mdeg(S(x^{\a_j}P_j,x^{\a_k}P_k)) < \beta$$ et donc $$\mdeg(S(P_j,P_k)) < \beta_{j,k}$$. On obtient donc
+>
+>   $$\sum_{m_i = \beta}P_i\LT(Q_i) = \sum_{m_j,m_k = \beta} c_{j,k} x^{\beta - \beta_{j,k}} S(P_j,P_k).$$
+>
+>   Nous utilisons maintenant notre hypothèse, à savoir $$\overline{S(P_j,P_k)}^{G} = 0$$. Ceci impose en particulier, en utilisant l'algorithme de division, l'existence des polynôme $$S_{j,k,\ell} \in R$$ tels que
+>
+>   $$S(P_j,P_k) = \sum_\ell S_{j,k,\ell} P_\ell,$$
+>
+>   avec $$\mdeg(S_{j,k,\ell}P_\ell) \leq \mdeg(S(P_j,P_k)) < \beta_{j,k}$$. On obtient donc
+>
+>   $$P = \sum_{m_j,m_k = \beta}
+>   \sum_\ell c_{j,k} x^{\beta - \beta_{j,k}} S_{j,k,\ell} P_\ell 
+>     + \sum_{m_i = \beta}P_i(Q_i - \LT(Q_i)) +
+>     \sum_{m_i = \beta}P_iQ_i.$$
+>
+> Chaque facteur de la première somme a un multi-degré strictement inférieur à $$\beta - \beta_{j,k} + \beta_{j,k} = \beta$$ et la chose est vraie des facteurs des deux dernières sommes. On a donc obtenu une nouvelle écriture de $$P$$ avec des facteurs de degré strictement inférieurs à $$\beta$$ ce qui contredit la minimalité de $$\beta$$.
+{:.proof}
+
+> Reprenons [l'Exemple](#exem-grob){:.crossref}.2. Soit $$R = \kk[x_1,\cdots,x_n]$$ avec $$n = 3$$ et $$\kk = \R$$. Soit $$I = (x_1 + x_3,x_2 - x_3)$$, soit $$P_1 = x_1 + x_3$$, soit $$P_2 = x_2 - x_3$$ et soit $$G = \{P_1 , P_2 \}$$. Montrons que $$G$$ est une base de Gröbner de $$I$$ pour l'ordre lexicographique. Pour celà il suffit de monter que $$\overline{S(P_1,P_2)}^{G} = 0$$. Or on a
+>
+>   $$S(P_1,P_2) = \frac{x_1x_2}{x_1} P_1 - \frac{x_1x_2}{x_2} P_2 = x_2x_3 + x_1x_3.$$
+>
+>   L'algorithme de division donne
+>
+>   $$S(P_1,P_2) = x_3(x_1 + x_3) + x_3(x_2-x_3) = x_3P_1 + x_3P_2$$
+>
+>   et donc $$\overline{S(P_1,P_2)}^{G} = 0$$.
+{:.theorem.exem #exem-grob-2}
+
+>   Autre exemple, soit $$I = (x_2 - x_1^2 , x_3 - x_1^3)$$
+>   et montrons que $$G = \{x_2 - x_1^2 , x_3 - x_1^3 \}$$ est une base de Gröbner de $$I$$ pour l’ordre lexicographique avec $$ x_2 > x_3 > x_1$$. Calculons
+>
+>   $$S(x_2 - x_1^2,x_3 - x_1^3) = \frac{x_2x_3}{x_2}(x_2 - x_1^2) - \frac{x_2x_3}{x_3} (x_3 - x_1^3)  = x_1^3 x_2 - x_1^2 x_3.$$
+>
+> L’algorithme de division donne
+>
+> $$S(x_2 - x_1^2,x_3 - x_1^3) = x_1^3 x_2 - x_1^2 x_3 = x_1^3(x_2 - x_1^2) - x_1^2(x_3 - x_1^3)$$
+>
+>  et donc $$\overline{S(x_2 - x_1^2 , x_3 - x_1^3)}^{\{x_2 - x_1^2 , x_3 - x_1^3\}} = 0$$.
+{:.theorem.exem}
+
+>   On a vu que aux [Exemples](#exem-grob){:.crossref}.2. et [](#exem-grob-2){:.crossref} que $$(x_1 + x_3 , x_2 - x_3)$$ est une base de Gröbner de $$\kk[x_1,x_2,x_3]$$ pour l'ordre lexicographique. Dans cet exercice on se propose de vérifier que le reste de la division polynomiale ne dépend pas de l'ordre des éléments d'une base de Gröbner.
+> 
+>   1. Effectuer la division de $$x_1x_2$$ par $$(x_1 + x_3 , x_2 - x_3)$$.
+> 
+>   2. Effectuer la division de $$x_1x_2$$ par $$(x_2 - x_3 , x_1 + x_3)$$.
+> 
+>   3. Comparer les restes et les quotients et remarquer que le reste ne dépend pas de l'ordre mais que les quotients en dépendent.
+{:.theorem.exer}
+
+>   Soit $$I \subset R$$ un idéal et $$G$$ une base de Gröbner de $$I$$.
+> 
+>   1. Montrer que $$\overline{P}^{G} = \overline{Q}^{G}$$ si et seulement si $$P - Q \in I$$.
+> 
+>   2. Montrer que $$\overline{P+Q}^{G} = \overline{P}^{G} + \overline{Q}^{G}$$ et $$\overline{PQ}^{G} = \overline{\overline{P}^{G} \overline{Q}^{G}}^{G}$$.
+{:.theorem.exer}
+
+#### Algorithme de Buchberger
+
+Dans cette section, on se propose de construire de manière effective des bases de Gröbner d'un idéal. Le principe est de satisfaire le critère de Buchberger et donc d'ajouter aux générateurs de l'idéal autant de $$S$$-polynômes que nécessaire.
+
+>   Soit $$I = (P_1,\cdots,P_r)$$ un idéal non nul de $$R$$. L'algorithme suivant détermine une base de Gröbner pour $$I$$ en un nombre fini d'opérations.
+{:.theorem.theo}
+
+> **Entrée :** $$F = \{ P_1,\cdots,P_r \}$$.
+> **Sortie :** Une base de Gröbner $$G$$ de $$I$$ avec $$F \subset G$$.
+>
+> $$G := F$$
+> Faire :
+> 	$$G' := G$$
+> 	Pour toute paire $$P \neq Q$$ de $$G'$$, faire :
+> 		$$S := \overline{S(P,Q)}^{G'}$$.
+> 		Si $$S \neq 0$$ faire $$G := G \cup \{S\}$$.
+> Tant que $$G' \neq G$$.
+> Donner $$G$$. 
+{:.theorem.algo}
+
+>   À  chaque étape, l'ensemble $$G$$ augmente et au départ $$G = F$$ donc on a toujours $$F \subset G$$. Montrons que $$G \subset I$$. C'est clair au départ puisqu'on a $$G = F \subset I$$. Par ailleurs, à chaque étape, on ajoute à $$G$$ des éléments de la forme $$S = \overline{S(P,Q)}^{G'}$$ avec $$P,Q, \in I$$ et $$G' \subset I$$. On a donc $$S = S(P,Q) - \sum_i Q_iS_i$$ avec $$S_i \in G' \subset I$$ et $$S(P,Q) \subset (P,G) \subset I$$ ce qui prouve $$S \in I$$ et donc $$G \subset I$$. On voit donc que $$G$$ est une famille génératrice de l'idéal $$I$$.
+> 
+>   Lorsque l'algorithme s'arrête, on a $$G = G'$$ et donc tous les restes $$S = \overline{S(P,Q)}^{G}$$ des $$S$$-polynômes formés à partir d'éléments de $$G$$ et obtenue après division par $$G$$ sont soit nuls soit déjà dans $$G$$. Mais s'ils sont dans $$G$$, le reste doit être nul donc dans tous les cas $$S = 0$$ et $$G$$ est une base de Gröbner d'après le critère de Buchberger.
+> 
+>   Il nous reste à montrer que l'algorithme s'arrête. Pour celà, notons $$G = (G_1,\cdots,G_s)$$ et $$(\LT(G)) = (\LT(G_1),\cdots,\LT(G_s))$$. On considère l'évolution de cet idéal. À chaque étape, comme $$G$$ est obtenu à partir de $$G'$$ (l'ensemble $$G$$ à l'étape précédente) en y ajoutant des éléments, on a toujours $$(\LT(G')) \subset (\LT(G))$$. Montrons que si $$G' \subsetneq G$$ alors $$(\LT(G')) \subsetneq (\LT(G))$$. En effet, si $$G$$ a un nouvel élément, il est de la forme $$S = \overline{S(P,Q)}^{G'}$$ avec $$P,Q, \in G'$$. En particuier par l'algorithme de division $$\LT(S)$$ n'est divisible par aucun des termes dominants des éléments de $$G'$$. On a donc $$\LT(S) \notin (\LT(G'))$$ mais $$\LT(S) \in (\LT(G))$$. Au cours de l'algorithme, on produit donc une suite strictement croissante d'idéaux, les $$(\LT(G))$$. Cette suite ne peut être infinie car $$R$$ est noethérien donc l'algorithme s'arrête.
+{:.theorem.preu}
+
+> Cet algorithme n'est pas optimal. Par exemple, une fois qu'un reste $$S = \overline{S(P,Q)}^{G'}$$ est nul, il reste nul tout au long de l'algorithme et il n'est pas utile de le recalculer.
+{:.theorem.rema}
+
+>   On se place dans $$\kk[x_1,x_2]$$ avec l'ordre lexicographique gradué. Soient $$P_1 = x_1^3 - 2x_1x_2$$, $$P_2 = x_1^2x_2 - 2 x_2^2 + x_1$$ et $$I = (P_1,P_2)$$. Testons tout d'abord si $$\{P_1,P_2\}$$ est une base de gröbner de $$I$$. On a
+>
+>   $$S(P_1,P_2) = x_2P_1 - x_1P_2 = - x_1^2 \text{ et } \overline{S(P_1,P_2)}^{\{P_1,P_2\}} = - x_1^2.$$
+>
+>   Ainsi $$\{P_1,P_2\}$$ n'est pas une base de Gröbner. On applique l'algorithme de Buchberger. A la première étape, on ajoute $$P_3 = \overline{S(P_1,P_2)}^{\{P_1,P_2\}} = - x_1^2$$. On recalcule les $$S$$-polynômes (sachant qu'on a pas besoin de recalculer $$S(P_1,P_2)$$ dont on a déjà ajouté le reste). On a $$S(P_1,P_3) = P_1 + x_1P_3 = - 2 x_1x_2$$ et $$S(P_2,P_3) = P_2 + x_2P_3 = - 2 x_2^2 + x_1$$. On obtient
+>
+> $$\overline{S(P_1,P_3)}^{\{P_1,P_2,P_3\}} = - 2 x_1x_2 \text{ et } \overline{S(P_2,P_3)}^{\{P_1,P_2,P_3\}} = - 2 x_2^2 + x_1.$$
+>
+>   Donc $$\{P_1,P_2,P_3\}$$ n'est pas une base de Gröbner. On continue et on pose $$P_4 = - 2 x_1x_2$$ et $$P_5 = - 2 x_2^2 + x_1$$. On a
+>
+>   - $$S(P_1,P_4) = x_2P_1 + 1/2 x_1^2 P_4 = - 2 x_1x_2$$,
+>   - $$S(P_1,P_5) = x_2^2 P_1 + 1/2 x_1^3 P_5 = -2 x_1x_2^3 + x_1^4$$,
+>   - $$S(P_2,P_4) = P_2 + 1/2x_2P_4 = - 2 x_2^2 + x_1$$,
+>   - $$S(P_2,P_5) = x_2P_2 + 1/2 x_1^2 P_5 = 1/2 x_1^3 - 2 x_2^3 + x_1x_2 $$,
+>   - $$S(P_3,P_4) = -x_2 P_3 + 1/2 x_1 P_4 = 0$$,
+>   - $$S(P_3,P_5) = - x_2^2 P_3 + 1/2 x_1^2 P_5 = 1/2 x_1^3$$ et
+>   - $$S(P_4,P_5) = -1/2 x_2 P_4 + 1/2 x_1 P_5 = 1/2 x_1^2$$.
+>
+> On vérifie que
+>
+>   $$\overline{S(P_i,P_j)}^{\{P_1,P_2,P_3,P_4,P_5\}} = 0$$
+>
+>  pour tout $$i,j \in [1,5]$$. Donc $$\{P_1,P_2,P_3,P_4,P_5\}$$ est une base de Gröbner de $$I$$.
+{:.theorem.exem #exem-algo-buch}
+
+> On a maintenant une méthode effective pour tester l'appartenance à un idéal, le problème $$P \in I$$. En effet, on commence par construire une base finie de $$I$$. Puis une base de Gröbner $$G$$ de $$I$$ et enfin on calcule $$\overline{P}^{G}$$. On a ($$P \in I \Leftrightarrow \overline{P}^{G} = 0$$).
+{:.theorem.rema}
+
+>   Soit $$I = (P_1,P_2)$$ avec $$P_1 = x_1x_3 - x_2^2$$ et $$P_2 = x_1^3 - x_3^2$$. On se demande si $$P = x_1x_2 - 5 x_3^2 + x_1$$ est dans $$I$$.
+> 
+>   On choisit pour ordre $$<$$ l'ordre lexicographique gradué. On commence par déterminer une base de Gröbner $$G$$. On obtient $$G = \{x_1x_3 - x_2^2 , x_1^3 - x_3^2 , x_1^2x_2^2 - x_3^3 , x_1x_2^4 - x_3^4 , x_2^6 - x_3^5 \}$$. On constate alors que $$\LT(P) \notin (\LT(Q) \ \vert \ Q \in G)$$. Donc $$P \notin I$$.
+{:.theorem.exem}
+
+#### Bases de Gröbner réduites
+
+L'algorithme de Buchberger produit des bases de Gröbner qui peuvent être de très grande taille. Nous allons maintenant expliquer comment obtenir des bases de Gr"obner "minimales".
+
+On commence par le lemme suivant.
+
+>   Soit $$G$$ une base de Gröbner d'un idéal $$I$$. Soit $$P \in G$$ tel que $$\LT(P) \in (\LT(Q) \ \vert \ Q \in G \setminus \{ P \})$$. Alors $$G \setminus \{P\}$$ est encore une base de Gröbner de $$I$$.
+{:.theorem.lemm}
+
+> Il faut vérifier que $$(\LT(I)) = (\LT(Q) \ \vert \ Q \in G \setminus \{ P \})$$. Mais on sait que $$(\LT(I)) = (\LT(Q) \ \vert \ Q \in G )$$. Comme $$\LT(P) \in (\LT(Q) \ \vert \ Q \in G \setminus \{ P \})$$, on a $$(\LT(Q) \ \vert \ Q \in G \setminus \{ P \}) = (\LT(Q) \ \vert \ Q \in G ) = (\LT(I))$$.
+{:.proof}
+
+Ce qui conduit naturellement à la définition suivante.
+
+>   Une base de Gröbner $$G$$ d'un idéal $$I$$ est dite **minimale** si les conditions suivantes sont satisfaites:
+>   
+>   1. Pour tout $$P \in G$$, on a $$\LC(P) = 1$$.
+>   2. Pour tout $$P \in G$$, on a $$\LT(P) \notin (\LT(Q) \ \vert \ Q \in G \setminus \{ P \})$$.
+{:.theorem.defi}
+
+Pour les base de Gröbner miniales, on a unicité de l'ensemble des monômes dominants de la base.
+
+>   Soient $$G$$ et $$G'$$ deux bases de Gröbner minimales d'un idéal $$I$$. Alors on a
+>
+>   $$\{\LT(Q) \ \vert \ Q \in G \} = \{\LT(Q') \ \vert \ Q' \in G' \}.$$
+{:.theorem.lemm #lemm-base-min}
+
+>   Par définition des bases de Gröbner, on a
+>
+>   $$(\{\LT(Q) \ \vert \ Q \in G ) = (\LT(I)) = (\LT(Q') \ \vert \ Q' \in G').$$
+>
+>   En particulier, pour tout $$Q \in G$$, il existe $$Q' \in G'$$ tel que $$\LT(Q')$$ divise $$\LT(Q)$$. De même pour ce $$Q'$$, il existe $$Q" \in G$$ tel que $$\LT(Q")$$ divise $$\LT(Q')$$. On en déduit que $$\LT(Q")$$ divise $$\LT(Q)$$. Si on avait $$Q \neq Q"$$, alors $$\LT(Q) \in (\LT(P) \ \vert \ P \in G \setminus \{Q\})$$, une contradiction à la minimalité. Ainsi $$Q = Q"$$ et donc $$\LT(Q)$$ et $$\LT(Q')$$ ne diffèrent que d'un scalaire. Comme $$\LC(Q) = 1 = \LC(Q')$$, on a déduit $$\LT(Q) = \LT(Q')$$. Ainsi on a montré $$\{\LT(Q) \ \vert \ Q \in G \} \subset \{\LT(Q') \ \vert \ Q' \in G' \}$$. Par symétrie, on a l'inclusion inverse et le résultat.
+{:.proof}
+
+Cependant on a base unicité de la base minimale comme le montre l'exemple suivant.
+
+>   Reprenons [l'Exemple](#exem-algo-buch){:.crossref}. On a
+>
+>   $$(\LT(I)) = (\LT(P_1),\LT(P_2),\LT(P_3),\LT(P_4),\LT(P_5)) = (x_1^3,x_1^2x_2,-x_1^2,-2x_1x_2,-2x_2^2).$$
+>
+>   En remplaçant $$P_3$$, $$P_4$$ et $$P_5$$ par $$-P_3$$, $$-1/2P_4$$ et $$-1/2 P_5$$ on obtient une base avec coefficients dominants égaux à $$1$$. On a donc $$(\LT(I)) = (x_1^3,x_1^2x_2,x_1^2,x_1x_2,x_2^2)$$. On voit alors que les deux premiers monômes sont engenrés par les autres. On peut donc supprimer $$P_1$$ et $$P_2$$ pour obtenir une base de Gröbner minimale de $$I$$ :
+>
+>   $$(-P_3,-1/2P_4,-1/2 P_5) = (x_1^2,x_1x_2,x_2^2 -1/2 x_1).$$
+>
+>   Remarquons qu'on obtient d'autres bases minimales en prenant
+>
+>   $$(x_1^2 + a x_1x_2 , x_1x_2 , x_2^2 -1/2 x_1)$$
+>
+>   pour tout $$a \in \kk$$. On a donc pas unicité des bases minimales.
+{:.theorem.exem #exem-algo-buch-suite}
+
+Pour remédier à ce problème, on a besoin de conditions un peu plus fortes.
+
+>   Une base de Gröbner $$G$$ d'un idéal $$I$$ est dite **réduite** si les conditions suivantes sont satisfaites:
+>   
+>   1. Pour tout $$P \in G$$, on a $$\LC(P) = 1$$.
+>   2. Pour tout $$P \in G$$, aucun monôme de $$P$$ n'est dans $$(\LT(Q) \ \vert \ Q \in G \setminus \{ P \})$$.
+{:.theorem.defi}
+
+>   Reprenons les [Exemples](#exem-algo-buch){:.crossref} et [](#exem-algo-buch-suite){:.crossref}. Rappelons que l'ordre est l'ordre lexicographique gradué. Parmis les bases minimales
+>
+>   $$(x_1^2 + a x_1x_2 , x_1x_2 , x_2^2 -1/2 x_1)$$
+>
+>   pour tout $$a \in \kk$$, on voit que seule la base $$(x_1^2 , x_1x_2 , x_2^2 -1/2 x_1)$$ est réduite.
+{:.theorem.exem}
+
+> Une base réduite est minimale.
+{:.theorem.rema}
+
+> Soient $$<$$ un ordre admissible et $$I$$ un idéal non nul de $$R$$. Alors $$I$$ admet une unique base de Gröbner réduite.
+{:.theorem.prop}
+
+>   Soit $$G$$ une base de Gröbner minimale et soit $$P \in G$$. On dira que $$P$$ est réduit pour $$G$$ s'il satisfait la seconde condition des bases réduites à savoir qu'aucun monôme de $$P$$ n'est dans l'idéal $$(\LT(Q) \ \vert \ Q \in G \setminus \{ P \})$$.
+> 
+>   On va modifier chaque élément de $$G$$ pour le rendre réduit. On remarque tout d'abord que le [Lemme](#lemm-base-min){:.crossref} impose qu'un élément $$P \in G$$ est réduit pour $$G$$ si et seulement si il est réduit pour tout base minimale $$G'$$ de $$I$$ le contenant. En effet, le [Lemme](#lemm-base-min){:.crossref} nous dit que l'ensemble des termes dominants des bases réduites est toujours le même ainsi la condition d'être réduit est identique dans $$G$$ ou $$G'$$. L'avantage de cette remarque est de pouvoir modifier un élément d'une base minimale tout en préservant le caractère réduit d'autres monômes de cette base.
+> 
+>   Prenons $$P \in G$$. S'il est réduit, il n'y a rien à faire. Sinon, on pose $$P' = \overline{P}^{G\setminus\{P\}}$$ et $$G' = (G \setminus \{P\}) \cup \{P'\}$$.
+> 
+>   Montrons tout d'abord que $$G'$$ est aussi une de Gröbner base minimale. Comme $$P' \in I$$, on a $$G' \subset I$$. Par ailleurs, on a $$\LT(P) \notin (\{ \LT(Q) \ Q \in G \setminus \{P\} )$$. En particulier aucun terme dominant des polynômes de $$G \setminus \{P\}$$ ne divise $$\LT(P)$$ ce qui impose que $$\LT(P)$$ est un monôme de $$P'$$. On a donc $$\LT(P') = \LT(P)$$. En particulier $$(\LT(I)) = (\LT(Q) \ \vert \ Q \in G) = (\LT(Q) \ \vert \ Q \in G' )$$ et comme la condition de minimalité ne dépend que des termes dominants, on a que $$G'$$ est bien une base de Gröbner minimale de $$I$$.
+> 
+>   Montrons maintenant que $$P'$$ est réduit pour $$G'$$. Ceci est imposé par définition et par la condition imposée sur le reste dans l'algorithme de division : aucun des monômes dominants d'éléments de $$G \setminus \{P\} = G' \setminus \{P'\}$$ ne divise les monômes de $$P'$$.
+> 
+>   En procédant de cette manière avec chaque terme de $$G$$, on obtient une base déduite.
+> 
+>   Il reste à montrer que cette base est unique. Soient donc $$G$$ et $$G'$$ deux bases de Gröbner réduites pour $$I$$. En particulier ces bases sont minimales donc le [Lemme](#lemm-base-min){:.crossref} impose
+>
+>   $$\{ \LT(Q) \ \vert \ Q \in G \} = \{ \LT(Q) \ \vert \ Q \in G' \}.$$
+>
+>   Pour tout $$P \in G$$, il existe donc $$P' \in G'$$ tel que $$\LT(P') = \LT(P)$$. On veut montrer que $$P' = P$$. On regarde $$P - P' \in I$$. On a donc $$\overline{P - P'}^{G} = 0$$. Mais les termes dominants de $$P$$ et $$P'$$ s'annulent dans $$P - P'$$ donc $$\overline{P-P'}^{G} = \overline{P-P'}^{G \setminus \{P\}}$$.
+>   De plus aucun autre monôme de $$P$$ ni de $$P'$$ n'est divisible par un élément de $$\{ \LT(Q) \ \vert \ Q \in G \setminus \{P\} \} = \{ \LT(Q) \ \vert \ Q \in G' \setminus \{P'\} \}$$. Ceci impose que $$\overline{P-P'}^{G} = \overline{P-P'}^{G \setminus \{P\}} =  \overline{P-P'}^{G' \setminus \{P'\}} = P - P'$$. En particulier, on obtient $$P' = P$$.
+{:.proof}
+
+> Les bases de Gröbner réduites nous donnent une méthode effective pour tester l'égalité entre idéaux, le problème $$I = J$$. En effet, on construit des bases de Gröbner réduites $$G$$ et $$G'$$ de $$I$$ et $$J$$. On a alors ($$I = J \Leftrightarrow G = G'$$).
+{:.theorem.rema}
+
+Au prochain chapitre, nous donnerons des applications des bases de Gröbner à des problèmes de type géométrique.

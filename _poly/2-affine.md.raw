@@ -1,0 +1,148 @@
+---
+title: Géométrie
+---
+
+### Polynômes et variétés affines
+
+Dans ce chapitre, nous rapellons des définitions concernant les liens entre géométrie (algébrique affine) et polynômes.
+
+La plupart de ces notions ont été vues en M1 ou dans le cours "courbes algébriques". Nous passerons donc rapidement sur les preuves eventuelles.
+
+#### Variétés affines
+
+On fixe $$\kk$$ un corps et $$n$$ un entier naturel. Rappelons que l'on pose $$R = \kk[x_1,\cdots,x_n]$$.
+
+>   Soit $$S \subset R$$ un sous-ensemble. La **variété affine associée à $$S$$** est le sous-ensemble de $$\kk^n$$ défini par
+>
+>   $$V(S) = \{(a_1,\cdots,a_n) \in \kk^n \ \vert \ P(a_1,\cdots,a_n) = 0 \text{ pour tout } P \in S \}.$$
+> 
+>   Un sous-ensemble $$V$$ de $$\kk^n$$ est appelé **variété affine** s'il existe $$S \subset R$$ tel que $$V = V(S)$$.
+> 
+>   Lorsque $$S$$ est fini composé des éléments $$P_1,\cdots,P_r$$, on écrira
+>
+>   $$V(S) = V(\{P_1,\cdots,P_r\}) = V(P_1,\cdots,P_r).$$
+{:.theorem.defi}
+
+>   Les ensembles suivants $$V \subset \R^3$$ sont des variétés affines
+>   
+>   1. $$V = V(x_1^2 + x_3^2 - 1)$$ est un cylindre.
+>   2. $$V = V(x_1^2 + x_2^2 + (x_3 - 1)^2 - 4)$$ est une sphère.
+>   3. $$V = V((x_1^2 + x_3^2 - 1)(x_1^2 + x_2^2 + (x_3 - 1)^2 - 4))$$ est la réunion des deux précédents.
+>   4. $$V = V(x_1^2 + x_3^2 - 1,x_1^2 + x_2^2 + (x_3 - 1)^2 - 4)$$ est l'intersection des deux précédents.
+> 
+> Par contre l'ensemble $$\R \setminus \{0\}$$ n'est pas une variété affine.
+{:.theorem.exem}
+
+> Soit $$S \subset R$$ et $$I$$ l'idéal de $$R$$ engendré par $$S$$. Alors on a $$V(S) = V(I)$$.
+{:.theorem.lemm}
+
+> Exercice.
+{:.proof}
+
+>   Soit $$V$$ une variété affine, alors il existe un nombre fini de polynômes $$P_1,\cdots,P_r$$ tels que $$V = V(P_1,\cdots,P_r)$$.
+{:.theorem.lemm}
+
+> C'est le théorème de Hilbert.
+{:.proof}
+
+>   On a les résultats suivants.
+> 
+>   1. L'intersection de variétés affines est encore une variété affine.
+> 
+>   2. La réunion d'un nombre fini de variétés affines est encore une variété affine.
+> 
+>   3. L'ensemble $$\kk^n$$ est une variété affine.
+> 
+>   4. L'ensemble vide est une variété affine.
+> 
+>   5. Un ensemble fini de points est une variété affine.
+{:.theorem.lemm}
+
+> Exercice.
+{:.proof}
+
+Les bases de Gröbner vont nous permettre de répondre aux questions :
+
+1. La variété affine $$V$$ est-elle vide ?
+2. Si la variété affine $$V$$ a un nombre fini de points, peut-on les décrire ?
+3. Peut-on déterminer la "dimension" de la variété affine $$V$$ ?
+4. Peut-on déterminer si la variété affine $$V$$ est régulière ou lisse ?
+5. Peut-on déterminer le "lieu singulier" de la variété affine $$V$$ ?
+
+
+>   Considérons dans $$\C$$ le système d'équations polynomiales suivant:
+>
+>   $$\begin{cases}
+>     x_1^2 + x_2^2 + x_3^2 = 1, \\
+>     x_1^2 + x_3^2 = x_2, \\
+>     x_1 = x_3.
+>   \end{cases}$$
+>
+>   On en cherche les solutions c'est-à-dire l'ensemble $$V = V(S)$$ avec $$S = \{ P_1 , P_2 , P_3 \}$$ où $$P_1 = x_1^2 + x_2^2 + x_3^2 - 1$$, $$P_2 = x_1^2 + x_3^2 - x_2$$ et $$P_3 = x_1 - x_3$$. On a $$V(S) = V(I)$$ avec $$I = (P_1 , P_2 , P_3)$$ l'idéal engendé par ces trois polynômes. Si on détermine une base de Gröbner $$G$$ pour $$I$$ pour l'ordre lexicographique, on obtient $$G = \{Q_1,Q_2,Q_3\}$$ avec $$Q_1 = x_1 - x_3$$, $$Q_2 = - x_2 + x_3^2$$ et $$Q_3 = x_3^4 + (1/2)x_2^2 - 1/4$$.
+> 
+>   Il suffit donc de résoudre les système $$Q_1 = 0$$, $$Q_2 = 0$$ et $$Q_3 = 0$$. On obtient pour la troisième équation
+>
+>   $$x_3 = \pm \frac{\sqrt{-1 \pm \sqrt{5}}}{2}.$$
+>
+>   En injectant dans la seconde équation on trouve $$y$$ et dans la première on obtient $$x$$. Le système a donc quatre solutions.
+{:.theorem.exem}
+
+#### Idéaux des variétés affines
+
+>   Soit $$V$$ un sous-ensemble de $$\kk^n$$ (par nécessairement une variété affine. On définit **l'idéal de $$V$$** noté $$I(V)$$ par
+>
+>   $$I(V) = \{P \in \kk[x_1,\cdots,x_n] \ \vert \ P(a_1,\cdots,a_n) = 0 \text{ pour tout } (a_1,\cdots,a_n) \in V \}.$$
+{:.theorem.defi}
+
+>   L'ensemble $$I(V)$$ est bien un idéal de $$R = \kk[x_1,\cdots,x_n]$$.
+{:.theorem.lemm}
+
+> Exercice.
+{:.proof}
+
+>   Soit $$I$$ un idéal de $$R$$. On a toujours $$I \subset I(V(I))$$.
+{:.theorem.lemm}
+
+> Exercice.
+{:.proof}
+
+> Si $$V$$ est une variété affine de la forme $$V = V(I)$$, alors on a en général $$I(V(I)) = I(V) \neq I$$.
+{:.theorem.rema}
+
+>   Voici deux exemple symptomatiques pour lesquels on a $$I(V(I)) \neq I$$ avec une unique variable et le corps $$\kk = \R$$ des nombres réels.
+> 
+>   1. Si $$I = (x_1^2)$$, on a $$V(I) = \{ 0 \}$$ et $$I(V(I)) = (x_1)$$.
+> 
+>   2. Si $$I = (x_1^2 + 1)$$, on a $$V(I) = \emptyset$$ et $$I(V(I)) = \R[x_1]$$.
+> 
+> Dans le premier cas, la variété $$V(I)$$ ne "voit" par les puissances. Dans le second cas, il "manque des points".
+> 
+> Le lien entre $$I$$ et $$I(V(I))$$ est subtil et dépend du corps. Ainsi si on remplace $$\R$$ par $$\C$$ dans le second exemple, on obtient pour $$I = (x_1^2 + 1)$$ que $$V(I) = \{\pm\sqrt{-1}\}$$ et $$I(V(I)) = I$$.
+{:.theorem.exem}
+
+>   Soit $$V$$ un sous-ensemble de $$\kk^n$$.
+> 
+>   1. On a $$V \subset V(I(V))$$.
+> 
+>   2. Soit $$V$$ une variété algébrique, on a toujours $$V = V(I(V))$$.
+{:.theorem.lemm}
+
+> Exercice.
+{:.proof}
+
+>   Soient $$V,W \subset \kk^n$$ des sous-ensembles et $$I,J \subset R$$ des idéaux.
+> 
+>   1. On a $$V \subset W \Rightarrow I(W) \subset I(V)$$.
+> 
+>   2. On a $$I \subset J \Rightarrow V(J) \subset V(I)$$.
+{:.theorem.lemm}
+
+> Exercice.
+{:.proof}
+
+>   Pour tout ensemble $$V$$ et tout idéal $$I$$, on a
+>   $$I(V) = I(V(I(V))) \text{ et } V(I) = V(I(V(I))).$$
+{:.theorem.coro}
+
+> Exercice.
+{:.proof}

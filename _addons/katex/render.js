@@ -1,0 +1,30 @@
+(function () {
+    function repl(t) {
+	var macros =  eLeMentS.page.addons.katex.options ? eLeMentS.page.addons.katex.options.macros : null;
+	return macros
+	    ? t.replace(new RegExp('(' + Object.keys(macros).join("|").replace(/\\/g, '\\\\') + ')([^a-zA-Z]|$)', 'g'),
+			function (match, macro, next) {
+			    return macros[macro] + next;
+			})
+	: t;
+    }
+
+    function escape(tex) {
+	return repl(tex.replace(/^% <!\[CDATA\[|%\]\]>$/g, ''));
+    }
+    
+    $$('script[type^="math/tex"]').forEach(function (m) {
+	var options = { display : m.type == 'math/tex; mode=display' };
+	for (var o in eLeMentS.page.addons.katex.options)
+	    options[o] = eLeMentS.page.addons.katex.options[o];
+	var dest = document.createElement(options.display ?  'div' : 'span');
+	dest.classList.add('katex-plugin');
+	m.parentElement.insertBefore(dest, m);
+	try {
+	    katex.render(escape(m.textContent), dest, options);
+	} catch (e) {
+	    dest.textContent = e.message;
+	    dest.classList.add('katex-error');
+	}
+    });
+})();

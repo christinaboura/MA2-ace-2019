@@ -1,6 +1,21 @@
 ---
 title: Exercices
 addons:
+  mathjax:
+    options:
+      TeX:
+        Macros:
+          PGCD : \mathrm{pgcd}
+          Z    : \mathbb{Z}
+          Q    : \mathbb{Q}
+          R    : \mathbb{R}
+          C    : \mathbb{C}
+          F    : \mathbb{F}
+          lex  : \mathrm{lex}
+          LT   : \mathrm{LT}
+          LM   : \mathrm{LM}
+          Syz  : \mathrm{Syz}
+  highlightjs: true
   style_goodies: yes
 ---
 

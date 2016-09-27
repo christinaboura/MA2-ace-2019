@@ -8,6 +8,8 @@ tagline: Algèbre Commutative et Effective
 authors:
   - name: Luca De Feo
     url: 'http://defeo.lu/'
+  - name: Nicolas Perrin
+    url: 'http://lmv.math.cnrs.fr/annuaire/nicolas-perrin/'
 created: 2014
 license:
   name: Creative Commons 4.0 Attribution-ShareAlike
@@ -27,11 +29,9 @@ defaults:
   - scope:
       path: ''
     values:
-      layout: article
+      layout: default
       addons:
         favicon: yes
-        mathjax: yes
-        highlightjs: yes
         print-link: yes
         about: yes
 
@@ -46,6 +46,10 @@ collections:
   addons:
     output: true
     permalink: /:collection/:path:output_ext
+  poly:
+    output: false
+  polytd:
+    output: false
   
 kramdown:
   parse_block_html: true

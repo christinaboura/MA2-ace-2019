@@ -1,0 +1,12 @@
+.katex-plugin {
+    font-size: 85%;
+}
+.katex-plugin.katex-error {
+    color: red;
+    outline: solid thin red;
+    font-size: 80%;
+}
+div.katex-plugin {
+    text-align: center;
+    margin-bottom: 0.5em;
+}

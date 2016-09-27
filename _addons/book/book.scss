@@ -1,0 +1,55 @@
+---
+---
+
+#content {
+    .book-error {
+	color: red;
+	outline: solid thin red;
+	font-size: 80%;
+    }
+
+    .theorem {
+	margin-bottom: 2ex;
+	&:before {
+	    content: attr(data-counter-type) ' ' attr(data-counter);
+	    font-style: italic;
+	    display: block;
+	}
+	&[title]:before {
+	    content: attr(data-counter-type) ' ' attr(data-counter) ' (' attr(title) ')';
+	}
+    }
+
+    .proof {
+	&>:first-child:before {
+	    content: 'Preuve : ';
+	    font-style: italic;
+	    display: inline;
+	}
+	&:after {
+	    content: '□';
+	    text-align: right;
+	    display: block;
+	}
+    }
+
+    .algo {
+	border-left: solid 2px #aaa;
+	padding-left: 1ex;
+	& > * {
+	    white-space: pre-wrap;
+	}
+	&:before {
+	    margin-bottom: 0.5ex;
+	}
+	em {
+	    color: gray;
+	}
+    }
+    
+    h2 {
+	&:before {
+	    content: attr(data-counter) '. ';
+	}
+    }
+}
