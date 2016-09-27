@@ -1,60 +1,61 @@
 ---
 ---
 
-# TDs d'Algèbre Commutative et Effective
+# Algèbre Commutative et Effective
 
-## Info pratiques
+## Informations pratiques
 
-Les TDs on lieu le mardi de 9h30 à 12h30 en salle 2106
+**Cours** les lundis de 9h30 à 12h30, avec [Nicolas Perrin](http://lmv.math.cnrs.fr/annuaire/nicolas-perrin/).
 
-**Chargé des TDs :** Luca De Feo <http://defeo.lu/>
+**TDs** les mardis de 9h30 à 12h30, avec [Luca De Feo](http://defeo.lu/).
 
-**Serveurs SageMath :**
+**Serveurs SageMath**
 
-- Hébergé au département de mathématiques <http://sage.math.uvsq.fr/>  
-  <small>(pour connaître votre mot de passe, `cat sagepwd` dans un terminal)</small>,
-- SageMathCloud (service fourni par
+- Hébergé au département de mathématiques <https://bourbaki.math.uvsq.fr/>;
+- En cas de panne: SageMathCloud (service fourni par
   [SageMath Inc.](http://sagemath.com/))
   <https://cloud.sagemath.com/>.
 
-**Serveur ssh/sftp :** `bourbaki.math.uvsq.fr`
+**Serveur ssh/sftp** `bourbaki.math.uvsq.fr`
 
-**Commande pour écran partagé :** `vncviewer localhost -passwd ~defeo/.vnc/vo-passwd`
+**Commande pour écran partagé** `vncviewer localhost -passwd ~defeo/.vnc/vo-passwd`
 
 
-## Liste des TDs
+## Matériel de cours
 
-TD 1 (22/09/2015)
-: [Introduction à l'environnement de travail et à SageMath](intro),
-: [Structures algébriques de base en SageMath](structures),
+- Le [polycopié de cours](poly) et le [polycopié de TD](polytd);
+- Les [exercices de TD](exercises);
+- [*Calcul mathématique avec Sage*](http://sagebook.gforge.inria.fr/).
+
+
+## Calendrier
+
+TD 1 (13/09/2016)
+: [Introduction à l'environnement de travail et à SageMath](polytd#introduction--lenvironnemnt-de-travail-et--sagemath),
+: [Structures algébriques de base en SageMath](polytd#anneaux-corps-polynmes-expressions),
 : **Exercices :** [Manipuler les polynômes en SageMath](exercises#polynmes--une-variable).
 
-TD 2 (06/10/2015)
-: [Anneaux de polynômes en SageMath](structures#polynmes),
-: [Structures de contrôle en Python](python),
+TD 2 (27/09/2016)
+: [Anneaux de polynômes en SageMath](polytd#polynmes),
+: [Structures de contrôle en Python](polytd#syntaxe-pythonsage),
 : **Exercices :** [Polynômes](exercises#polynmes--une-variable).
 
-TD 3 (13/10/2015)
-: [Anneaux de polynômes multivariés](structures#polynmes),
-: [Types en SageMath](types),
-: **Exercices :** [Polynômes multivariés](exercises#polynmes--plusieurs-variables).
+TD 3 (04/10/2016)
+: 
 
-TD 4 (20/10/2015)
-: [Bases de Gröbner](structures#idaux-et-bases-de-grbner),
-: **Exercices :** [Bases de Gröbner](exercises#calcul-de-bases-de-grbner).
+TD 4 (11/10/2016)
+: 
 
-TD 5 (20/102015)
-: [Résultants, Élimination](structures#rsultants-et-limination),
-: [Tracer des courbes et des surfaces](plots),
-: **Exercices :** [Résultants et élimination](exercises#rsultants-et-limination).
+TD 5 (18/10/2016)
+: 
 
-TD 6 (06/11/2015)
-: **Exercices :** [Variétés affines, dimension](exercises#varits-affines).
+TD 6 (??/11/2016)
+: 
 
-TD 7 (10/11/2015)
-: **Exercices :** [Variétés affines, dimension](exercises#varits-affines).
+TD 7 (08/11/2016)
+: 
 
-## Devoirs maison
+## Annales
 
 Devoir maison 2015
 : [Résultants successifs](dm2015)
