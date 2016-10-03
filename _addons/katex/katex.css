@@ -1,5 +1,9 @@
 .katex-plugin {
     font-size: 85%;
+/*  -moz-user-select: all;
+    -webkit-user-select: all;
+    -ms-user-select: all;
+    user-select: all; */
 }
 .katex-plugin.katex-error {
     color: red;

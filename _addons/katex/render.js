@@ -21,7 +21,12 @@
 	dest.classList.add('katex-plugin');
 	m.parentElement.insertBefore(dest, m);
 	try {
-	    katex.render(escape(m.textContent), dest, options);
+	    var tex = escape(m.textContent);
+	    katex.render(tex, dest, options);
+	    dest.addEventListener('copy', function(e) {
+		e.clipboardData.setData('text/plain', tex);
+		e.preventDefault();
+	    });
 	} catch (e) {
 	    dest.textContent = e.message;
 	    dest.classList.add('katex-error');
