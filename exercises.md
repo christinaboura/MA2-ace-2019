@@ -1,20 +1,22 @@
 ---
 title: Exercices
 addons:
-  mathjax:
+  katex:
     options:
-      TeX:
-        Macros:
-          PGCD : \mathrm{pgcd}
-          Z    : \mathbb{Z}
-          Q    : \mathbb{Q}
-          R    : \mathbb{R}
-          C    : \mathbb{C}
-          F    : \mathbb{F}
-          lex  : \mathrm{lex}
-          LT   : \mathrm{LT}
-          LM   : \mathrm{LM}
-          Syz  : \mathrm{Syz}
+      macros:
+        \PGCD : \mathrm{pgcd}
+        \Z    : \mathbb{Z}
+        \Q    : \mathbb{Q}
+        \R    : \mathbb{R}
+        \C    : \mathbb{C}
+        \F    : \mathbb{F}
+        \lex  : \mathrm{lex}
+        \degrevlex  : \mathrm{degrevlex}
+        \LT   : \mathrm{LT}
+        \LM   : \mathrm{LM}
+        \Syz  : \mathrm{Syz}
+        \iff  : \Leftrightarrow
+        \succA: \,\begin{matrix}\succ\\[-0.9em]\tiny A\end{matrix}\,
   highlightjs: true
   style_goodies: yes
 ---
@@ -225,14 +227,14 @@ façon évidente.  On définit une relation sur les monômes
 taille $$n$$ comme suit :
 
 $$
-  x_1^{\alpha_1}\cdots x_n^{\alpha_n}\underset{A}{\succ}
+  x_1^{\alpha_1}\cdots x_n^{\alpha_n}\succA
   x_1^{\beta_1}\cdots x_n^{\beta_n} \iff
   A\begin{pmatrix}\alpha_1\\\vdots\\\alpha_n\end{pmatrix}>_{\lex}
   A\begin{pmatrix}\beta _1\\\vdots\\\beta _n\end{pmatrix}.
 $$
 
 1. Montrer que si $$A\in \mathcal{M}_n\left(\Q\right)$$ et $$\det
-   A=0$$ alors $$\underset{A}{\succ}$$ n'est pas un ordre admissible.
+   A=0$$ alors $$\succA$$ n'est pas un ordre admissible.
 1. Quelles conditions (nécessaires et suffisantes) doit vérifier
    $$A\in\mathcal{M}_n\left(\Q\right)$$ pour que l'ordre associé soit
    un ordre admissible ?
@@ -240,11 +242,11 @@ $$
 1. Pour $$n\geq 2$$, trouver
    
    $$A = \begin{pmatrix}
-       a_1 & \dots & a_n\\ 0 & \cdots & 0\\ \vdots & & \vdots \\ 0 &
-	   \dots & 0
+	   a_1 & \cdots & a_n\\ 0 & \cdots & 0\\ \vdots & & \vdots \\
+	   0 & \cdots & 0
    \end{pmatrix}\in\mathcal{M}_n\left(\R\right)$$
    
-   telle que $$\underset{A}{\succ}$$ soit un ordre admissible.
+   telle que $$\succA$$ soit un ordre admissible.
 1. Quelles conditions (nécessaires et suffisantes) doit
    vérifier $$A\in\mathcal{M}_n\left(\R\right)$$ pour que l'ordre
    associé soit un ordre admissible ?
@@ -272,11 +274,11 @@ Fonction utiles : `lc`, `lm`, `lt`.
 
 **–**{:.exercise}
 
-Dans l'anneau $$k[x_1,\dots,x_n,y_1,\dots,y_m]$$, on considère l'ordre
+Dans l'anneau $$k[x_1,\ldots,x_n,y_1,\ldots,y_m]$$, on considère l'ordre
 $$\preccurlyeq$$ défini par l'ordre lexicographique sur les $$x_i$$ et
 par l'ordre degrevlex sur les $$y_j$$ :
 
-$$x^\alpha y^\beta\preccurlyeq x^\gamma y^\delta \iff x^\alpha \prec_{\operatorname{lex}}x^\gamma\text{ ou } (x^\alpha=x^\beta\text{ et } y^\beta\preccurlyeq_{\operatorname{degrevlex}}y^\delta)$$
+$$x^\alpha y^\beta\preccurlyeq x^\gamma y^\delta \iff x^\alpha \prec_{\lex}x^\gamma\text{ ou } (x^\alpha=x^\beta\text{ et } y^\beta\preccurlyeq_{\degrevlex}y^\delta)$$
 
 Montrer que $$\preccurlyeq$$ est un ordre monomial.
 
@@ -336,7 +338,7 @@ $$I=\langle x^2y^2-x,xy^3+y\rangle.$$
 **–**{:.exercise}
   Soit $$G$$ une base de Gröbner pour l'idéal $$I\subset
   k[x_1,\ldots,x_n]$$ et supposons qu'il
-  existe $$P\not=Q\in G$$ tels que $$\LT(P)$$ divise $$\LT(Q)$$. Montrer que
+  existe $$P\neq Q\in G$$ tels que $$\LT(P)$$ divise $$\LT(Q)$$. Montrer que
   $$G\setminus\{Q\}$$ est encore une base de Gröbner pour $$I$$.
   <!-- notes cours lemme 3.5.3 -->
 
@@ -388,14 +390,14 @@ de $$k[x, y, z, t]$$.
   <!-- Strurmfels p.2 example 1.4 -->
   
   Soit l'anneau $$A$$ des polynômes à $$2m$$ indéterminées
-  $$(x_{ij})_{1≤i≤2, 1≤j≤m}$$, à coefficients dans
+  $$(x_{ij})_{1\le i\le 2, 1\le j\le m}$$, à coefficients dans
   $$k$$. Soit $$I$$ l'idéal de $$A$$ engendré par les $$\binom{m}{2}$$
   polynômes $$D_{k,\ell}=x_{1k}x_{2\ell}- x_{1\ell}x_{2k}$$.
   
 
   1. Pour $$m=3$$, montrer que les $$D_{k,\ell}$$ forment une base de
     Gröbner universelle de $$I$$.
-  1. Pour $$m≥3$$, montrer que les $$D_{k,\ell}$$ forment une base
+  1. Pour $$m\ge3$$, montrer que les $$D_{k,\ell}$$ forment une base
     de Gröbner universelle de $$I$$.
 
 
@@ -409,7 +411,7 @@ Soit $$V$$ un sous-espace vectoriel de $$k^n$$ de dimension
 $$n-d<n$$. Soit $$I$$ son idéal annulateur dans $$k[\underline{x}]$$ :
 l'idéal $$I$$ est engendré par $$d$$ formes linéaires indépendantes
 
-$$I=\left\langle \sum_{j=1}^n a_{ij}x_j \;,\; 1≤i≤n \right\rangle.$$
+$$I=\left\langle \sum_{j=1}^n a_{ij}x_j \;,\; 1\le i\le n \right\rangle.$$
 
 On dit qu'une forme linéaire non nulle de $$I$$ est un circuit si son
 ensemble de variables est minimal pour l'inclusion. On dit qu'un
@@ -422,7 +424,7 @@ $$(a_{ij})_{i,j\in\{j_1,\ldots,j_d\}}$$ associée est non nul.
    
    $$D_{k_1,\ldots,k_{d-1},1}x_1+D_{k_1,\ldots,k_{d-1},2}x_2+\cdots+D_{k_1,\ldots,n}x_n$$
    
-   où $$1 ≤ k_1<\cdots<k_{d_1} ≤ n$$.
+   où $$1 \le k_1<\cdots<k_{d_1} \le n$$.
 1. En déduire qu'il y a au plus $$\binom{n}{d-1}$$ circuits.
 1. Soit $$I'$$ un idéal engendré par des formes
    linéaires. Montrer que l'ensemble des circuits dans $$I$$ est une
@@ -469,7 +471,7 @@ $$(a_{ij})_{i,j\in\{j_1,\ldots,j_d\}}$$ associée est non nul.
 
 
 **–**{:.exercise}
-  Soit $$I\subset k[x_1,\ldots, x_n]$$ un idéal et $$G=\{g_1,\dots, g_m\}$$ une 
+  Soit $$I\subset k[x_1,\ldots, x_n]$$ un idéal et $$G=\{g_1,\ldots, g_m\}$$ une 
   base de Gröbner de $$I$$.
   
 
@@ -506,7 +508,7 @@ $$(a_{ij})_{i,j\in\{j_1,\ldots,j_d\}}$$ associée est non nul.
 
 
 **–**{:.exercise}
-Montrer que pour tout $$m≥1$$, la base de Gröbner réduite de
+Montrer que pour tout $$m\ge1$$, la base de Gröbner réduite de
 
 $$I_m=\left\langle x^{m+1}-yz^{m-1}t,xy^{m-1}-z^m,x^mz-y^mt
 \right\rangle\subset k[x,y,z,t]$$
@@ -520,20 +522,20 @@ $$I_m$$.
 
 **–**{:.exercise}
 
-Soient $$2≤n'≤n$$.
+Soient $$2\le n'\le n$$.
 
-  1. Soient $$r≥1$$ un entier et $$J=(m_1,\dots,m_r)$$ un idéal
+  1. Soient $$r\ge1$$ un entier et $$J=(m_1,\ldots,m_r)$$ un idéal
     monomial de $$k[X_1,\ldots,X_n]$$. Donner des générateurs de
-    l'idéal $$J\cap (X_{n'},\dots,X_n)$$.  Dans la suite on fixe sur
+    l'idéal $$J\cap (X_{n'},\ldots,X_n)$$.  Dans la suite on fixe sur
     $$k[X_1,\ldots,X_n]$$ l'ordre lexicographique, on désigne
     par $$I$$ un idéal homogène non nul et par $$I'$$ l'intersection
-    $$I'=I\cap (X_{n'},\dots,X_n)$$.
-  1. Montrer que $$\LT(I')=\LT(I) \cap (X_{n'},\dots,X_n)$$.
-  1. Soit $$(f_1,\dots,f_s)$$ une base de Gröbner de $$I$$ formée
+    $$I'=I\cap (X_{n'},\ldots,X_n)$$.
+  1. Montrer que $$\LT(I')=\LT(I) \cap (X_{n'},\ldots,X_n)$$.
+  1. Soit $$(f_1,\ldots,f_s)$$ une base de Gröbner de $$I$$ formée
     de polynômes homogènes. Déduire des questions
     précédentes des générateurs de $$\LT( I')$$. En déduire
     une base de Gröbner de $$I'$$.
-  1. Soit $$(f_1,\dots,f_s)$$ une base de Gröbner réduite de $$I$$
+  1. Soit $$(f_1,\ldots,f_s)$$ une base de Gröbner réduite de $$I$$
     formée de polynômes homogènes. Donner une condition
     nécessaire et suffisante pour que l'on ait $$I\cap (X_n)=X_n I$$.
 
@@ -749,8 +751,10 @@ z & = \sin 2s.
 **–**{:.exercise}
   Soient les idéaux de $$k[x,y]$$ :
 
-$$I = \left\langle x^2y + xy^2 -2y; x^2 + xy- x + y^2 -2y; xy^2 - x - y + y^3 \right\rangle \mbox{ et }
-J = \left\langle x- y^2; xy- y; x^2-y \right\rangle.$$
+$$\begin{aligned}
+I &= \left\langle x^2y + xy^2 -2y; x^2 + xy- x + y^2 -2y; xy^2 - x - y + y^3 \right\rangle \text{ et}\\
+J &= \left\langle x- y^2; xy- y; x^2-y \right\rangle.
+\end{aligned}$$
 
 Montrer que $$I=J$$.
 
@@ -758,10 +762,12 @@ Montrer que $$I=J$$.
 **–**{:.exercise}
   Soient les idéaux de $$k[x,y,z]$$ :
   
-$$I = \left\langle x^2 + xz; y + y^4 + xz^2- 3z; y + 2x^2y^2 + xz^2 \right\rangle \mbox{ et }
-J = \left\langle x^3 + yz + xy; xyz + 2y^2z^2 - 3x; x^3y -z^2 \right\rangle.$$
+$$\begin{aligned}
+I &= \left\langle x^2 + xz; y + y^4 + xz^2- 3z; y + 2x^2y^2 + xz^2 \right\rangle \text{ et}\\
+J &= \left\langle x^3 + yz + xy; xyz + 2y^2z^2 - 3x; x^3y -z^2 \right\rangle.
+\end{aligned}$$
 
-1. Montrer que $$I\not=J$$.
+1. Montrer que $$I\neq J$$.
 1. A-t-on $$I\subset J$$ ?
 1. A-t-on $$J\subset I$$ ?
 
@@ -780,26 +786,26 @@ a^3+b^3+c^3 & =7
 \end{aligned}\right.$$
 
 1. Montrer que $$a^4+b^4+c^4=9.$$
-1. Montrer que $$a^5+b^5+c^5\not=11$$.
+1. Montrer que $$a^5+b^5+c^5\neq 11$$.
 1. Que valent $$a^5+b^5+c^5$$ et $$a^6+b^6+c^6$$ ?
 
 <!-- % Cox Litlle O'Shea p.99 ex.11 -->
 
 
 **–**{:.exercise} ([Sagebook]({{ site.data.bib.sagebook }}),
-exercice 36) Soit $$J$$ un idéal de dimension zéro de $$ℚ[x,y]$$. Soit
-$$χ_x$$ le polynôme caractéristique de l'application linéaire
+exercice 36) Soit $$J$$ un idéal de dimension zéro de $$\Q[x,y]$$. Soit
+$$\chi_x$$ le polynôme caractéristique de l'application linéaire
 
 $$
 \begin{aligned}
-m_x : ℚ[x,y]/J &\;→\; ℚ[x,y]/J\\
-       p + J   &\;↦\; xp + J
+m_x : \Q[x,y]/J &\;\to\; \Q[x,y]/J\\
+       p + J   &\;\mapsto\; xp + J
 \end{aligned}
 $$
 
-Calculer $$χ_x$$ dans le cas $$J =〈x^2 + y^2 - 1, 4x^2y^2 - 1〉$$.
-Montrer que toute racine de $$χ_x$$ est l’abscisse d’un point de la
-variété $$V_ℂ(J)$$.
+Calculer $$\chi_x$$ dans le cas $$J =\langle x^2 + y^2 - 1, 4x^2y^2 - 1\rangle$$.
+Montrer que toute racine de $$\chi_x$$ est l’abscisse d’un point de la
+variété $$V_\C(J)$$.
 
 
 
@@ -917,7 +923,7 @@ $$I\cap k[\underline{y}]=\{0\}$$.  La dimension de $$I$$ est définie
 par
 
 $$\dim I=\max\{|\{y_1,\ldots,y_r\}|, \text{ avec } \{y_1,\ldots,y_r\}
-  \text{ indépendant modulo } I\}.$$
+  \text{ independants modulo } I\}.$$
   
 1. Montrer qu'un idéal propre $$I$$ est de dimension zéro si, et
    seulement si, il contient un polynôme non constant en chaque
@@ -985,8 +991,8 @@ $$\begin{aligned}
 $$g_i(f_1,\ldots,f_n)=x_i,\; 1\leq i\leq n.$$
 
   Soit
-  $$I=\langle y_1-f_1,\dots,y_n-f_n\rangle\subseteq
-  k[x_1,\dots,x_n,y_1,\dots,y_n]$$ muni de l'ordre lexicographique.
+  $$I=\langle y_1-f_1,\ldots,y_n-f_n\rangle\subseteq
+  k[x_1,\ldots,x_n,y_1,\ldots,y_n]$$ muni de l'ordre lexicographique.
   
 
 1. On suppose que la base de Gröbner réduite $$G$$ de $$I$$ est de la forme
@@ -1018,12 +1024,12 @@ $$g_i(f_1,\ldots,f_n)=x_i,\; 1\leq i\leq n.$$
 Le polynôme $$P\in k[x_1,\ldots,x_n]$$ de degré $$d$$ s'écrit $$P=P_1+P_2$$ avec $$P_1$$ polynôme homogène de degré $$d$$ (non nul) et
 $$P_2$$ polynôme de degré $$<d$$. Ainsi
 $$P(x_1+a_1x_n,\ldots,x_{n-1}+a_{n-1}x_n,x_n)=P_1(a_1,\ldots,a_{n-1},1)x_n^d+Q$$
-où $$Q$$ est un polynôme de degré $$<d$$ en $$x_n$$. Comme $$k$$ est infini et $$P_1\not=0$$, il existe $$(a_1,\ldots,a_{n-1})\in k^{n-1}$$ tel que $$P_1(a_1,\ldots,a_{n-1},1)=c\not=0$$.
+où $$Q$$ est un polynôme de degré $$<d$$ en $$x_n$$. Comme $$k$$ est infini et $$P_1\neq 0$$, il existe $$(a_1,\ldots,a_{n-1})\in k^{n-1}$$ tel que $$P_1(a_1,\ldots,a_{n-1},1)=c\neq 0$$.
 
 Par récurrence sur le nombre de variables $$n$$.  Si $$n=1$$, $$\left\langle f_1,\ldots,f_m \right\rangle=\left\langle g \right\rangle\subseteq k[x_1]$$. Si $$g$$ est une constante non nulle,
 alors
 $$\left\langle f_1,\ldots,f_m \right\rangle=1$$. Sinon $$g$$ admet un zéro dans $$k$$ qui est commun à tous les $$f_i$$.
-Supposons le résultat vrai pour $$n-1>0$$. On peut supposer que $$f_i\not=0$$, $$1\leq i\leq m$$. D'après la question {\bf 1.}, on peut
+Supposons le résultat vrai pour $$n-1>0$$. On peut supposer que $$f_i\neq 0$$, $$1\leq i\leq m$$. D'après la question {\bf 1.}, on peut
 supposer que le polynôme $$f_1$$ est unitaire en $$x_n$$.  Soit
 $$g(y,x_1,\ldots,x_n)=f_2+yf_3+\cdots +y^{m-2}f_m.$$
 Alors
@@ -1046,15 +1052,15 @@ $$1\in\left\langle a_0,\ldots,a_k \right\rangle$$. Or $$a_i\in\left\langle f_1,\
 
 **–**{:.exercise}
 
-Soit $$I \subset k\left[x_1,\dots,x_n\right]$$ un idéal monomial tel
+Soit $$I \subset k\left[x_1,\ldots,x_n\right]$$ un idéal monomial tel
 que $$\mathbb{V}\left(I\right)=n-1$$.
   
 
 1. Montrer que les monômes de n'importe quel ensemble de générateurs
    de $$I$$ on un facteur commun non constant.
-1. On écrit $$\mathbb{V}\left(I\right)=V_1\cup\dots,\cup V_p$$, où les
+1. On écrit $$\mathbb{V}\left(I\right)=V_1\cup\ldots,\cup V_p$$, où les
    $$V_i$$ sont des sous-espaces de coordonnées tels que $$V_i
-   \not\subset V_j$$ pour $$i\neq j$$. On suppose de plus qu'un seul
+   \nsubseteq V_j$$ pour $$i\neq j$$. On suppose de plus qu'un seul
    des $$V_i$$ est de dimension $$n-1$$.
    
    1. Quelle est la valeur maximale que peut prendre $$p$$ ?
@@ -1065,11 +1071,11 @@ que $$\mathbb{V}\left(I\right)=n-1$$.
 
 **–**{:.exercise}
 
-Soit $$I$$ un idéal monomial de $$k\left[x_1,\dots,x_n\right]$$.
+Soit $$I$$ un idéal monomial de $$k\left[x_1,\ldots,x_n\right]$$.
 
   1. Si $$\mathbb{V}\left(I\right)$$ est de dimension $$0$$, que peut être $$\mathbb{V}\left(I\right)$$ ?
-  1. Montrer que $$\mathbb{V}\left(I\right)$$ est de dimension $$0$$ si et seulement si pour tout $$i\in\left\{1,\dots,n\right\}$$, il existe
-    $$ℓ_i\geq 1$$ tel que  $$x_i^{ℓ_i}\in I$$.
+  1. Montrer que $$\mathbb{V}\left(I\right)$$ est de dimension $$0$$ si et seulement si pour tout $$i\in\left\{1,\ldots,n\right\}$$, il existe
+    $$\ell_i\geq 1$$ tel que  $$x_i^{\ell_i}\in I$$.
   
 
 
@@ -1131,8 +1137,8 @@ Soit $$k$$ un corps algébriquement clos. Calculer la dimension des variétés a
 
 **–**{:.exercise}
 
-On se donne des entiers $$a_1,\dots,a_n$$ strictement positifs et on
-considère l'idéal monomial $$J=(X_1^{a_1},\dots,X_n^{a_n})$$.  On se
+On se donne des entiers $$a_1,\ldots,a_n$$ strictement positifs et on
+considère l'idéal monomial $$J=(X_1^{a_1},\ldots,X_n^{a_n})$$.  On se
 propose de calculer la fonction de Hilbert $$h={}^aHF_J$$. On prolonge
 la fonction de Hilbert à $$\Z$$ par la valeur zéro sur les entiers
 négatifs.
@@ -1160,7 +1166,7 @@ Soit $$k$$ un corps algébriquement clos et $$I=\left\langle xy,wz
 
 1. Montrer que $$I\cap k[x]=0$$ mais que $$I\cap k[x,y]$$ et $$I\cap
    k[x,z]$$ ne sont pas nuls.
-1. Montrer que $$I\cap k[y,z]=0$$ mais que $$I\cap k[x,y,z]\not=0$$.
+1. Montrer que $$I\cap k[y,z]=0$$ mais que $$I\cap k[x,y,z]\neq 0$$.
 1. Quelle est la dimension de $$V(I)$$ ?
 
 
