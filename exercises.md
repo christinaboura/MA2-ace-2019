@@ -100,7 +100,7 @@ Fonctions utiles : `degree`, `leading_coefficient`, `coefficients`,
 
 ## Polynômes à plusieurs variables
 **–**{:.exercise}
-  Soit le polynôme $$P=xy^5+2y^4+3y^3x^3+4x^2y^2+5x^1y^2+6yx^3+7y.$$
+  Soit le polynôme $$P=xy^5+2y^4+3y^3x^3+4x^2y^2+5xy^2+6yx^3+7y$$.
   
 
   1. Donner le degré total de $$P$$.
@@ -117,8 +117,8 @@ Fonctions utiles : `degree`, `leading_coefficient`, `coefficients`,
 
   1. $$x^3+2x^2y+xy^2+x^2+2xy+y^2$$;
   1. $$(x+1)(x+y)^2$$;
-  1. $$y^2+(2y+y^2)x+(1+2y)x^2+x^3$$;
-  1. $$x^3+x^2+(2x^2+2x)y+(x+1)y^2$$.
+  1. $$x^3+(2y+1)x^2+(y^2+2y)x+y^2$$;
+  1. $$(x+1)y^2+(2x^2+2x)y+x^3+x^2$$.
   
 
 
@@ -128,7 +128,7 @@ Fonctions utiles : `degree`, `leading_coefficient`, `coefficients`,
 
 **–**{:.exercise}
 1. Soit le polynôme
-   $$P=xy^5+2y^4+3y^3x^3+4x^2y^2+5x^1y^2+6yx^3+7y$$.
+   $$P=xy^5+2y^4+3y^3x^3+4x^2y^2+5xy^2+6yx^3+7y$$.
    
    1. Ordonner $$P$$ pour l'ordre lexicographique.
    1. Ordonner $$P$$ pour l'ordre lexicographique gradué.
