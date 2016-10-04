@@ -42,11 +42,11 @@ TD 2 (27/09/2016)
 : Le [Jupyter notebook](http://nbviewer.jupyter.org/gist/defeo/d0cab064cbc539ab96a3130a3832ac66){:target="_blank"} de la séance.
 
 TD 3 (04/10/2016)
-: [Structures de contrôle en Python](polytd#syntaxe-pythonsage),
-: 
+: **Exercices :** [Polynômes](exercises#polynmes--plusieurs-variables).
+: Le [Jupyter notebook](http://nbviewer.jupyter.org/gist/defeo/1986c494e878b2d93b4534bbca2f9642){:target="_blank"} de la séance.
 
 TD 4 (11/10/2016)
-: 
+: [Structures de contrôle en Python](polytd#syntaxe-pythonsage),
 
 TD 5 (18/10/2016)
 : 
