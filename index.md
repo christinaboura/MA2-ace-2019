@@ -18,7 +18,7 @@
 
 **Serveur ssh/sftp** `bourbaki.math.uvsq.fr`
 
-**Commande pour écran partagé** `vncviewer localhost -passwd ~defeo/.vnc/vo-passwd`
+**Commande pour écran partagé** `vncviewer localhost -passwd ~defeo/.vnc/vo-passwd`{:style="-moz-user-select:all;-webkit-user-select:all;user-select:all"}
 
 
 ## Matériel de cours
