@@ -44,25 +44,6 @@ Fonctions utiles : `degree`, `leading_coefficient`, `coefficients`,
 
 
 **–**{:.exercise}
-  Que fait la procédure suivante ?  Quels sont les arguments de la
-  procédure ? Comment les variables sont elles initialisées ?
-  Quelle est la condition d'arrêt de la boucle ? Que doit renvoyer
-  la procédure ?
-
-    def euclidepol (A,B):
-        A0 = A; A1 = B
-        S0 = 1; S1 = 0
-        T0 = 0; T1 = 1
-        while A1 != 0:
-            Q = A0//A1
-            U = A1; A1 = A0 - Q*A1; A0 = U
-            U = S1; S1 = S0 - Q*S1; S0 = U
-            U = T1; T1 = T0 - Q*T1; T0 = U
-        return (A0,S0,T0)
-
-
-
-**–**{:.exercise}
   Soit le polynôme $$P=x^{11}+x^{10}+x^9+2x^8+2x^6+2x^4+x^3+x^2+x$$.
   
 
@@ -283,25 +264,6 @@ $$x^\alpha y^\beta\preccurlyeq x^\gamma y^\delta \iff x^\alpha \prec_{\lex}x^\ga
 Montrer que $$\preccurlyeq$$ est un ordre monomial.
 
 
-
-**–**{:.exercise}
-  Nous allons adopter une représentation distribuée creuse pour les
-  polynômes : un monôme sera représenté par une liste à deux
-  éléments. Le premier est le coefficient et le second la liste des
-  exposants.
-  
-
-  1. Écrire une fonction qui teste si un monôme $$m_1$$ est plus
-    petit qu'un monôme $$m_2$$ pour l'ordre lexicographique.
-  1. Écrire une fonction qui, étant donnée une liste de
-    monômes, renvoie son plus petit élément $$m$$.
-  1. Écrire une fonction qui, étant donnée une liste de monômes,
-    énumère les monômes dans l'ordre croissant pour l'ordre
-    lexicographique.
-
-
-
-
 **–**{:.exercise}
   Soit l'idéal $$I=\langle x^2-2xz+5,xy^2+yz^3,3y^2-8z^3\rangle$$ de
   $$\Q[x,y,z]$$.
@@ -310,8 +272,60 @@ Montrer que $$\preccurlyeq$$ est un ordre monomial.
   1. Donner une base de Gröbner $$G$$ de $$I$$ pour l'ordre
     lexicographique.
   1. Même question pour l'ordre degrevlex.
-  
 
+
+## Programmation Python/Sage
+
+**–**{:.exercise}
+  Que fait la procédure suivante ?  Quels sont les arguments de la
+  procédure ? Comment les variables sont elles initialisées ?
+  Quelle est la condition d'arrêt de la boucle ? Que doit renvoyer
+  la procédure ?
+
+    def euclidepol (A,B):
+        A0 = A; A1 = B
+        S0 = 1; S1 = 0
+        T0 = 0; T1 = 1
+        while A1 != 0:
+            Q = A0//A1
+            U = A1; A1 = A0 - Q*A1; A0 = U
+            U = S1; S1 = S0 - Q*S1; S0 = U
+            U = T1; T1 = T0 - Q*T1; T0 = U
+        return (A0,S0,T0)
+
+**–**{:.exercise} Écrire une fonction qui prend en entrée un corps
+$$k$$ et un entier $$n$$ et donne en sortie un polynôme aléatoire
+irréductible de $$k[x]$$ de degré $$n$$.  **Consignes :** Ne vous
+servez pas de la méthode `.irreducible_element()`. Écrivez une boucle
+qui tire des polynômes au hasard jusqu'à en trouver un
+irréductible. Vous pouvez utiliser la méthode `.random_element()` des
+anneaux de polynômes pour tirer des polynômes au hasard.
+
+**–**{:.exercise} Même question qu'à l'exercice précédent, mais cette
+fois-ci $$k=\F_p$$ est un corps premier, et vous donnerez en sortie le
+plus petit polynôme irréductible par l'ordre lexicographique (sur les
+coefficients).
+
+**–**{:.exercise}
+  Nous allons adopter une représentation distribuée creuse pour les
+  polynômes : un monôme sera représenté par une liste à deux
+  éléments. Le premier est le coefficient et le second la liste des
+  exposants.
+
+  1. Écrire une fonction qui teste si un monôme $$m_1$$ est plus
+    petit qu'un monôme $$m_2$$ pour l'ordre lexicographique.
+  1. Écrire une fonction qui, étant donnée une liste de
+    monômes, renvoie son plus petit élément $$m$$.
+  1. Écrire une fonction qui, étant donnée une liste de monômes,
+    énumère les monômes dans l'ordre croissant pour l'ordre
+    lexicographique.
+  1. Écrire une fonction qui affiche un monome de la manière
+     habituelle (par ex. `5 x^10 y^20`). Vous êtes libres de choisir
+     la façon dont les noms des variables sont assignés (pour
+     référence, `chr(97)` équivaut au caractère `'a'`).
+  1. (**avancé**) Transformer ces fonctions en une classe `Monome`,
+     munie de deux champs, et au minimum des méthodes spéciales
+     `__lt__`, `__repr__` et `__mul__`.
 
 
 ## Calcul de bases de Gröbner
