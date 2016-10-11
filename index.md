@@ -47,6 +47,8 @@ TD 3 (04/10/2016)
 
 TD 4 (11/10/2016)
 : [Structures de contrôle en Python](polytd#syntaxe-pythonsage),
+: **Exercices :** [Programmation Python/Sage](exercises#programmation-pythonsage).
+: Le [Jupyter notebook](http://nbviewer.jupyter.org/gist/defeo/a79b7f7e31c1973bfcff1d95aab84269){:target="_blank"} de la séance.
 
 TD 5 (18/10/2016)
 : 
