@@ -2,9 +2,9 @@
     function repl(t) {
 	var macros =  eLeMentS.page.addons.katex.options ? eLeMentS.page.addons.katex.options.macros : null;
 	return macros
-	    ? t.replace(new RegExp('(' + Object.keys(macros).join("|").replace(/\\/g, '\\\\') + ')([^a-zA-Z]|$)', 'g'),
-			function (match, macro, next) {
-			    return macros[macro] + next;
+	    ? t.replace(new RegExp('(' + Object.keys(macros).join("|").replace(/\\/g, '\\\\') + ')(?=[^a-zA-Z]|$)', 'g'),
+			function (match, macro) {
+			    return macros[macro];
 			})
 	: t;
     }
