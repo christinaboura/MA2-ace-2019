@@ -51,13 +51,14 @@ TD 4 (11/10/2016)
 : Le [Jupyter notebook](http://nbviewer.jupyter.org/gist/defeo/a79b7f7e31c1973bfcff1d95aab84269){:target="_blank"} de la séance.
 
 TD 5 (18/10/2016)
-: 
+: **Exercices :** [Bases de Gröbner](exercises#calcul-de-bases-de-grbner).
+: Le [Jupyter notebook](http://nbviewer.jupyter.org/gist/defeo/89b80a1903a3f0ef95b1a239ab30c62f){:target="_blank"} de la séance.
 
-TD 6 (??/11/2016)
-: 
+TD 6 (07/11/2016)
+: **Exercices :** [Élimination](exercises#rsultants-et-limination).
 
 TD 7 (08/11/2016)
-: 
+: **Exercices :** [Élimination et fonction de Hilbert](exercises#rappel-sur-les-idaux).
 
 ## Annales
 

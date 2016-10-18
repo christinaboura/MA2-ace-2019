@@ -555,19 +555,6 @@ Soient $$2\le n'\le n$$.
 
 
 
-
-**–**{:.exercise}
-  Soit l'idéal $$I=\left\langle
-    y^4x+3x^3-y^4-3x^2,x^2y-2x^2,2y^4x-x^3-2y^4+x^2 \right\rangle$$.
-  
-
-  1. Montrer que $$I\cap \Q[x]=\left\langle x^3-x^2
-    \right\rangle$$.
-  1. Montrer que $$I\cap \Q[y]=\left\langle y^5-2y^4 \right\rangle$$.
-
-
-
-
 **–**{:.exercise}
   Soient $$f$$ et $$g$$ deux polynômes non nuls sans facteur commun et
   $$I$$ l'idéal qu'ils engendrent.  On suppose que $$(f,g)$$ est une
@@ -592,8 +579,18 @@ Soient $$2\le n'\le n$$.
   
 
 
-
 ## Résultants et élimination
+
+**–**{:.exercise}
+  Soit l'idéal $$I=\left\langle
+    y^4x+3x^3-y^4-3x^2,x^2y-2x^2,2y^4x-x^3-2y^4+x^2 \right\rangle$$.
+  
+
+  1. Montrer que $$I\cap \Q[x]=\left\langle x^3-x^2
+    \right\rangle$$.
+  1. Montrer que $$I\cap \Q[y]=\left\langle y^5-2y^4 \right\rangle$$.
+
+
 
 **–**{:.exercise}
 
