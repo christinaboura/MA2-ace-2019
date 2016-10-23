@@ -62,3 +62,4 @@ sass:
 
 gems:
   - jekyll-coffeescript
+  - jekyll-redirect-from

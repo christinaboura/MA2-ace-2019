@@ -63,13 +63,13 @@ TD 7 (08/11/2016)
 ## Annales
 
 Devoir maison 2015
-: [Résultants successifs](dm2015)
+: [Résultants successifs](misc/dm2015)
 
 Devoir maison 2014
-: [Cryptanalyse algébrique](dm2014)
+: [Cryptanalyse algébrique](misc/dm2014)
 
 Devoir maison 2013
-: [FGLM](dm2013)
+: [FGLM](misc/dm2013)
 
 ## Ressources
 
