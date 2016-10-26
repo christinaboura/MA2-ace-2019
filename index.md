@@ -62,6 +62,9 @@ TD 7 (08/11/2016)
 
 ## Annales
 
+Devoir maison 2016
+: [Coloration de graphes](misc/dm2016)
+
 Devoir maison 2015
 : [Résultants successifs](misc/dm2015)
 
