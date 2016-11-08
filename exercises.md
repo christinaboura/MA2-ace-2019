@@ -16,6 +16,7 @@ addons:
         \LM   : \mathrm{LM}
         \Syz  : \mathrm{Syz}
         \iff  : \Leftrightarrow
+        \dim : \mathrm{dim}
         \succA: \,\begin{matrix}\succ\\[-0.9em]\tiny A\end{matrix}\,
   highlightjs: true
   style_goodies: yes
@@ -1064,12 +1065,12 @@ $$1\in\left\langle a_0,\ldots,a_k \right\rangle$$. Or $$a_i\in\left\langle f_1,\
 **–**{:.exercise}
 
 Soit $$I \subset k\left[x_1,\ldots,x_n\right]$$ un idéal monomial tel
-que $$\mathbb{V}\left(I\right)=n-1$$.
+que $$\dim\mathbb{V}\left(I\right)=n-1$$.
   
 
 1. Montrer que les monômes de n'importe quel ensemble de générateurs
-   de $$I$$ on un facteur commun non constant.
-1. On écrit $$\mathbb{V}\left(I\right)=V_1\cup\ldots,\cup V_p$$, où les
+   de $$I$$ ont un facteur commun non constant.
+1. On écrit $$\mathbb{V}\left(I\right)=V_1\cup\ldots\cup V_p$$, où les
    $$V_i$$ sont des sous-espaces de coordonnées tels que $$V_i
    \nsubseteq V_j$$ pour $$i\neq j$$. On suppose de plus qu'un seul
    des $$V_i$$ est de dimension $$n-1$$.
@@ -1126,7 +1127,7 @@ Calculer la fonction de Hilbert $$^aHF_I(s)$$.
 
 **–**{:.exercise}
 
-Soit $$I_1\subset I_2$$ des idéaux de $$k[x_1,\ldots,x_n]$$.
+Soient $$I_1\subset I_2$$ des idéaux de $$k[x_1,\ldots,x_n]$$.
 
   1. Montrer que $$C(\left\langle \LT(I_2) \right\rangle)\subset C(\left\langle \LT(I_1) \right\rangle)$$.
   1. Montrer que pour tout $$s\geq 0$$, $$^aHF_{I_2}(s)\leq ^aHF_{I_1}(s).$$
