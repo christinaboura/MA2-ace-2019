@@ -56,9 +56,11 @@ TD 5 (18/10/2016)
 
 TD 6 (07/11/2016)
 : **Exercices :** [Élimination](exercises#rsultants-et-limination).
+: Le [Jupyter notebook](http://nbviewer.jupyter.org/gist/defeo/ac4a2fd4594f119fbba24986b46808d6){:target="_blank"} de la séance.
 
 TD 7 (08/11/2016)
 : **Exercices :** [Élimination et fonction de Hilbert](exercises#rappel-sur-les-idaux).
+: Le [Jupyter notebook](http://nbviewer.jupyter.org/gist/defeo/134e8b3769fa273121c0407b094d5361){:target="_blank"} de la séance.
 
 ## Annales
 
