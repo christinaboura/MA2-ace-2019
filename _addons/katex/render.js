@@ -14,10 +14,10 @@
     }
     
     $$('script[type^="math/tex"]').forEach(function (m) {
-	var options = { display : m.type == 'math/tex; mode=display' };
+	var options = { displayMode : m.type == 'math/tex; mode=display' };
 	for (var o in eLeMentS.page.addons.katex.options)
 	    options[o] = eLeMentS.page.addons.katex.options[o];
-	var dest = document.createElement(options.display ?  'div' : 'span');
+	var dest = document.createElement(options.displayMode ?  'div' : 'span');
 	dest.classList.add('katex-plugin');
 	m.parentElement.insertBefore(dest, m);
 	try {
