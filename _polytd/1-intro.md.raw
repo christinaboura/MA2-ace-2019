@@ -20,15 +20,15 @@ title: Introduction à l'environnemnt de travail et à SageMath
   [*Jupyter*](http://jupyter.readthedocs.io/en/latest/index.html) :
   espace de cours sur <https://bourbaki.math.uvsq.fr/>,
 
-- SageMathCloud : <https://cloud.sagemath.com/> (UWashington).
+- SageMathCloud : <https://cocalc.com/> (SageMath Inc.).
 
 - Dans un terminal : taper la commande `sage` dans un terminal de la salle.
 
 - Installation locale sur machine personnelle (notebook *classique* et terminal) :
   - Instructions générales : <http://www.sagemath.org/download.html>
   - Linux :
-	- [Distribution précompilée](http://www-ftp.lip6.fr/pub/math/sagemath/linux/64bit/index.html)
-      (méthode conseillée).
+	- Gestionnaire de paquets du système: sous Arch, Debian, Ubuntu.
+	- [Distribution précompilée](http://www-ftp.lip6.fr/pub/math/sagemath/linux/64bit/index.html).
 	- Compiler à partir du
       [code source](http://www.sagemath.org/download-source.html).
   - MacOS,
