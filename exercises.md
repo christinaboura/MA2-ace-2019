@@ -29,7 +29,7 @@ addons:
 ## Polynômes à une variable
 
 Fonctions utiles : `degree`, `leading_coefficient`, `coefficients`,
-  `coeffs`, `expand`, `factor`, `gcd`, `quo`, `rem`.
+  `expand`, `factor`, `gcd`, `quo`, `rem`.
 
 **–**{:.exercise}
   Soient les polynômes $$P_1=x^6+2x^5-2x^4+2x^2-2x-1$$ et
