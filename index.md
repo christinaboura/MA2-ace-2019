@@ -92,5 +92,9 @@ P. Zimmermann. <http://sagebook.gforge.inria.fr/>
 [*Poly*](http://webusers.imj-prg.fr/~ariane.mezard/Grobner.pdf), par Arianne Mézard
 : <http://webusers.imj-prg.fr/~ariane.mezard/Grobner.pdf>
 
+[*Algorithmes Efficaces en Calcul Formel AECF*](https://hal.archives-ouvertes.fr/AECF/)
+: A. Bostan, F. Chyzak, M. Giusti, R. Lebreton, G. Lecerf, B. Salvy et
+É. Schost. <https://hal.archives-ouvertes.fr/AECF/>
+
 Les définitions des [ordres monomiaux dans Sage](http://doc.sagemath.org/html/en/reference/polynomial_rings/sage/rings/polynomial/term_order.html)
 : <http://doc.sagemath.org/html/en/reference/polynomial_rings/sage/rings/polynomial/term_order.html>
