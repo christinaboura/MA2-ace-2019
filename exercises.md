@@ -71,16 +71,27 @@ Fonctions utiles : `degree`, `leading_coefficient`, `coefficients`,
 
 **–**{:.exercise}
   Soit $$p$$ un nombre premier. Factoriser $$x^p-x+c$$ en facteurs
-  irréductibles dans $$\F_p[x]$$ pour $$0\le c<p$$.
+  irréductibles dans $$\F_p[x]$$ pour $$0\le c<p$$. Formuler une
+  conjecture sur le type de factorisation de ces polynômes, et la
+  prouver. **Suggestion:** observer que deux racines du polynôme
+  diffèrent nécessairement d'un élément de $$\F_p$$ ; conclure en
+  étudiant l'action du Frobenius sur les racines. **Note:** il est
+  possible de se passer de la théorie de Galois, si on le souhaite.
 
 
 **–**{:.exercise}
   Soit $$p$$ un nombre premier. Factoriser le polynôme $$x^{2p}+x^p+1$$
-  en facteurs irréductibles dans $$\Z[x]$$.
-
-
+  en facteurs irréductibles dans $$\Z[x]$$. Prouver que ces polynômes
+  sont des produits de *polynômes cyclotomiques*.
+  
+  
 
 ## Polynômes à plusieurs variables
+
+À partir de maintenant, il est préférable de se servir des
+[anneaux de polynômes de Sage](polytd#polynômes), plutôt que des
+[variables symboliques](polytd#variables-et-expressions-symboliques).
+
 **–**{:.exercise}
   Soit le polynôme $$P=xy^5+2y^4+3y^3x^3+4x^2y^2+5xy^2+6yx^3+7y$$.
   
@@ -150,12 +161,13 @@ aussi la proposition 4, p.55 du Cox, Little & O'Shea)
    
    1. À quoi correspond la commande `p.reduce([g, h])` ?
    1. À quoi correspond la commande `p.reduce([h, g])` ?
+   1. Montrer que $p$ est dans l'idéal $(g,h)$.
 
-1. Soient $$g=x^2y^2-x$$, $$h=xy^2+y$$ et $$p=x^3y^2+2xy^4$$.
+1. Soient $$g=x^2y^2-x$$ et $$h=xy^2+y$$.
    
-   1. Calculer *à la main* la réduction de $$p$$ par $$[g,h]$$,
-	  puis celle de $$p$$ par $$[h,g]$$.
-   1. Comparer avec `p.reduce([g, h])` et `p.reduce([h, g])`.
+   1. À quoi correspond la commande `g.reduce([g, h])` ?
+   1. À quoi correspond la commande `h.reduce([g, h])` ?
+   1. Pleurer.
 
 
 
