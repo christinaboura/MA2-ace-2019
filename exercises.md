@@ -161,7 +161,7 @@ aussi la proposition 4, p.55 du Cox, Little & O'Shea)
    
    1. À quoi correspond la commande `p.reduce([g, h])` ?
    1. À quoi correspond la commande `p.reduce([h, g])` ?
-   1. Montrer que $p$ est dans l'idéal $(g,h)$.
+   1. Montrer que $$p$$ est dans l'idéal $$(g,h)$$.
 
 1. Soient $$g=x^2y^2-x$$ et $$h=xy^2+y$$.
    
