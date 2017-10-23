@@ -14,7 +14,7 @@
 - Hébergé au département de mathématiques <https://bourbaki.math.uvsq.fr/>;
 - En cas de panne: SageMathCloud (service fourni par
   [SageMath Inc.](http://sagemath.com/))
-  <https://cocalc.com//>.
+  <https://cocalc.com/>.
 
 **Serveur ssh/sftp** `bourbaki.math.uvsq.fr`
 
@@ -64,14 +64,14 @@ TD 7 (??/11/2016)
 
 ## Annales
 
+Devoir maison 2017
+: [Cryptanalyse algébrique](misc/dm2014)
+
 Devoir maison 2016
 : [Coloration de graphes](misc/dm2016)
 
 Devoir maison 2015
 : [Résultants successifs](misc/dm2015)
-
-Devoir maison 2014
-: [Cryptanalyse algébrique](misc/dm2014)
 
 Devoir maison 2013
 : [FGLM](misc/dm2013)
