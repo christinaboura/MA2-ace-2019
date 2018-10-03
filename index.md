@@ -18,7 +18,8 @@
 ## Matériel de cours
 
 - Le [polycopié de cours](poly) et le [polycopié de TD](polytd);
-- Les [exercices de TD](exercises);
+- Les [exercices de TD](exercises), et les
+  [corrections](https://defeo.lu/MA2-ace-notebooks/);
 - [*Calcul mathématique avec Sage*](http://sagebook.gforge.inria.fr/).
 
 
@@ -28,12 +29,12 @@ TD 1 (28/09/2018)
 : [Introduction à l'environnement de travail et à SageMath](polytd#introduction-à-lenvironnemnt-de-travail-et-à-sagemath),
 : [Structures algébriques de base en SageMath](polytd#anneaux-corps-polynômes-expressions),
 : **Exercices :** [Manipuler les polynômes en SageMath](exercises#polynômes-à-une-variable),
-: Le [Jupyter notebook](http://nbviewer.jupyter.org/gist/defeo/4adb727f7608dfd2c75eb7699d670fb7){:target="_blank"} de la séance.
+: Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/0/TD1){:target="_blank"} de la séance.
 
 TD 2 (01/10/2018)
 : [Anneaux de polynômes en SageMath](polytd#polynômes),
 : **Exercices :** [Polynômes](exercises#polynômes-à-une-variable).
-: Le [Jupyter notebook](http://nbviewer.jupyter.org/gist/defeo/d0cab064cbc539ab96a3130a3832ac66){:target="_blank"} de la séance.
+: Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/1/TD2){:target="_blank"} de la séance.
 
 TD 3 (12/10/2018)
 : **Exercices :** [Polynômes](exercises#polynômes-à-plusieurs-variables).
