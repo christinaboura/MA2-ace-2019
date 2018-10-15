@@ -37,8 +37,8 @@ TD 2 (01/10/2018)
 : Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/1/TD2){:target="_blank"} de la séance.
 
 TD 3 (12/10/2018)
-: **Exercices :** [Polynômes](exercises#polynômes-à-plusieurs-variables).
-: Le [Jupyter notebook](http://nbviewer.jupyter.org/gist/defeo/1986c494e878b2d93b4534bbca2f9642){:target="_blank"} de la séance.
+: **Exercices :** [Bases de Gröbner](exercises#idéaux-monomiaux).
+: Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/1/TD3){:target="_blank"} de la séance.
 
 TD 4 (15/10/2018)
 : [Structures de contrôle en Python](polytd#syntaxe-pythonsage),
