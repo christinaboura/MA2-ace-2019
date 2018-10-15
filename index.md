@@ -43,7 +43,7 @@ TD 3 (12/10/2018)
 TD 4 (15/10/2018)
 : [Structures de contrôle en Python](polytd#syntaxe-pythonsage),
 : **Exercices :** [Programmation Python/Sage](exercises#programmation-pythonsage).
-: Le [Jupyter notebook](http://nbviewer.jupyter.org/gist/defeo/a79b7f7e31c1973bfcff1d95aab84269){:target="_blank"} de la séance.
+: Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/1/TD4){:target="_blank"} de la séance.
 
 TD 5 (22/10/2018)
 : **Exercices :** [Bases de Gröbner](exercises#calcul-de-bases-de-gröbner).
