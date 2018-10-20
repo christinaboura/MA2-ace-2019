@@ -59,11 +59,11 @@ TD 7 (12/11/2018)
 
 ## Annales
 
+Devoir maison 2018
+: [Coloration de graphes](misc/dm2018)
+
 Devoir maison 2017
 : [Cryptanalyse algébrique](misc/dm2014)
-
-Devoir maison 2016
-: [Coloration de graphes](misc/dm2016)
 
 Devoir maison 2015
 : [Résultants successifs](misc/dm2015)
