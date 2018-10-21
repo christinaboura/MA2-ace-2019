@@ -47,7 +47,7 @@ TD 4 (15/10/2018)
 
 TD 5 (19/10/2018)
 : **Exercices :** [Bases de Gröbner](exercises#calcul-de-bases-de-gröbner).
-: Le [Jupyter notebook](http://nbviewer.jupyter.org/gist/defeo/89b80a1903a3f0ef95b1a239ab30c62f){:target="_blank"} de la séance.
+: Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/1/TD5){:target="_blank"} de la séance.
 
 TD 6 (09/11/2018)
 : **Exercices :** [Élimination](exercises#résultants-et-élimination).
