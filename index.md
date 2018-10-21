@@ -34,11 +34,11 @@ TD 1 (28/09/2018)
 TD 2 (01/10/2018)
 : [Anneaux de polynômes en SageMath](polytd#polynômes),
 : **Exercices :** [Polynômes](exercises#polynômes-à-une-variable).
-: Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/1/TD2){:target="_blank"} de la séance.
+: Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/4/TD2){:target="_blank"} de la séance.
 
 TD 3 (12/10/2018)
 : **Exercices :** [Bases de Gröbner](exercises#idéaux-monomiaux).
-: Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/1/TD3){:target="_blank"} de la séance.
+: Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/3/TD3){:target="_blank"} de la séance.
 
 TD 4 (15/10/2018)
 : [Structures de contrôle en Python](polytd#syntaxe-pythonsage),
@@ -47,7 +47,7 @@ TD 4 (15/10/2018)
 
 TD 5 (19/10/2018)
 : **Exercices :** [Bases de Gröbner](exercises#calcul-de-bases-de-gröbner).
-: Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/1/TD5){:target="_blank"} de la séance.
+: Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/2/TD5){:target="_blank"} de la séance.
 
 TD 6 (09/11/2018)
 : **Exercices :** [Élimination](exercises#résultants-et-élimination).
