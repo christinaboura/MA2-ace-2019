@@ -34,28 +34,28 @@ TD 1 (28/09/2018)
 TD 2 (01/10/2018)
 : [Anneaux de polynômes en SageMath](polytd#polynômes),
 : **Exercices :** [Polynômes](exercises#polynômes-à-une-variable).
-: Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/5/TD2){:target="_blank"} de la séance.
+: Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/6/TD2){:target="_blank"} de la séance.
 
 TD 3 (12/10/2018)
 : **Exercices :** [Bases de Gröbner](exercises#idéaux-monomiaux).
-: Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/4/TD3){:target="_blank"} de la séance.
+: Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/5/TD3){:target="_blank"} de la séance.
 
 TD 4 (15/10/2018)
 : [Structures de contrôle en Python](polytd#syntaxe-pythonsage),
 : **Exercices :** [Programmation Python/Sage](exercises#programmation-pythonsage).
-: Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/1/TD4){:target="_blank"} de la séance.
+: Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/2/TD4){:target="_blank"} de la séance.
 
 TD 5 (19/10/2018)
 : **Exercices :** [Bases de Gröbner](exercises#calcul-de-bases-de-gröbner).
-: Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/2/TD5){:target="_blank"} de la séance.
+: Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/3/TD5){:target="_blank"} de la séance.
 
 TD 6 (09/11/2018)
 : **Exercices :** [Élimination](exercises#résultants-et-élimination).
-: Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/3/TD6){:target="_blank"} de la séance.
+: Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/4/TD6){:target="_blank"} de la séance.
 
 TD 7 (12/11/2018)
 : **Exercices :** [Élimination et fonction de Hilbert](exercises#rappel-sur-les-idaux).
-: Le [Jupyter notebook](http://nbviewer.jupyter.org/gist/defeo/134e8b3769fa273121c0407b094d5361){:target="_blank"} de la séance.
+: Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/1/TD7){:target="_blank"} de la séance.
 
 ## Annales
 
