@@ -7,7 +7,7 @@
 
 **Cours** les lundis de 9h30 à 12h30, avec [Nicolas Perrin](http://lmv.math.cnrs.fr/annuaire/nicolas-perrin/).
 
-**TDs** les lundis de 14h à 17h, avec [Luca De Feo](http://defeo.lu/).
+**TDs** les lundis de 9h40 à 12h50, avec [Luca De Feo](http://defeo.lu/).
 
 **Serveurs SageMath**
 
