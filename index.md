@@ -7,7 +7,7 @@
 
 **Cours** les lundis de 9h30 à 12h30, avec [Nicolas Perrin](http://lmv.math.cnrs.fr/annuaire/nicolas-perrin/).
 
-**TDs** les mardis de 9h40 à 12h50, avec [Luca De Feo](http://defeo.lu/).
+**TDs** les mardis de 9h40 à 12h50, avec [Christina Boura](http://christina-boura.info/).
 
 **Serveurs SageMath**
 
@@ -25,35 +25,35 @@
 
 ## Calendrier
 
-TD 1 (28/09/2018)
+TD 1 (25/09/2019)
 : [Introduction à l'environnement de travail et à SageMath](polytd#introduction-à-lenvironnemnt-de-travail-et-à-sagemath),
 : [Structures algébriques de base en SageMath](polytd#anneaux-corps-polynômes-expressions),
 : **Exercices :** [Manipuler les polynômes en SageMath](exercises#polynômes-à-une-variable),
 : Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/0/TD1){:target="_blank"} de la séance.
 
-TD 2 (01/10/2018)
+TD 2 (01/10/2019)
 : [Anneaux de polynômes en SageMath](polytd#polynômes),
 : **Exercices :** [Polynômes](exercises#polynômes-à-une-variable).
 : Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/6/TD2){:target="_blank"} de la séance.
 
-TD 3 (12/10/2018)
+TD 3 (08/10/2019)
 : **Exercices :** [Bases de Gröbner](exercises#idéaux-monomiaux).
 : Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/5/TD3){:target="_blank"} de la séance.
 
-TD 4 (15/10/2018)
+TD 4 (15/10/2019)
 : [Structures de contrôle en Python](polytd#syntaxe-pythonsage),
 : **Exercices :** [Programmation Python/Sage](exercises#programmation-pythonsage).
 : Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/2/TD4){:target="_blank"} de la séance.
 
-TD 5 (19/10/2018)
+TD 5 (22/10/2019)
 : **Exercices :** [Bases de Gröbner](exercises#calcul-de-bases-de-gröbner).
 : Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/3/TD5){:target="_blank"} de la séance.
 
-TD 6 (09/11/2018)
+TD 6 (05/11/2019)
 : **Exercices :** [Élimination](exercises#résultants-et-élimination).
 : Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/4/TD6){:target="_blank"} de la séance.
 
-TD 7 (12/11/2018)
+TD 7 (12/11/2019)
 : **Exercices :** [Élimination et fonction de Hilbert](exercises#rappel-sur-les-idaux).
 : Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/1/TD7){:target="_blank"} de la séance.
 
