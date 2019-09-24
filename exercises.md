@@ -870,7 +870,7 @@ $$\begin{cases}x^2+2y^2 & =3\\x^2+xy+y^2 & =3\end{cases}$$
 **–**{:.exercise}
   Soit $$I$$ l'idéal déterminé par les équations
 
-$$x^5+y^2+z^2=4,\; x^2+2y^2=5,\; xz=1.$$
+$$x^2+y^2+z^2=4,\; x^2+2y^2=5,\; xz=1.$$
   
 
   1. Calculer les idéaux $$I_1$$ et $$I_2$$.
