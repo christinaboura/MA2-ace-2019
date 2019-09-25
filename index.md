@@ -18,8 +18,7 @@
 ## Matériel de cours
 
 - Le [polycopié de cours](poly) et le [polycopié de TD](polytd);
-- Les [exercices de TD](exercises), et les
-  [corrections](https://defeo.lu/MA2-ace-notebooks/);
+- Les [exercices de TD](exercises)
 - [*Calcul mathématique avec Sage*](http://sagebook.gforge.inria.fr/).
 
 
@@ -28,34 +27,27 @@
 TD 1 (25/09/2019)
 : [Introduction à l'environnement de travail et à SageMath](polytd#introduction-à-lenvironnemnt-de-travail-et-à-sagemath),
 : [Structures algébriques de base en SageMath](polytd#anneaux-corps-polynômes-expressions),
-: **Exercices :** [Manipuler les polynômes en SageMath](exercises#polynômes-à-une-variable),
-: Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/0/TD1){:target="_blank"} de la séance.
+: **Exercices :** [Manipuler les polynômes en SageMath](exercises#polynômes-à-une-variable)
 
 TD 2 (01/10/2019)
 : [Anneaux de polynômes en SageMath](polytd#polynômes),
 : **Exercices :** [Polynômes](exercises#polynômes-à-une-variable).
-: Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/6/TD2){:target="_blank"} de la séance.
 
 TD 3 (08/10/2019)
 : **Exercices :** [Bases de Gröbner](exercises#idéaux-monomiaux).
-: Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/5/TD3){:target="_blank"} de la séance.
 
 TD 4 (15/10/2019)
 : [Structures de contrôle en Python](polytd#syntaxe-pythonsage),
 : **Exercices :** [Programmation Python/Sage](exercises#programmation-pythonsage).
-: Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/2/TD4){:target="_blank"} de la séance.
 
 TD 5 (22/10/2019)
 : **Exercices :** [Bases de Gröbner](exercises#calcul-de-bases-de-gröbner).
-: Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/3/TD5){:target="_blank"} de la séance.
 
 TD 6 (05/11/2019)
 : **Exercices :** [Élimination](exercises#résultants-et-élimination).
-: Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/4/TD6){:target="_blank"} de la séance.
 
 TD 7 (12/11/2019)
 : **Exercices :** [Élimination et fonction de Hilbert](exercises#rappel-sur-les-idaux).
-: Le [Jupyter notebook](https://defeo.lu/MA2-ace-notebooks/#/nb/notebook/1/TD7){:target="_blank"} de la séance.
 
 ## Annales
 
