@@ -209,51 +209,6 @@ Soient $$f = x^7y^2 + x^3y^2-y-1$$ et l'ensemble ordonné $$F =
    h_1(y-x^2) + h_2(z-x^3)$$.
   
 
-
-
-
-## Représentation matricielle des ordres admissibles.
-**–**{:.exercise}
-
-On étend l'ordre lexicographique $$>_{\lex}$$ à $$\R^n$$ de la
-façon évidente.  On définit une relation sur les monômes
-à $$n$$ variables à partir d'une matrice $$A$$ carrée réelle de
-taille $$n$$ comme suit :
-
-$$
-  x_1^{\alpha_1}\cdots x_n^{\alpha_n}\succA
-  x_1^{\beta_1}\cdots x_n^{\beta_n} \iff
-  A\begin{pmatrix}\alpha_1\\\vdots\\\alpha_n\end{pmatrix}>_{\lex}
-  A\begin{pmatrix}\beta _1\\\vdots\\\beta _n\end{pmatrix}.
-$$
-
-1. Montrer que si $$A\in \mathcal{M}_n\left(\Q\right)$$ et $$\det
-   A=0$$ alors $$\succA$$ n'est pas un ordre admissible.
-1. Quelles conditions (nécessaires et suffisantes) doit vérifier
-   $$A\in\mathcal{M}_n\left(\Q\right)$$ pour que l'ordre associé soit
-   un ordre admissible ?
-    
-1. Pour $$n\geq 2$$, trouver
-   
-   $$A = \begin{pmatrix}
-	   a_1 & \cdots & a_n\\ 0 & \cdots & 0\\ \vdots & & \vdots \\
-	   0 & \cdots & 0
-   \end{pmatrix}\in\mathcal{M}_n\left(\R\right)$$
-   
-   telle que $$\succA$$ soit un ordre admissible.
-1. Quelles conditions (nécessaires et suffisantes) doit
-   vérifier $$A\in\mathcal{M}_n\left(\R\right)$$ pour que l'ordre
-   associé soit un ordre admissible ?
-
-1. Donner successivement un exemple de matrice $$A$$ tel que
-   l'ordre associé soit l'ordre `lex`, `deglex`,
-   `degrevlex`, un ordre produit (avec à chaque fois
-   $$x_1>\cdots> x_n$$).
-
-
-
-
-
 ## Idéaux monomiaux
 
 Fonction utiles : `lc`, `lm`, `lt`.
