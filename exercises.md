@@ -590,28 +590,6 @@ Soient $$2\le n'\le n$$.
 
 
 **–**{:.exercise}
-
-Le degré (resp. le poids) du monôme non nul $$ax_1^{\alpha_1}\cdots
-x_n^{\alpha_n}$$ est $$\sum \alpha_i$$ (resp. $$\sum i\alpha_i$$).  Le
-degré (resp. le poids) d'un polynôme est le maximum des degrés
-(resp. des poids) de ses monômes non nuls.  Un polynôme $$P\in
-k[x_1,\ldots,x_n]$$ est dit symétrique si pour toute permutation
-$$\sigma \in S_n,
-P(x_{\sigma(1)},\ldots,x_{\sigma(n)})=P(x_1,\ldots,x_n).$$ Pour
-$$1\leq k\leq n$$, on note $$S_k=\sum_{1\leq
-i_1<\cdots<i_k}x_{i_1}\cdots x_{i_k}$$ le $$k$$-ième polynôme
-symétrique élémentaire.
-
-1. Si $$P$$ est symétrique, montrer que le degré par rapport à n'importe quel variable est le même. Ce degré est appelé degré partiel de $$P$$.
-1. Montrer que pour tout polynôme $$P\in k[x_1,\ldots,x_n]$$ symétrique de degré $$d$$, il existe un unique polynôme $$F\in
-  k[x_1,\ldots,x_n]$$ tel que
-$$P(x_1,\ldots,x_n)=F(S_1,\ldots,S_n)$$
-où $$F$$ est de poids $$d$$ et de degré le degré partiel de $$P$$.
-
-
-
-
-**–**{:.exercise}
   Déterminer à l'aide d'un résultant l'intersection des courbes de $$\R^2$$ définies par
 
 $$f(X,Y) = X^4 + Y^4- 1,\;
