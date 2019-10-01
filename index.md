@@ -33,6 +33,7 @@ TD 1 (25/09/2019)
 TD 2 (01/10/2019)
 : [Anneaux de polynômes en SageMath](polytd#polynômes),
 : **Exercices :** [Polynômes](exercises#polynômes-à-une-variable).
+[Le Jupyter notebook de la séance](misc/TD2.ipynb)
 
 TD 3 (08/10/2019)
 : **Exercices :** [Bases de Gröbner](exercises#idéaux-monomiaux).
