@@ -227,7 +227,7 @@ Dans l'anneau $$k[x_1,\ldots,x_n,y_1,\ldots,y_m]$$, on considère l'ordre
 $$\preccurlyeq$$ défini par l'ordre lexicographique sur les $$x_i$$ et
 par l'ordre degrevlex sur les $$y_j$$ :
 
-$$x^\alpha y^\beta\preccurlyeq x^\gamma y^\delta \iff x^\alpha \prec_{\lex}x^\gamma\text{ ou } (x^\alpha=x^\beta\text{ et } y^\beta\preccurlyeq_{\degrevlex}y^\delta)$$
+$$x^\alpha y^\beta\preccurlyeq x^\gamma y^\delta \iff x^\alpha \prec_{\lex}x^\gamma\text{ ou } (x^\alpha=x^\gamma\text{ et } y^\beta\preccurlyeq_{\degrevlex}y^\delta)$$
 
 Montrer que $$\preccurlyeq$$ est un ordre monomial.
 
