@@ -387,7 +387,7 @@ On donne une preuve sous forme d'algorithme.
 > 		Sinon $$i := i+1$$ *(On essaie le polynôme suivant de $$F$$)*
 > 	Si division $$=$$ faux faire : *(si aucun élément de $$F$$ n'a marché, on regarde le coefficient suivant de $$T$$)*
 > 		$$S := S + \LT(T)$$
-> 		$$T := P - \LT(T)$$.
+> 		$$T := T - \LT(T)$$.
 > Donner $$(Q_1,\cdots,Q_r,S)$$.
 {:.theorem.algo}
 
