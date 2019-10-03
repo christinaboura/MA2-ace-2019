@@ -1091,7 +1091,7 @@ Soit $$k$$ un corps algébriquement clos. Calculer la dimension des variétés a
 
 
 
-
+<!--
 **–**{:.exercise}
 
 On se donne des entiers $$a_1,\ldots,a_n$$ strictement positifs et on
@@ -1107,7 +1107,7 @@ négatifs.
 1. Calculer $$h$$ quand $$a_i=2$$ pour tout $$i\in [1,n]$$.
 1. Calculer $$h$$ quand $$n=2$$, $$a_1\leq a_2$$.
  
-
+-->
 
 **–**{:.exercise}
 
