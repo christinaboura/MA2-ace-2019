@@ -1118,7 +1118,7 @@ Montrer qu'un point $$p=(a_1,\ldots,a_n)\in k^n$$ est une variété affine de di
 
 **–**{:.exercise}
 
-Soit $$k$$ un corps algébriquement clos et $$I=\left\langle xy,wz
+Soit $$k$$ un corps algébriquement clos et $$I=\left\langle xy,xz
 \right\rangle\in k[x,y,z]$$.
 
 1. Montrer que $$I\cap k[x]=0$$ mais que $$I\cap k[x,y]$$ et $$I\cap
