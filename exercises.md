@@ -842,8 +842,8 @@ polynomiale de $$\R^2$$ dans $$\R$$.
   <!-- Becker Weispfenning p.259 -->
   
   Soient $$I$$ et $$J$$ deux idéaux de $$k[x_1,\ldots,x_n]$$. Soit
-  $$\left\langle tI+(t-1)I' \right\rangle\in k[t,x_1,\ldots,x_n]$$. Montrer que
-  $$I\cap J = \left\langle tI+(t-1)I' \right \cap k[x_1, \dots, x_n].$$
+  $$\left\langle tI+(t-1)J \right\rangle\in k[t,x_1,\ldots,x_n]$$. Montrer que
+  $$I\cap J = \left\langle tI+(t-1)J \right\rangle \cap k[x_1, \dots, x_n].$$
 
 
 
