@@ -841,9 +841,9 @@ polynomiale de $$\R^2$$ dans $$\R$$.
 **–**{:.exercise}
   <!-- Becker Weispfenning p.259 -->
   
-  Soient $$I$$ et $$I'$$ deux idéaux de $$k[x_1,\ldots,x_n]=k[\underline{x}]$$. Soit
-  $$J=\left\langle yI,(y-1)I' \right\rangle\in k[y,\underline{x}]$$. Montrer que
-  $$I\cap I'$$ est l'idéal d'élimination $$J_{\underline{x}}$$.
+  Soient $$I$$ et $$J$$ deux idéaux de $$k[x_1,\ldots,x_n]$$. Soit
+  $$\left\langle tI+(t-1)I' \right\rangle\in k[t,x_1,\ldots,x_n]$$. Montrer que
+  $$I\cap J = \left\langle tI+(t-1)I' \right \cap k[x_1, \dots, x_n].$$
 
 
 
@@ -853,7 +853,7 @@ polynomiale de $$\R^2$$ dans $$\R$$.
   
   Calculer, dans $$\Q[x,y]$$, l'intersection des idéaux
   
-  $$I=\left\langle x^2-2,x+y \right\rangle,\; I'=\left\langle x^2-2,x-y
+  $$I=\left\langle x^2-2,x+y \right\rangle,\; J=\left\langle x^2-2,x-y
   \right\rangle.$$
 
 
