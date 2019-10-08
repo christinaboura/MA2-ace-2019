@@ -37,6 +37,7 @@ TD 2 (01/10/2019)
 
 TD 3 (08/10/2019)
 : **Exercices :** [Bases de Gröbner](exercises#idéaux-monomiaux).
+[Le Jupyter notebook de la séance](misc/TD3.ipynb)
 
 TD 4 (15/10/2019)
 : [Structures de contrôle en Python](polytd#syntaxe-pythonsage),
