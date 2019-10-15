@@ -42,6 +42,7 @@ TD 3 (08/10/2019)
 TD 4 (15/10/2019)
 : [Structures de contrôle en Python](polytd#syntaxe-pythonsage),
 : **Exercices :** [Programmation Python/Sage](exercises#programmation-pythonsage).
+[Le Jupyter notebook de la séance](misc/TD4.ipynb)
 
 TD 5 (22/10/2019)
 : **Exercices :** [Bases de Gröbner](exercises#calcul-de-bases-de-gröbner).
