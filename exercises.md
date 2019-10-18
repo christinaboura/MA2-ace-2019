@@ -374,7 +374,7 @@ de $$k[x, y, z, t]$$.
   Soit l'anneau $$A$$ des polynômes à $$2m$$ indéterminées
   $$(x_{ij})_{1\le i\le 2, 1\le j\le m}$$, à coefficients dans
   $$k$$. Soit $$I$$ l'idéal de $$A$$ engendré par les $$\binom{m}{2}$$
-  polynômes $$D_{k,\ell}=x_{1k}x_{2\ell}- x_{1\ell}x_{2k}$$, pour $1\leq k < \ell \leq m$.
+  polynômes $$D_{k,\ell}=x_{1k}x_{2\ell}- x_{1\ell}x_{2k}$$, pour $$1\leq k < \ell \leq m.$$
   
 
   1. Pour $$m=3$$, montrer que les $$D_{k,\ell}$$ forment une base de
