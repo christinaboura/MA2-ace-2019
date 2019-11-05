@@ -50,6 +50,7 @@ TD 5 (22/10/2019)
 
 TD 6 (05/11/2019)
 : **Exercices :** [Élimination](exercises#résultants-et-élimination).
+: [Le Jupyter notebook de la séance](misc/TD6.ipynb)
 
 TD 7 (12/11/2019)
 : **Exercices :** [Élimination et fonction de Hilbert](exercises#rappel-sur-les-idaux).
