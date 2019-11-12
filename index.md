@@ -53,7 +53,7 @@ TD 6 (05/11/2019)
 : [Le Jupyter notebook de la séance](misc/TD6.ipynb)
 
 TD 7 (12/11/2019)
-: **Exercices :** [Élimination et fonction de Hilbert](exercises#rappel-sur-les-idaux).
+: [Examen](misc/ExamTD.pdf)
 
 ## Annales
 
