@@ -28,32 +28,25 @@ TD 1 (25/09/2019)
 : [Introduction à l'environnement de travail et à SageMath](polytd#introduction-à-lenvironnemnt-de-travail-et-à-sagemath),
 : [Structures algébriques de base en SageMath](polytd#anneaux-corps-polynômes-expressions),
 : **Exercices :** [Manipuler les polynômes en SageMath](exercises#polynômes-à-une-variable)
-: [Le Jupyter notebook de la séance](misc/TD1.ipynb)
 
 TD 2 (01/10/2019)
 : [Anneaux de polynômes en SageMath](polytd#polynômes),
 : **Exercices :** [Polynômes](exercises#polynômes-à-une-variable).
-: [Le Jupyter notebook de la séance](misc/TD2.ipynb)
 
 TD 3 (08/10/2019)
 : **Exercices :** [Bases de Gröbner](exercises#idéaux-monomiaux).
-: [Le Jupyter notebook de la séance](misc/TD3.ipynb)
 
 TD 4 (15/10/2019)
 : [Structures de contrôle en Python](polytd#syntaxe-pythonsage),
 : **Exercices :** [Programmation Python/Sage](exercises#programmation-pythonsage).
-: [Le Jupyter notebook de la séance](misc/TD4.ipynb)
 
 TD 5 (22/10/2019)
 : **Exercices :** [Bases de Gröbner](exercises#calcul-de-bases-de-gröbner).
-: [Le Jupyter notebook de la séance](misc/TD5.ipynb)
 
 TD 6 (05/11/2019)
 : **Exercices :** [Élimination](exercises#résultants-et-élimination).
-: [Le Jupyter notebook de la séance](misc/TD6.ipynb)
 
 TD 7 (12/11/2019)
-: [Examen](misc/ExamTD.pdf)
 
 ## Annales
 
