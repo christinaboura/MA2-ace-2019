@@ -5,49 +5,46 @@
 
 ## Informations pratiques
 
-**Cours** les lundis de 9h30 à 12h30, avec [Nicolas Perrin](http://lmv.math.cnrs.fr/annuaire/nicolas-perrin/).
+**Cours** les lundis de 9h30 à 12h30, avec [Pierre-Guy Plamondon](http://www.departement.math.uvsq.fr/node/1862).
 
-**TDs** les mardis de 9h40 à 12h50, avec [Christina Boura](http://christina-boura.info/).
+**TDs** les mardis de 16h00 à 18h40, avec [Christina Boura](https://christinaboura.wordpress.com/).
 
-**Serveurs SageMath**
+**Serveur SageMath**
 
-- Serveur de l'UFR <https://jupyter.ens.uvsq.fr/>;
-- En cas de panne: <https://sage.prism.uvsq.fr/> (**attention :**
-  données non sauvegardées).
+- Serveur de l'UFR <https://jupyter.ens.uvsq.fr/>.
 
 ## Matériel de cours
 
 - Le [polycopié de cours](poly) et le [polycopié de TD](polytd);
-- Les [exercices de TD](exercises) 
+- Les [exercices de TD](exercises)
 - [*Calcul mathématique avec Sage*](http://sagebook.gforge.inria.fr/).
 
 
 ## Calendrier
 
-TD 1 (28/09/2018)
-: [Introduction à l'environnement de travail et à SageMath](polytd#introduction-à-lenvironnemnt-de-travail-et-à-sagemath).
-: [Structures algébriques de base en SageMath](polytd#anneaux-corps-polynômes-expressions).
-: **Exercices :** [Manipuler les polynômes en SageMath](exercises#polynômes-à-une-variable).
+TD 1 (22/09/2020)
+: [Introduction à l'environnement de travail et à SageMath](polytd#introduction-à-lenvironnemnt-de-travail-et-à-sagemath),
+: [Structures algébriques de base en SageMath](polytd#anneaux-corps-polynômes-expressions),
+: **Exercices :** [Manipuler les polynômes en SageMath](exercises#polynômes-à-une-variable)
 
-TD 2 (01/10/2018)
+TD 2 (06/10/2020)
 : [Anneaux de polynômes en SageMath](polytd#polynômes),
 : **Exercices :** [Polynômes](exercises#polynômes-à-une-variable).
 
-TD 3 (12/10/2018)
+TD 3 (13/10/2020)
 : **Exercices :** [Bases de Gröbner](exercises#idéaux-monomiaux).
 
-TD 4 (15/10/2018)
+TD 4 (20/10/2020)
 : [Structures de contrôle en Python](polytd#syntaxe-pythonsage),
 : **Exercices :** [Programmation Python/Sage](exercises#programmation-pythonsage).
 
-TD 5 (19/10/2018)
+TD 5 (03/11/2020)
 : **Exercices :** [Bases de Gröbner](exercises#calcul-de-bases-de-gröbner).
 
-TD 6 (09/11/2018)
+TD 6 (10/11/2020)
 : **Exercices :** [Élimination](exercises#résultants-et-élimination).
 
-TD 7 (12/11/2018)
-: **Exercices :** [Élimination et fonction de Hilbert](exercises#rappel-sur-les-idaux).
+TD 7 (17/11/2019)
 
 ## Annales
 
