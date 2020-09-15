@@ -2,25 +2,7 @@
 layout: default
 title: Algèbre commutatative et effective
 addons:
-  katex:
-    options:
-      macros:
-        \a : \alpha
-        \N : \mathbb{N}
-        \Z : \mathbb{Z}
-        \R : \mathbb{R}
-        \Q : \mathbb{Q}
-        \C : \mathbb{C}
-        \F : \mathbb{F}
-        \kk : \mathsf{k}
-        \LL : \mathcal{L}
-        \PP : \mathfrak{P}
-        \dd : \,\mathrm{d}
-        \im : \{\mathrm{Im}
-        \LC : \mathrm{LC}
-        \LT : \mathrm{LT}
-        \LM : \mathrm{LM}
-        \mdeg : \mathrm{mdeg}
+  mathjax: yes
   style_goodies: yes
   book:
     crossref:
@@ -42,6 +24,25 @@ addons:
           nota: Notation
           algo: Algorithme
 ---
+
+$$
+\def\a{\alpha}
+\def\N{\mathbb{N}}
+\def\Z{\mathbb{Z}}
+\def\R{\mathbb{R}}
+\def\Q{\mathbb{Q}}
+\def\C{\mathbb{C}}
+\def\F{\mathbb{F}}
+\def\kk{\mathsf{k}}
+\def\LL{\mathcal{L}}
+\def\PP{\mathfrak{P}}
+\def\dd{\,\mathrm{d}}
+\def\im{\mathrm{Im}}
+\def\LC{\mathrm{LC}}
+\def\LT{\mathrm{LT}}
+\def\LM{\mathrm{LM}}
+\def\mdeg{\mathrm{mdeg}}
+$$
 
 <style>
 ol#markdown-toc ol {
