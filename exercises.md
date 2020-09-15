@@ -101,8 +101,6 @@ Fonctions utiles : `degree`, `leading_coefficient`, `coefficients`,
   
 
 
-
-
 **–**{:.exercise}
   Transformer le polynôme $$P=(x^2+xy+x+y)(x+y)$$ avec Sage
   sous les formes suivantes:
