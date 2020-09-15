@@ -1,26 +1,27 @@
 ---
 title: Exercices
 addons:
-  katex:
-    options:
-      macros:
-        \PGCD : \mathrm{pgcd}
-        \Z    : \mathbb{Z}
-        \Q    : \mathbb{Q}
-        \R    : \mathbb{R}
-        \C    : \mathbb{C}
-        \F    : \mathbb{F}
-        \lex  : \mathrm{lex}
-        \degrevlex  : \mathrm{degrevlex}
-        \LT   : \mathrm{LT}
-        \LM   : \mathrm{LM}
-        \Syz  : \mathrm{Syz}
-        \iff  : \Leftrightarrow
-        \dim : \mathrm{dim}
-        \succA: \,\begin{matrix}\succ\\[-0.9em]\tiny A\end{matrix}\,
+  mathjax: yes
   highlightjs: true
   style_goodies: yes
 ---
+
+$$
+\def\PGCD { \mathrm{pgcd}}
+\def\Z    { \mathbb{Z}}
+\def\Q    { \mathbb{Q}}
+\def\R    { \mathbb{R}}
+\def\C    { \mathbb{C}}
+\def\F    { \mathbb{F}}
+\def\lex  { \mathrm{lex}}
+\def\degrevlex  { \mathrm{degrevlex}}
+\def\LT   { \mathrm{LT}}
+\def\LM   { \mathrm{LM}}
+\def\Syz  { \mathrm{Syz}}
+\def\iff  { \Leftrightarrow}
+\def\dim { \mathrm{dim}}
+\def\succA{ \,\begin{matrix}\succ\\[-0.9em]\tiny A\end{matrix}\,}
+$$
 
 1. TOC
 {:toc}
