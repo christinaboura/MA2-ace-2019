@@ -212,6 +212,11 @@ Soient $$f = x^7y^2 + x^3y^2-y-1$$ et l'ensemble ordonné $$F =
 
 Fonction utiles : `lc`, `lm`, `lt`.
 
+Soient $n>0$ et $k$ un corps, et considérons l'anneau $k[x_1, \ldots, x_n]$ muni d'un ordre monomial quelconque $<$.  Nous utiliserons la notation suivante : si $\alpha \in \mathbb{N}^n$, alors $x^{\alpha} := \prod_{i=1}^n x_i^{\alpha_i}$.
+
+Un idéal $I$ de $k[x_1, \ldots, x_n]$ est un *idéal monomial* s'il existe un ensemble $A\subset \mathbb{N}^n$ tel que $I = \langle x^{\alpha} \ | \ \alpha \in A \rangle$.
+
+
 **–**{:.exercise}
   Soit $$I=\left\langle x^\alpha, \alpha\in A \right\rangle$$ un idéal
   monomial et $$S$$ l'ensemble des exposants qui apparaissent dans
@@ -240,6 +245,12 @@ Montrer que $$\preccurlyeq$$ est un ordre monomial.
     lexicographique.
   1. Même question pour l'ordre degrevlex.
 
+
+**-**{:.exercise}
+  Montrer que si $I = \langle x^{\alpha_1}, \ldots, x^{\alpha_r}$ est un idéal monomial de $k[x_1, \ldots, x_n]$, alors $(x^{\alpha_1}, \ldots, x^{\alpha_r})$ est une base de Gröbner de $I$.  Pour ce faire :
+  1. Montrer que si $x^{\beta} \in I$, alors $x^{\beta}$ est divisible par l'un des $x^{\alpha_i}$.
+  1. Montrer que si $f$ est un élément de $I$, alors tous les monômes apparaissant dans $f$ sont dans $I$.
+  1. En déduire que $\langle \mathsc{LT}(I) \rangle = I$, et conclure.
 
 ## Programmation Python/Sage
 
