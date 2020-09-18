@@ -6,7 +6,6 @@ addons:
       macros:
         \PGCD : \mathrm{pgcd}
         \Z    : \mathbb{Z}
-	\N    : \mathbb{N}
         \Q    : \mathbb{Q}
         \R    : \mathbb{R}
         \C    : \mathbb{C}
@@ -214,9 +213,9 @@ Soient $$f = x^7y^2 + x^3y^2-y-1$$ et l'ensemble ordonné $$F =
 
 Fonction utiles : `lc`, `lm`, `lt`.
 
-Soient $n>0$ et $k$ un corps, et considérons l'anneau $k[x_1, \ldots, x_n]$ muni d'un ordre monomial quelconque $<$.  Nous utiliserons la notation suivante : si $\alpha \in \N^n$, alors $x^{\alpha} := \prod_{i=1}^n x_i^{\alpha_i}$.
+Soient $n>0$ et $k$ un corps, et considérons l'anneau $k[x_1, \ldots, x_n]$ muni d'un ordre monomial quelconque $<$.  Nous utiliserons la notation suivante : si $\alpha \in \mathbb{N}^n$, alors $x^{\alpha} := \prod_{i=1}^n x_i^{\alpha_i}$.
 
-Un idéal $I$ de $k[x_1, \ldots, x_n]$ est un *idéal monomial* s'il existe un ensemble $A\subset \N^n$ tel que $I = \langle x^{\alpha} \ | \ \alpha \in A \rangle$.
+Un idéal $I$ de $k[x_1, \ldots, x_n]$ est un *idéal monomial* s'il existe un ensemble $A\subset \mathbb{N}^n$ tel que $I = \langle x^{\alpha} \ | \ \alpha \in A \rangle$.
 
 
 **–**{:.exercise}
