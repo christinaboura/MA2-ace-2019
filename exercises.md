@@ -237,7 +237,7 @@ Fonction utiles : `lc`, `lm`, `lt`.
 
 Soient $$n>0$$ et $$k$$ un corps, et considérons l'anneau $$k[x_1, \ldots, x_n]$$ muni d'un ordre monomial quelconque $$<$$.  Nous utiliserons la notation suivante : si $$\alpha \in \mathbb{N}^n$$, alors $$x^{\alpha} := \prod_{i=1}^n x_i^{\alpha_i}$$.
 
-Un idéal $$I$$ de $$k[x_1, \ldots, x_n]$$ est un *idéal monomial* s'il existe un ensemble $$A\subset \mathbb{N}^n$$ tel que $$I=\left\langle x^\alpha, \alpha\in A \right\rangle$$$$.
+Un idéal $$I$$ de $$k[x_1, \ldots, x_n]$$ est un *idéal monomial* s'il existe un ensemble $$A\subset \mathbb{N}^n$$ tel que $$I=\left\langle x^\alpha, \alpha\in A \right\rangle$$.
 
 
 **–**{:.exercise}
@@ -270,7 +270,7 @@ Montrer que $$\preccurlyeq$$ est un ordre monomial.
 
 
 **-**{:.exercise}
-  Montrer que si $$I = \langle x^{\alpha_1}, \ldots, x^{\alpha_r}$$ est un idéal monomial de $$k[x_1, \ldots, x_n]$$, alors $$(x^{\alpha_1}, \ldots, x^{\alpha_r})$$ est une base de Gröbner de $$I$$.  Pour ce faire :
+  Montrer que si $$I = \langle x^{\alpha_1}, \ldots, x^{\alpha_r} \rangle$$ est un idéal monomial de $$k[x_1, \ldots, x_n]$$, alors $$(x^{\alpha_1}, \ldots, x^{\alpha_r})$$ est une base de Gröbner de $$I$$.  Pour ce faire :
   1. Montrer que si $$x^{\beta} \in I$$, alors $$x^{\beta}$$ est divisible par l'un des $$x^{\alpha_i}$$.
   1. Montrer que si $$f$$ est un élément de $$I$$, alors tous les monômes apparaissant dans $$f$$ sont dans $$I$$.
   1. En déduire que $$\langle \LT(I) \rangle = I$$, et conclure.
@@ -278,13 +278,13 @@ Montrer que $$\preccurlyeq$$ est un ordre monomial.
 **-**{:.exercise}
   Dans cet exercice, nous démontrerons le *Lemme de Dickson*, qui est un cas particulier du théorème de la base de Hilbert pour les idéaux monomiaux.  
   
-  * Lemme de Dickson : Si $$A$$ est un sous-ensemble non vide de $$\N^n$$ et si $$I = \langle x^{\alpha} \ | \ \alpha \in A \rangle$$, alors il existe $$\alpha_1, \ldots, \alpha_r \in A$$ tels que $$I = \langle x^{\alpha_1}, \ldots, x^{\alpha_r} \rangle$$.
+  * Lemme de Dickson : Si $$A$$ est un sous-ensemble non vide de $$\N^n$$ et si $$I = \langle x^{\alpha},  \alpha \in A \rangle$$, alors il existe $$\alpha_1, \ldots, \alpha_r \in A$$ tels que $$I = \langle x^{\alpha_1}, \ldots, x^{\alpha_r} \rangle$$.
   
   La démonstration que nous présentons ci-dessous est une adaptation de l'orginiale de Dickson (1913).
   
-  Quelques notations : si $$\alpha \in \N^n$$, alors $$\alpha + \N^n := \{\alpha + \beta \ | \ \beta \in \N^n\}$$ ; de même, si $$A \subset \N^n$$, alors $$A + \N^n := \{\alpha + \beta \ | \ \alpha\in A, \beta\in \N^n\}$$.
+  Quelques notations : si $$\alpha \in \N^n$$, alors $$\alpha + \N^n := \{\alpha + \beta, \beta \in \N^n\}$$ ; de même, si $$A \subset \N^n$$, alors $$A + \N^n := \{\alpha + \beta, \alpha\in A, \beta\in \N^n\}$$.
   
-  1. *Illustration du cas $$n=2$$*.  On représente $$\N^2$$ comme l'ensemble des points entiers positifs du plan.  Illustrer $$A + \N^n$$ si $$A = \{(1,8), (3,5), (4,2) \}$$, puis si $$A = \{(x,y) \ | \ y \geq 9-x^2\}$$.  Dans le deuxième cas, décrire un sous-ensemble $$\{\alpha_1, \ldots, \alpha_r\}$$ de $$A$$ tel que $$A + \N^n = \{\alpha_1, \ldots, \alpha_r\} + \N^n$$.
+  1. *Illustration du cas $$n=2$$*.  On représente $$\N^2$$ comme l'ensemble des points entiers positifs du plan.  Illustrer $$A + \N^n$$ si $$A = \{(1,8), (3,5), (4,2) \}$$, puis si $$A = \{(x,y), y \geq 9-x^2\}$$.  Dans le deuxième cas, décrire un sous-ensemble $$\{\alpha_1, \ldots, \alpha_r\}$$ de $$A$$ tel que $$A + \N^n = \{\alpha_1, \ldots, \alpha_r\} + \N^n$$.
   
   1. Nous allons maintenant montrer le lemme de Dickson par récurrence sur $$n$$.  Montrer d'abord que l'énoncé du lemme est vrai pour $$n=1$$.
   
@@ -294,11 +294,11 @@ Montrer que $$\preccurlyeq$$ est un ordre monomial.
   
   1. Supposons que $$A + \N^n \neq \alpha + \N^n$$.  Alors il existe $$\beta \in A$ tel que $$\beta_j < \alpha_j$$ pour un certain $$j\in \{1, \ldots, n\}$$. 
     
-     Fixons $$i\in \{1, \ldots, n\}$$ et $$c\in \N$$ tels que $$c<\alpha_i$$.  Soit $$A_{i,c} := \{\beta \in A \ | \ \beta_i = c \}$$.
+     Fixons $$i\in \{1, \ldots, n\}$$ et $$c\in \N$$ tels que $$c<\alpha_i$$.  Soit $$A_{i,c} := \{\beta \in A, \beta_i = c \}$$.
      
      Montrer qu'il existe des éléments $$\alpha_{i,c,1}, \ldots, \alpha_{i,c,m}\in A_{i,c}$$ tels que pour tout $$\gamma \in A_{i,c}$$, on a que $$x^{\gamma} \in \langle x^{\alpha_{i,c,1}}, \ldots, x^{\alpha_{i,c,m}} \rangle$$.  
      
-     Pour ce faire, on pourra considérer $$B_{i,c} = \{(\beta_1, \ldots, \beta_{i-1}, \beta_{i+1}, \ldots, \beta_n) \in \N^n \ | \ (\beta_1, \ldots, \beta_{i-1}, c, \beta_{i+1}, \ldots, \beta_n) \in A \}$$ et appliquer l'hypothèse de récurrence à $$B_{i,c}$$.
+     Pour ce faire, on pourra considérer $$B_{i,c} = \{(\beta_1, \ldots, \beta_{i-1}, \beta_{i+1}, \ldots, \beta_n) \in \N^n,  (\beta_1, \ldots, \beta_{i-1}, c, \beta_{i+1}, \ldots, \beta_n) \in A \}$$ et appliquer l'hypothèse de récurrence à $$B_{i,c}$$.
      
   1. Montrer qu'il n'y a qu'un nombre fini de choix possibles de $$i$$ et $$c$$ tels que $$c<\alpha_i$$.  Conclure la démonstration du lemme de Dickson.
   
