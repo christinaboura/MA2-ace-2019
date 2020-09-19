@@ -13,6 +13,7 @@ $$
 \def\R    { \mathbb{R}}
 \def\C    { \mathbb{C}}
 \def\F    { \mathbb{F}}
+\def\N    { \mathbb{N}}
 \def\lex  { \mathrm{lex}}
 \def\degrevlex  { \mathrm{degrevlex}}
 \def\LT   { \mathrm{LT}}
@@ -216,13 +217,13 @@ Soit $$M$$ une matrice $$m\times n$$ à coefficients réels, et soient $$w_1, \l
 
 1. Montrer que si $$M$$ est la matrice identité, alors $$<_M$$ est l'ordre lexicographique avec $$x_1>x_2 >\ldots > x_n$$.  
 
-1. On définit $$\mathrm{ker}(M) = \{v\in \R^n \ | \ Mv = 0 \}$$.  Supposons que $$\mathrm{ker}(M) \cap \Z^n = \{0\}$$.  Montrer que $$<_M$$ définit un ordre total ; autrement dit :
+1. On définit $$\mathrm{ker}(M) = \{v\in \R^n,  Mv = 0 \}$$.  Supposons que $$\mathrm{ker}(M) \cap \Z^n = \{0\}$$.  Montrer que $$<_M$$ définit un ordre total ; autrement dit :
 
     1. si $$x^{\alpha} <_M x^{\beta}$$ et $$x^{\beta} <_M x^{\gamma}$$, alors $$x^{\alpha} <_M x^{\gamma}$$,
     1. il est impossible d'avoir à la fois $$x^{\alpha} <_M x^{\beta}$$ et $$x^{\beta} <_M x^{\alpha}$$, et
     1. si $$\alpha \neq \beta$$, alors soit $$x^{\alpha} <_M x^{\beta}$$, soit $$x^{\beta} <_M x^{\alpha}$$.
     
-1. En plus de supposer que $$\mathrm{ker}(M) \cap \Z^n = \{0\}$$, on suppose maintenant que les coefficients de $$M$$ sont tous positifs.  Montrer que $$<_M$$ est un *bon ordre*, c'est-à-dire que tout ensemble non vide de monômes possède un plus petit élément pour $$<_M$$.  (On pourra considérer, pour $$A\subseteq \N^n$$ non vide, l'ensemble $$w_1\cdot A := \{w_1\cdot \alpha \ | \ \alpha \in A\}$$, qui doit contenir un élément minimal $$b_1$$ ; définir $$A_1 = \{\alpha \in A \ | \ w_1\cdot \alpha = b_1\}$$ ; puis, pour chaque $$i$$, considérer l'ensemble $$w_i \cdot A_{i-1}$$ et répéter.)
+1. En plus de supposer que $$\mathrm{ker}(M) \cap \Z^n = \{0\}$$, on suppose maintenant que les coefficients de $$M$$ sont tous positifs.  Montrer que $$<_M$$ est un *bon ordre*, c'est-à-dire que tout ensemble non vide de monômes possède un plus petit élément pour $$<_M$$.  (On pourra considérer, pour $$A\subseteq \N^n$$ non vide, l'ensemble $$w_1\cdot A := \{w_1\cdot \alpha,  \alpha \in A\}$$, qui doit contenir un élément minimal $$b_1$$ ; définir $$A_1 = \{\alpha \in A,  w_1\cdot \alpha = b_1\}$$ ; puis, pour chaque $$i$$, considérer l'ensemble $$w_i \cdot A_{i-1}$$ et répéter.)
 
 1. Exprimer les ordres monomiaux vus en cours sous la forme $$<_M$$.
 
