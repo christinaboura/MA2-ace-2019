@@ -292,7 +292,7 @@ Montrer que $$\preccurlyeq$$ est un ordre monomial.
   
   3. Remarquer que si $$A + \N^n = \alpha + \N^n$$, alors la preuve du lemme est terminée.
   
-  1. Supposons que $$A + \N^n \neq \alpha + \N^n$$.  Alors il existe $$\beta \in A$ tel que $$\beta_j < \alpha_j$$ pour un certain $$j\in \{1, \ldots, n\}$$. 
+  1. Supposons que $$A + \N^n \neq \alpha + \N^n$$.  Alors il existe $$\beta \in A$$ tel que $$\beta_j < \alpha_j$$ pour un certain $$j\in \{1, \ldots, n\}$$. 
     
      Fixons $$i\in \{1, \ldots, n\}$$ et $$c\in \N$$ tels que $$c<\alpha_i$$.  Soit $$A_{i,c} := \{\beta \in A, \beta_i = c \}$$.
      
