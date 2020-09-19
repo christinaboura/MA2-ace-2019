@@ -1,26 +1,27 @@
 ---
 title: Exercices
 addons:
-  katex:
-    options:
-      macros:
-        \PGCD : \mathrm{pgcd}
-        \Z    : \mathbb{Z}
-        \Q    : \mathbb{Q}
-        \R    : \mathbb{R}
-        \C    : \mathbb{C}
-        \F    : \mathbb{F}
-        \lex  : \mathrm{lex}
-        \degrevlex  : \mathrm{degrevlex}
-        \LT   : \mathrm{LT}
-        \LM   : \mathrm{LM}
-        \Syz  : \mathrm{Syz}
-        \iff  : \Leftrightarrow
-        \dim : \mathrm{dim}
-        \succA: \,\begin{matrix}\succ\\[-0.9em]\tiny A\end{matrix}\,
+  mathjax: yes
   highlightjs: true
   style_goodies: yes
 ---
+
+$$
+\def\PGCD { \mathrm{pgcd}}
+\def\Z    { \mathbb{Z}}
+\def\Q    { \mathbb{Q}}
+\def\R    { \mathbb{R}}
+\def\C    { \mathbb{C}}
+\def\F    { \mathbb{F}}
+\def\lex  { \mathrm{lex}}
+\def\degrevlex  { \mathrm{degrevlex}}
+\def\LT   { \mathrm{LT}}
+\def\LM   { \mathrm{LM}}
+\def\Syz  { \mathrm{Syz}}
+\def\iff  { \Leftrightarrow}
+\def\dim { \mathrm{dim}}
+\def\succA{ \,\begin{matrix}\succ\\[-0.9em]\tiny A\end{matrix}\,}
+$$
 
 1. TOC
 {:toc}
@@ -99,8 +100,6 @@ Fonctions utiles : `degree`, `leading_coefficient`, `coefficients`,
   1. Donner le degré total de $$P$$.
   1. Écrire $$P$$ comme polynôme en $$x$$.
   
-
-
 
 
 **–**{:.exercise}
@@ -213,9 +212,9 @@ Soient $$f = x^7y^2 + x^3y^2-y-1$$ et l'ensemble ordonné $$F =
 
 Fonction utiles : `lc`, `lm`, `lt`.
 
-Soient $n>0$ et $k$ un corps, et considérons l'anneau $k[x_1, \ldots, x_n]$ muni d'un ordre monomial quelconque $<$.  Nous utiliserons la notation suivante : si $\alpha \in \mathbb{N}^n$, alors $x^{\alpha} := \prod_{i=1}^n x_i^{\alpha_i}$.
+Soient $$n>0$$ et $$k$$ un corps, et considérons l'anneau $$k[x_1, \ldots, x_n]$$ muni d'un ordre monomial quelconque $$<$$.  Nous utiliserons la notation suivante : si $$\alpha \in \mathbb{N}^n$$, alors $$x^{\alpha} := \prod_{i=1}^n x_i^{\alpha_i}$$.
 
-Un idéal $I$ de $k[x_1, \ldots, x_n]$ est un *idéal monomial* s'il existe un ensemble $A\subset \mathbb{N}^n$ tel que $I = \langle x^{\alpha} \ | \ \alpha \in A \rangle$.
+Un idéal $$I$$ de $$k[x_1, \ldots, x_n]$$ est un *idéal monomial* s'il existe un ensemble $$A\subset \mathbb{N}^n$$ tel que $$I=\left\langle x^\alpha, \alpha\in A \right\rangle$$$$.
 
 
 **–**{:.exercise}
@@ -248,10 +247,10 @@ Montrer que $$\preccurlyeq$$ est un ordre monomial.
 
 
 **-**{:.exercise}
-  Montrer que si $I = \langle x^{\alpha_1}, \ldots, x^{\alpha_r}$ est un idéal monomial de $k[x_1, \ldots, x_n]$, alors $(x^{\alpha_1}, \ldots, x^{\alpha_r})$ est une base de Gröbner de $I$.  Pour ce faire :
-  1. Montrer que si $x^{\beta} \in I$, alors $x^{\beta}$ est divisible par l'un des $x^{\alpha_i}$.
-  1. Montrer que si $f$ est un élément de $I$, alors tous les monômes apparaissant dans $f$ sont dans $I$.
-  1. En déduire que $\langle \mathsc{LT}(I) \rangle = I$, et conclure.
+  Montrer que si $$I = \langle x^{\alpha_1}, \ldots, x^{\alpha_r}$$ est un idéal monomial de $$k[x_1, \ldots, x_n]$$, alors $$(x^{\alpha_1}, \ldots, x^{\alpha_r})$$ est une base de Gröbner de $$I$$.  Pour ce faire :
+  1. Montrer que si $$x^{\beta} \in I$$, alors $$x^{\beta}$$ est divisible par l'un des $$x^{\alpha_i}$$.
+  1. Montrer que si $$f$$ est un élément de $$I$$, alors tous les monômes apparaissant dans $$f$$ sont dans $$I$$.
+  1. En déduire que $$\langle \LT(I) \rangle = I$$, et conclure.
 
 ## Programmation Python/Sage
 

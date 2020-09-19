@@ -2,14 +2,15 @@
 layout: default
 title: Algèbre effective avec SageMath
 addons:
-  katex:
-    options:
-      macros:
-        \Z    : \mathbb{Z}
-        \Q    : \mathbb{Q}
-        \F    : \mathbb{F}
+  mathjax: yes
   highlightjs: true
 ---
+
+$$
+\def\Z{\mathbb{Z}}
+\def\Q{\mathbb{Q}}
+\def\F{\mathbb{F}}
+$$
 
 <style>
 ol#markdown-toc ol {
