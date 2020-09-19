@@ -207,6 +207,28 @@ Soient $$f = x^7y^2 + x^3y^2-y-1$$ et l'ensemble ordonné $$F =
 1. Trouver une écriture explicite de la forme $$z^2-x^4y =
    h_1(y-x^2) + h_2(z-x^3)$$.
   
+**-**{:.exercise}
+Dans cet exercice, nous verrons une façon de définir des ordres monomiaux sur $$k[x_1, \ldots, x_n]$$ qui généralise tous les ordres vus précédemment.
+
+Soit $$M$$ une matrice $$m\times n$$ à coefficients réels, et soient $$w_1, \ldots, w_m$$ ses vecteurs ligne.  On définit la relation $$<_M$$ sur les monômes de la façon suivante.  Soient $$x^{\alpha}$$ et $$x^{\beta}$$ des monômes.  On pose $$x^{\alpha} <_M x^{\beta}$$ si $$w_1\cdot \alpha < w_1 \cdot \beta$$, ou si $$w_1\cdot \alpha = w_1 \cdot \beta$$ et $$w_2\cdot \alpha < w_2 \cdot \beta$$, ou s'il existe $$i\in \{1, \ldots, n\}$$ tel que $$w_j\cdot \alpha = w_j \cdot \beta$$ pour $$1\leq j \leq i-1$$ et $$w_i\cdot \alpha < w_i \cdot \beta$$.
+
+1. Montrer que si $$x^{\alpha} <_M x^{\beta}$$ et $$x^{\gamma} <_M x^{\delta}$$, alors $$x^{\alpha+\gamma} <_M x^{\beta+\delta}$$.
+
+1. Montrer que si $$M$$ est la matrice identité, alors $$<_M$$ est l'ordre lexicographique avec $$x_1>x_2 >\ldots > x_n$$.  
+
+1. On définit $$\mathrm{ker}(M) = \{v\in \R^n \ | \ Mv = 0 \}$$.  Supposons que $$\mathrm{ker}(M) \cap \Z^n = \{0\}$$.  Montrer que $$<_M$$ définit un ordre total ; autrement dit :
+
+    1. si $$x^{\alpha} <_M x^{\beta}$$ et $$x^{\beta} <_M x^{\gamma}$$, alors $$x^{\alpha} <_M x^{\gamma}$$,
+    1. il est impossible d'avoir à la fois $$x^{\alpha} <_M x^{\beta}$$ et $$x^{\beta} <_M x^{\alpha}$$, et
+    1. si $$\alpha \neq \beta$$, alors soit $$x^{\alpha} <_M x^{\beta}$$, soit $$x^{\beta} <_M x^{\alpha}$$.
+    
+1. En plus de supposer que $$\mathrm{ker}(M) \cap \Z^n = \{0\}$$, on suppose maintenant que les coefficients de $$M$$ sont tous positifs.  Montrer que $$<_M$$ est un *bon ordre*, c'est-à-dire que tout ensemble non vide de monômes possède un plus petit élément pour $$<_M$$.  (On pourra considérer, pour $$A\subseteq \N^n$$ non vide, l'ensemble $$w_1\cdot A := \{w_1\cdot \alpha \ | \ \alpha \in A\}$$, qui doit contenir un élément minimal $$b_1$$ ; définir $$A_1 = \{\alpha \in A \ | \ w_1\cdot \alpha = b_1\}$$ ; puis, pour chaque $$i$$, considérer l'ensemble $$w_i \cdot A_{i-1}$$ et répéter.)
+
+1. Exprimer les ordres monomiaux vus en cours sous la forme $$<_M$$.
+
+Pour aller plus loin : Lorenzo Robbiano a montré en 1985 que tous les ordres monomiaux s'écrivent comme $$<_M$$ pour une matrice $$M$$.  Son article est très court et très lisible :
+
+  * Robbiano L. (1985) Term orderings on the polynomial ring. In: Caviness B.F. (eds) EUROCAL '85. EUROCAL 1985. Lecture Notes in Computer Science, vol 204. Springer, Berlin, Heidelberg. https://doi.org/10.1007/3-540-15984-3_321 .
 
 ## Idéaux monomiaux
 
