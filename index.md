@@ -26,6 +26,7 @@ TD 1 (22/09/2020)
 : [Introduction à l'environnement de travail et à SageMath](polytd#introduction-à-lenvironnemnt-de-travail-et-à-sagemath),
 : [Structures algébriques de base en SageMath](polytd#anneaux-corps-polynômes-expressions),
 : **Exercices :** [Manipuler les polynômes en SageMath](exercises#polynômes-à-une-variable)
+: Le [jupyter](misc/TD1.ipynb) de la séance.
 
 TD 2 (06/10/2020)
 : [Anneaux de polynômes en SageMath](polytd#polynômes),
