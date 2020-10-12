@@ -29,8 +29,9 @@ TD 1 (22/09/2020)
 : Le [jupyter](misc/TD1.ipynb) de la séance.
 
 TD 2 (06/10/2020)
-: [Anneaux de polynômes en SageMath](polytd#polynômes),
-: **Exercices :** [Polynômes](exercises#polynômes-à-une-variable).
+: [Théorème de Hilbert et idéaux monomiaux](polytd#théorème-de-hilbert),
+: **Exercices :** [Idéaux monomiaux](exercises#idéaux-monomiaux).
+Le [jupyter](misc/TD2.ipynb) de la séance.
 
 TD 3 (13/10/2020)
 : **Exercices :** [Bases de Gröbner](exercises#idéaux-monomiaux).
