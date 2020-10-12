@@ -298,7 +298,7 @@ Montrer que $$\preccurlyeq$$ est un ordre monomial.
      
      Montrer qu'il existe des éléments $$\alpha_{i,c,1}, \ldots, \alpha_{i,c,m}\in A_{i,c}$$ tels que pour tout $$\gamma \in A_{i,c}$$, on a que $$x^{\gamma} \in \langle x^{\alpha_{i,c,1}}, \ldots, x^{\alpha_{i,c,m}} \rangle$$.  
      
-     Pour ce faire, on pourra considérer $$B_{i,c} = \{(\beta_1, \ldots, \beta_{i-1}, \beta_{i+1}, \ldots, \beta_n) \in \N^n,  (\beta_1, \ldots, \beta_{i-1}, c, \beta_{i+1}, \ldots, \beta_n) \in A \}$$ et appliquer l'hypothèse de récurrence à $$B_{i,c}$$.
+     Pour ce faire, on pourra considérer $$B_{i,c} = \{(\beta_1, \ldots, \beta_{i-1}, \beta_{i+1}, \ldots, \beta_n) \in \N^{n-1},  (\beta_1, \ldots, \beta_{i-1}, c, \beta_{i+1}, \ldots, \beta_n) \in A \}$$ et appliquer l'hypothèse de récurrence à $$B_{i,c}$$.
      
   1. Montrer qu'il n'y a qu'un nombre fini de choix possibles de $$i$$ et $$c$$ tels que $$c<\alpha_i$$.  Conclure la démonstration du lemme de Dickson.
   
