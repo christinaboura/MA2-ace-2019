@@ -978,7 +978,9 @@ Soit $$I$$ un idéal propre de $$k[x_1,\ldots,x_n]$$.
    finie, montrer que  $$I$$ est de dimension zéro. 
 1. En déduire que $$I$$ est de dimension zéro si, et seulement si,
    $$k[x_1,\ldots,x_n]/I$$ est un $$k$$-espace vectoriel de dimension
-   finie.
+   finie.   
+1. Montrer que $$I$$ est de dimension zéro si et seulement si la variété
+   $$V(I)$$ ne contient qu'un nombre fini de points.
 {: start="2" }
 
 
