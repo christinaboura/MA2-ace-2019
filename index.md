@@ -26,13 +26,16 @@ TD 1 (22/09/2020)
 : [Introduction à l'environnement de travail et à SageMath](polytd#introduction-à-lenvironnemnt-de-travail-et-à-sagemath),
 : [Structures algébriques de base en SageMath](polytd#anneaux-corps-polynômes-expressions),
 : **Exercices :** [Manipuler les polynômes en SageMath](exercises#polynômes-à-une-variable)
+: Le [jupyter](misc/TD1.ipynb) de la séance.
 
 TD 2 (06/10/2020)
-: [Anneaux de polynômes en SageMath](polytd#polynômes),
-: **Exercices :** [Polynômes](exercises#polynômes-à-une-variable).
+: [Théorème de Hilbert et idéaux monomiaux](polytd#théorème-de-hilbert),
+: **Exercices :** [Idéaux monomiaux](exercises#idéaux-monomiaux).
+: Le [jupyter](misc/TD2.ipynb) de la séance.
 
 TD 3 (13/10/2020)
 : **Exercices :** [Bases de Gröbner](exercises#idéaux-monomiaux).
+: Le [jupyter](misc/TD3.ipynb) de la séance.
 
 TD 4 (20/10/2020)
 : [Structures de contrôle en Python](polytd#syntaxe-pythonsage),
