@@ -621,7 +621,8 @@ Soient $$2\le n'\le n$$.
   de $$I = \langle \ell_1, \ldots, \ell_m \rangle$$ ne contient que des
   polynômes de degré $$1$$.  (On pourra considérer la réduction du système
   d'équations linéaires défini par les $$\ell_1, \ldots, \ell_m$$ et utiliser
-  l'unicité de la base de Gröbner réduite.)
+  l'unicité de la base de Gröbner réduite.)  Montrer que l'énoncé n'est plus
+  vrai avec des polynômes de degré $$2$$.
 
 
 ## Résultants et élimination
