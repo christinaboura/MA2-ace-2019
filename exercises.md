@@ -957,7 +957,7 @@ $$I\cap k[\underline{y}]=\{0\}$$.  La dimension de $$I$$ est définie
 par
 
 $$\dim I=\max\{|\{y_1,\ldots,y_r\}|, \text{ avec } \{y_1,\ldots,y_r\}
-  \text{ independants modulo } I\}.$$
+  \text{ algebriquement independants modulo } I\}.$$
   
 1. Montrer qu'un idéal propre $$I$$ est de dimension zéro si, et
    seulement si, il contient un polynôme non constant en chaque
