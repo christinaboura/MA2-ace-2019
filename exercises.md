@@ -613,7 +613,16 @@ Soient $$2\le n'\le n$$.
     l'idéal $$I'$$ engendré par $$f'$$ et $$g'$$.
   1. Donner une condition nécessaire et suffisante pour que
     $$(f,g)$$ soit une base de Gröbner de $$I$$.
-  
+
+**-**{:.exercise}
+  Soit $$k[x_1, \ldots, x_n]$$ muni d'un ordre monomial $$<$$ tel que
+  $$x_1 > \ldots > x_n$$.  Soient $$\ell_1, \ldots, \ell_m \in k[x_1, \ldots, x_n]$$
+  des polynômes de degré $$1$$.  Montrer que la base de Gröbner réduite
+  de $$I = \langle \ell_1, \ldots, \ell_m \rangle$$ ne contient que des
+  polynômes de degré $$1$$.  (On pourra considérer la réduction du système
+  d'équations linéaires défini par les $$\ell_1, \ldots, \ell_m$$ et utiliser
+  l'unicité de la base de Gröbner réduite.)  Montrer que l'énoncé n'est plus
+  vrai avec des polynômes de degré $$2$$.
 
 
 ## Résultants et élimination
@@ -949,7 +958,7 @@ $$I\cap k[\underline{y}]=\{0\}$$.  La dimension de $$I$$ est définie
 par
 
 $$\dim I=\max\{|\{y_1,\ldots,y_r\}|, \text{ avec } \{y_1,\ldots,y_r\}
-  \text{ independants modulo } I\}.$$
+  \text{ algebriquement independants modulo } I\}.$$
   
 1. Montrer qu'un idéal propre $$I$$ est de dimension zéro si, et
    seulement si, il contient un polynôme non constant en chaque
@@ -970,7 +979,9 @@ Soit $$I$$ un idéal propre de $$k[x_1,\ldots,x_n]$$.
    finie, montrer que  $$I$$ est de dimension zéro. 
 1. En déduire que $$I$$ est de dimension zéro si, et seulement si,
    $$k[x_1,\ldots,x_n]/I$$ est un $$k$$-espace vectoriel de dimension
-   finie.
+   finie.   
+1. Montrer que $$I$$ est de dimension zéro si et seulement si la variété
+   $$V(I)$$ ne contient qu'un nombre fini de points.
 {: start="2" }
 
 
