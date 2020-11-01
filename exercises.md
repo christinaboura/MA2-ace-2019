@@ -1206,4 +1206,13 @@ Soit $$k$$ un corps algébriquement clos et $$I=\left\langle xy,xz
 1. Montrer que $$I\cap k[y,z]=0$$ mais que $$I\cap k[x,y,z]\neq 0$$.
 1. Quelle est la dimension de $$V(I)$$ ?
 
+## Cônes et éventails de Gröbner
 
+**-**{:.exercise}
+
+Pour chacun des idéaux suivants, représenter l'éventail de Gröbner.
+
+1. I = $$\langle x^2+y^2 - 1, x+2y \rangle$$ (l'éventail contient deux cônes maximaux).
+1. I = $$\langle x^3-y, x+y^3+1  \rangle$$ (l'éventail contient trois cônes maximaux).
+1. I = $$\langle y^2-x^2, z-y^4  \rangle$$ (l'éventail contient quatre cônes maximaux ; représenter son intersection avec le plan $x+y+z = 1$).
+1. I = $$\langle y-x^3, z-x^3  \rangle$$ (l'éventail contient six cônes maximaux ; représenter son intersection avec le plan $x+y+z = 1$).
