@@ -7,7 +7,7 @@
 
 **Cours** les lundis de 9h30 à 12h30, avec [Pierre-Guy Plamondon](http://www.departement.math.uvsq.fr/node/1862).
 
-**TDs** les mardis de 16h00 à 18h40, avec [Christina Boura](https://christinaboura.wordpress.com/).
+**TDs** les mardis de 16h00 à 18h50, avec [Christina Boura](https://christinaboura.wordpress.com/).
 
 **Serveur SageMath**
 
@@ -40,6 +40,7 @@ TD 3 (13/10/2020)
 TD 4 (20/10/2020)
 : [Structures de contrôle en Python](polytd#syntaxe-pythonsage),
 : **Exercices :** [Programmation Python/Sage](exercises#programmation-pythonsage).
+: Le [jupyter](misc/TD4.ipynb) de la séance.
 
 TD 5 (03/11/2020)
 : **Exercices :** [Bases de Gröbner](exercises#calcul-de-bases-de-gröbner).
