@@ -1206,4 +1206,19 @@ Soit $$k$$ un corps algébriquement clos et $$I=\left\langle xy,xz
 1. Montrer que $$I\cap k[y,z]=0$$ mais que $$I\cap k[x,y,z]\neq 0$$.
 1. Quelle est la dimension de $$V(I)$$ ?
 
+## Cônes et éventails de Gröbner
 
+**-**{:.exercise}
+
+Pour chacun des idéaux suivants, représenter l'éventail de Gröbner.
+
+1. I = $$\langle x^2+y^2 - 1, x+2y \rangle$$ (l'éventail contient deux cônes maximaux).
+1. I = $$\langle x^3-y, x+y^3+1  \rangle$$ (l'éventail contient trois cônes maximaux).
+1. I = $$\langle y^2-x^2, z-y^4  \rangle$$ (l'éventail contient quatre cônes maximaux ; représenter son intersection avec le plan $x+y+z = 1$).
+1. I = $$\langle y-x^3, z-x^3  \rangle$$ (l'éventail contient six cônes maximaux ; représenter son intersection avec le plan $x+y+z = 1$).
+
+**-**{:.exercise}
+
+Soit $$G$$ une base de Gröbner marquée pour un ordre matriciel $$<_M$$, et soit $$w$$ la première ligne (non nulle) de $$M$$.  Soit $$w'$$ un vecteur dans le cône de Gröbner $$C_G$$.  Pour tout $$f\in k[x_1, \ldots, x_n]$$, on définit $$\operatorname{in}_{w'}(f)$$ comme étant la somme des termes de $$f$$ de $$w'$$-poids maximal.
+
+Montrer que l'ensemble $$\operatorname{in}_{w'}(G)$$ est une base de Gröbner de l'idéal $$\langle \operatorname{in}_{w'}(G) \rangle$$ pour l'ordre $$<_M$$.  Observer que $$\langle \operatorname{in}_{w'}(G) \rangle$$ est un idéal monomial si $$w'$$ se trouve dans l'intérieur du cône $$C_G$$.
