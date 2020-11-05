@@ -44,6 +44,7 @@ TD 4 (20/10/2020)
 
 TD 5 (03/11/2020)
 : **Exercices :** [Bases de Gröbner](exercises#calcul-de-bases-de-gröbner).
+: Le [jupyter](misc/TD5.ipynb) de la séance.
 
 TD 6 (10/11/2020)
 : **Exercices :** [Élimination](exercises#résultants-et-élimination).
