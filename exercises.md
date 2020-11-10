@@ -1229,3 +1229,13 @@ Montrer que l'ensemble $$\operatorname{in}_{w'}(G)$$ est une base de Gröbner de
 **-**{:.exercise}
 
 Pour chacun des idéaux de l'exercice 14.1.1, effectuer une marche de Gröbner pour convertir la base de Gröbner marquée pour l'ordre degrevlex avec $$x>y>z$$ en celle pour l'ordre lexicographique avec $$z>y>x$$.
+
+## Polynômes symétriques et théorie des invariants
+
+**-**{:.exercise}
+
+Soit $$K$$ un corps de caractéristique nulle.  Soit $$C_3$$ le sous-groupe de $$GL_3(K)$$ engendré par $$\begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 0 & 0 \end{pmatrix}$$.  Montrer que l'anneau des polynômes $$C_3$$-invariants est égal à
+
+$$K[x_1, x_2, x_3]^{C_3} = K[\sigma_1, \sigma_2, \sigma_3, x_1x_2^2 + x_2x_3^2 + x_3x_1^2, x_1^2x_2 + x_2^2x_3 + x_3^2x_1]$$,
+
+où les $$\sigma_i$$ sont les polynômes symétriques élémentaires.
