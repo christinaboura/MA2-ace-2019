@@ -1225,3 +1225,7 @@ Pour chacun des idéaux suivants, représenter l'éventail de Gröbner.
 Soit $$G$$ une base de Gröbner marquée pour un ordre matriciel $$<_M$$, et soit $$w$$ la première ligne (non nulle) de $$M$$.  Soit $$w'$$ un vecteur dans le cône de Gröbner $$C_G$$.  Pour tout $$f\in k[x_1, \ldots, x_n]$$, on définit $$\operatorname{in}_{w'}(f)$$ comme étant la somme des termes de $$f$$ de $$w'$$-poids maximal.
 
 Montrer que l'ensemble $$\operatorname{in}_{w'}(G)$$ est une base de Gröbner de l'idéal $$\langle \operatorname{in}_{w'}(G) \rangle$$ pour l'ordre $$<_M$$.  Observer que $$\langle \operatorname{in}_{w'}(G) \rangle$$ est un idéal monomial si $$w'$$ se trouve dans l'intérieur du cône $$C_G$$.
+
+**-**{:.exercise}
+
+Pour chacun des idéaux de l'exercice 14.1.1, effectuer une marche de Gröbner pour convertir la base de Gröbner marquée pour l'ordre degrevlex avec $$x>y>z$$ en celle pour l'ordre lexicographique avec $$z>y>x$$.
