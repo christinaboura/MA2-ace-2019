@@ -462,10 +462,13 @@ Soit $$V$$ un sous-espace vectoriel de $$k^n$$ de dimension
 $$n-d<n$$. Soit $$I$$ son idéal annulateur dans $$k[\underline{x}]$$ :
 l'idéal $$I$$ est engendré par $$d$$ formes linéaires indépendantes
 
-$$I=\left\langle \sum_{j=1}^n a_{ij}x_j \;,\; 1\le i\le n \right\rangle.$$
+$$I=\left\langle \sum_{j=1}^n a_{ij}x_j \;,\; 1\le i\le d \right\rangle.$$
 
-On dit qu'une forme linéaire non nulle de $$I$$ est un circuit si son
-ensemble de variables est minimal pour l'inclusion. On dit qu'un
+Soit $$A = (a_{ij})$$ la matrice $$d \times n$$ dont les coefficients sont les $$a_{ij}$$ 
+définis ci-dessus.  On dit qu'une forme linéaire non nulle $$L$$ dans $$I$$ est un circuit si l'ensemble des variables apparaîssant dans toute écriture de $$L$$ est minimal pour l'inclusion. 
+
+Pour $$j_i, \ldots, j_d$$ des entiers entre $$1$$ et $$n$$, on définit $$D_{j_1, \ldots, j_d}$$ comme étant le déterminant de la matrice dont les colonnes sont les colonnes $$j_1, \ldots, j_d$$ de $$A$$. 
+On dit qu'un
 $$d$$-sous-ensemble $$J=\{j_1,\ldots,j_d\}\subset\{1,\ldots,n\}$$ est
 une base, si le déterminant $$D_J$$ de la matrice
 $$(a_{ij})_{i,j\in\{j_1,\ldots,j_d\}}$$ associée est non nul.
@@ -478,8 +481,8 @@ $$(a_{ij})_{i,j\in\{j_1,\ldots,j_d\}}$$ associée est non nul.
    où $$1 \le k_1<\cdots<k_{d_1} \le n$$.
 1. En déduire qu'il y a au plus $$\binom{n}{d-1}$$ circuits.
 1. Soit $$I'$$ un idéal engendré par des formes
-   linéaires. Montrer que l'ensemble des circuits dans $$I$$ est une
-   base de Gröbner universelle de $$I$$.
+   linéaires. Montrer que l'ensemble des circuits dans $$I'$$ est une
+   base de Gröbner universelle de $$I'$$.
    
 
 
