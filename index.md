@@ -48,6 +48,8 @@ TD 5 (03/11/2020)
 
 TD 6 (10/11/2020)
 : **Exercices :** [Élimination](exercises#résultants-et-élimination).
+: Le [jupyter](misc/TD6.ipynb) de la séance.
+: Le [corrigé](misc/exo14_1.pdf) de l'exercice 14.1
 
 TD 7 (17/11/2019)
 
