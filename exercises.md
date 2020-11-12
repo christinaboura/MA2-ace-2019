@@ -1260,16 +1260,10 @@ Soit $$K$$ un corps de caractéristique nulle contenant une racine cubique primi
 (Discriminants.)  Soit $$n\geq 2$$ un entier, et soit $$S_n$$ le groupe symétrique.  Considérons le polynôme $$f = \prod_{1\leq i < j \leq n} (x_i - x_j)^2$$.
 
 1. Montrer que $$f$$ est un polynôme symétrique à coefficients entiers.
-2. En déduire qu'il existe un polynôme $$\Delta \in \Z[y_1, \ldots, y_n]$$ tel que $$f = \Delta(\sigma_1, \ldots, \sigma_n)$$, où les $$\sigma_i$$ sont les fonctions symétriques élémentaires.
-
+1. En déduire qu'il existe un polynôme $$\Delta \in \Z[y_1, \ldots, y_n]$$ tel que $$f = \Delta(\sigma_1, \ldots, \sigma_n)$$, où les $$\sigma_i$$ sont les fonctions symétriques élémentaires.
 Le polynôme $$\Delta$$ est appelé le discriminant d'ordre $$n$$.
-
-3. Montrer que, pour $$n=2$$, on a $$\Delta = y_1^2 - 4y_2$$.  Montrer que pour $$n=3$$, on a $$\Delta = y_1^2y_2^2 - 4y_2^3 - 4y_1^3y_3 - 27y_3^2 + 18y_1y_2y_3$$.
-
-4. Soit $$T$$ une autre variable, et considérons le polynôme $$\prod_{i=1}^n (T - x_i)$$.  Montrer que ce polynôme est égal à
-
+1. Montrer que, pour $$n=2$$, on a $$\Delta = y_1^2 - 4y_2$$.  Montrer que pour $$n=3$$, on a $$\Delta = y_1^2y_2^2 - 4y_2^3 - 4y_1^3y_3 - 27y_3^2 + 18y_1y_2y_3$$.
+1. Soit $$T$$ une autre variable, et considérons le polynôme $$\prod_{i=1}^n (T - x_i)$$.  Montrer que ce polynôme est égal à
 $$ T^n - \sigma_1 T^{n-1} + \sigma_2 T^{n-2} - \ldots + (-1)^n\sigma_n.$$
-
-5. Soit maintenant $$p\in K[T]$ un polynôme de degré $$n$$ et de coefficient directeur $$1$$.  Écrivons $$p = T^n + \sum_{i=0}^{n-1} (-1)^i a_i T^{n-i}$$.  On appelle discriminant de $$p$$ l'élément de $$K$$ défini par $$\Delta_p := \Delta(a_1, \ldots, a_n)$$.
-
+1. Soit maintenant $$p\in K[T]$$ un polynôme de degré $$n$$ et de coefficient directeur $$1$$.  Écrivons $$p = T^n + \sum_{i=0}^{n-1} (-1)^i a_i T^{n-i}$$.  On appelle discriminant de $$p$$ l'élément de $$K$$ défini par $$\Delta_p := \Delta(a_1, \ldots, a_n)$$.
 Supposons enfin que $$p$$ est scindé dans $$K$$.  Montrer que $$p$$ admet une racine multiple si et seulement si $$\Delta_p = 0$$.
