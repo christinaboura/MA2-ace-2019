@@ -1234,7 +1234,7 @@ Pour chacun des idéaux de l'exercice 14.1.1, effectuer une marche de Gröbner p
 
 **-**{:.exercise}
 
-Soit $$K$$ un corps de caractéristique nulle.  Soit $$C_3$$ le sous-groupe de $$GL_3(K)$$ engendré par $$\begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 0 & 0 \end{pmatrix}$$.  Montrer que l'anneau des polynômes $$C_3$$-invariants est égal à
+c  Montrer que l'anneau des polynômes $$C_3$$-invariants est égal à
 
 $$K[x_1, x_2, x_3]^{C_3} = K[\sigma_1, \sigma_2, \sigma_3, x_1x_2^2 + x_2x_3^2 + x_3x_1^2, x_1^2x_2 + x_2^2x_3 + x_3^2x_1]$$,
 
@@ -1247,3 +1247,9 @@ Soit $$K$$ un corps de caractéristique nulle.  Soit $$G$$ le sous-groupe de $$G
 1. Montrer que $$G$$ est un groupe cyclique d'ordre $$4$$.
 1. Montrer que $$K[x_1, x_2]^G = K[x_1^2 + x_2^2, x_1^3x_2 - x_1x_2^3, x_1^2x_2^2]$$.
 1. Exprimer le polynôme $$G$$-invariant $$-x_1^8x_2^8 + x_1^8x_2^4 - 2x_1^6x_2^6 + x_1^4x_2^8 + x_1^9x_2 + 2x_1^7x_2^3 - 2x_1^3x_2^7 - x_1x_2^9$$ en termes des générateurs trouvés à la question précédente.
+
+**-**{:.exercise}
+Soit $$K$$ un corps de caractéristique nulle contenant une racine cubique primitive de l'unité $$\zeta$$ (autrement dit, $$\zeta^3 = 1$$, mais $$\zeta$$ et $$\zeta^2$$ sont différents de $$1$$).  Soit $$G$$ le sous-groupe de $$GL_3(K)$$ engendré par $$\begin{pmatrix} \zeta & 0 & 0 \\ 0 & \zeta & 0 \\ 0 & 0 & \zeta \end{pmatrix}$$.
+
+1. Montrer que $$K[x_1, x_2, x_3]^G = K[x_1^3, x_2^3, x_3^3, x_1x_2^2, x_1^2x_2, x_1x_3^2, x_1^2x_3, x_2x_3^2, x_2^2x_3, x_1x_2x_3]$$.
+1. Calculer l'idéal dea relations entre les générateurs trouvés à la question précédente.
