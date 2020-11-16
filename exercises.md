@@ -972,7 +972,7 @@ Soit $$I$$ un idéal propre de $$k[x_1,\ldots,x_n]$$.
 1. Si $$I$$ est de dimension zéro, montrer que pour tout ordre
    admissible sur $$k[x_1,\ldots,x_n]$$ et pour toute base de Gröbner
    $$G$$ de $$I$$, pour tout $$1\leq i\leq n$$, il existe $$g_i\in G$$
-   avec $$\LM(g_i)=x_i^{\alpha_i}$$ pour un $$\alpha_i>0$$.
+   avec $$\LM(g_i)=x_i^{\alpha_i}$$ pour un $$\alpha_i\ge 0$$.
 1. Supposons qu'il existe un ordre sur $$k[x_1,\ldots,x_n]$$ et une
    base de Gröbner $$G$$ de $$I$$ telle que pour tout $$1\leq i\leq
    n$$, il existe $$g_i\in G$$ avec $$\LM(g_i)=x_i^{\alpha_i}$$ pour
