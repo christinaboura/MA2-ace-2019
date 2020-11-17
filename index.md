@@ -55,6 +55,9 @@ TD 7 (17/11/2019)
 
 ## Annales
 
+Contrôle TD 2019
+: Contrôle(misc/ExamTD.pdf)
+
 Devoir maison 2018
 : [Coloration de graphes](misc/dm2018)
 
