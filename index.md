@@ -52,6 +52,9 @@ TD 6 (10/11/2020)
 : Le [corrigé](misc/exo14_1.pdf) de l'exercice 14.1
 
 TD 7 (17/11/2019)
+: Le [jupyter](misc/TD7.ipynb) de la séance.
+: Le [corrigé](misc/exo14_3.pdf) de l'exercice 14.3
+
 
 ## Annales
 
