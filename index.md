@@ -5,9 +5,9 @@
 
 ## Informations pratiques
 
-**Cours** les lundis de 9h30 à 12h30, avec [Pierre-Guy Plamondon](http://www.departement.math.uvsq.fr/node/1862).
+**Cours** les lundis de 13h40 à 16h50, avec [Pierre-Guy Plamondon](http://www.departement.math.uvsq.fr/node/1862).
 
-**TDs** les mardis de 16h00 à 18h50, avec [Christina Boura](https://christinaboura.wordpress.com/).
+**TDs** les lundis de 9h40 à 12h50, avec [Christina Boura](https://christinaboura.wordpress.com/).
 
 **Serveur SageMath**
 
@@ -22,38 +22,38 @@
 
 ## Calendrier
 
-TD 1 (22/09/2020)
+TD 1 (19/09/2022)
 : [Introduction à l'environnement de travail et à SageMath](polytd#introduction-à-lenvironnemnt-de-travail-et-à-sagemath),
 : [Structures algébriques de base en SageMath](polytd#anneaux-corps-polynômes-expressions),
 : **Exercices :** [Manipuler les polynômes en SageMath](exercises#polynômes-à-une-variable)
-: Le [jupyter](misc/TD1.ipynb) de la séance.
+<!-- : Le [jupyter](misc/TD1.ipynb) de la séance.-->
 
-TD 2 (06/10/2020)
+TD 2 (03/10/2022)
 : [Théorème de Hilbert et idéaux monomiaux](polytd#théorème-de-hilbert),
 : **Exercices :** [Idéaux monomiaux](exercises#idéaux-monomiaux).
-: Le [jupyter](misc/TD2.ipynb) de la séance.
+<!--: Le [jupyter](misc/TD2.ipynb) de la séance.-->
 
-TD 3 (13/10/2020)
+TD 3 (10/10/2022)
 : **Exercices :** [Bases de Gröbner](exercises#idéaux-monomiaux).
-: Le [jupyter](misc/TD3.ipynb) de la séance.
+<!--: Le [jupyter](misc/TD3.ipynb) de la séance. -->
 
-TD 4 (20/10/2020)
+TD 4 (17/10/2022)
 : [Structures de contrôle en Python](polytd#syntaxe-pythonsage),
 : **Exercices :** [Programmation Python/Sage](exercises#programmation-pythonsage).
-: Le [jupyter](misc/TD4.ipynb) de la séance.
+<!-- : Le [jupyter](misc/TD4.ipynb) de la séance. -->
 
-TD 5 (03/11/2020)
+TD 5 (24/10/2022)
 : **Exercices :** [Bases de Gröbner](exercises#calcul-de-bases-de-gröbner).
-: Le [jupyter](misc/TD5.ipynb) de la séance.
+<!-- : Le [jupyter](misc/TD5.ipynb) de la séance. -->
 
-TD 6 (10/11/2020)
+TD 6 (07/11/2022)
 : **Exercices :** [Élimination](exercises#résultants-et-élimination).
-: Le [jupyter](misc/TD6.ipynb) de la séance.
-: Le [corrigé](misc/exo14_1.pdf) de l'exercice 14.1
+<!-- : Le [jupyter](misc/TD6.ipynb) de la séance. -->
+<!-- : Le [corrigé](misc/exo14_1.pdf) de l'exercice 14.1 -->
 
-TD 7 (17/11/2019)
+TD 7 (14/11/2022)
 : Le [jupyter](misc/TD7.ipynb) de la séance.
-: Le [corrigé](misc/exo14_3.pdf) de l'exercice 14.3
+<!-- : Le [corrigé](misc/exo14_3.pdf) de l'exercice 14.3 -->
 
 
 ## Annales
