@@ -5,7 +5,7 @@
 
 ## Informations pratiques
 
-**Cours** les lundis de 13h40 à 16h50, avec [Pierre-Guy Plamondon](http://www.departement.math.uvsq.fr/node/1862).
+**Cours** les lundis de 13h40 à 16h50, avec [Pierre-Guy Plamondon](https://www.imo.universite-paris-saclay.fr/~plamondon/).
 
 **TDs** les lundis de 9h40 à 12h50, avec [Christina Boura](https://christinaboura.wordpress.com/).
 
