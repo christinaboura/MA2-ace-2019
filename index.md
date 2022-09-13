@@ -52,7 +52,7 @@ TD 6 (07/11/2022)
 <!-- : Le [corrigé](misc/exo14_1.pdf) de l'exercice 14.1 -->
 
 TD 7 (14/11/2022)
-: Le [jupyter](misc/TD7.ipynb) de la séance.
+<!--: Le [jupyter](misc/TD7.ipynb) de la séance.-->
 <!-- : Le [corrigé](misc/exo14_3.pdf) de l'exercice 14.3 -->
 
 
