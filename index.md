@@ -26,7 +26,7 @@ TD 1 (19/09/2022)
 : [Introduction à l'environnement de travail et à SageMath](polytd#introduction-à-lenvironnemnt-de-travail-et-à-sagemath),
 : [Structures algébriques de base en SageMath](polytd#anneaux-corps-polynômes-expressions),
 : **Exercices :** [Manipuler les polynômes en SageMath](exercises#polynômes-à-une-variable)
-<!-- : Le [jupyter](misc/TD1.ipynb) de la séance.-->
+: Le [jupyter](misc/TD1.ipynb) de la séance.
 
 TD 2 (03/10/2022)
 : [Théorème de Hilbert et idéaux monomiaux](polytd#théorème-de-hilbert),
