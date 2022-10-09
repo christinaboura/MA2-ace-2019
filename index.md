@@ -31,7 +31,7 @@ TD 1 (19/09/2022)
 TD 2 (03/10/2022)
 : [Théorème de Hilbert et idéaux monomiaux](polytd#théorème-de-hilbert),
 : **Exercices :** [Idéaux monomiaux](exercises#idéaux-monomiaux).
-<!--: Le [jupyter](misc/TD2.ipynb) de la séance.-->
+: Le [jupyter](misc/TD2.ipynb) de la séance.
 
 TD 3 (10/10/2022)
 : **Exercices :** [Bases de Gröbner](exercises#idéaux-monomiaux).
