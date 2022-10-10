@@ -35,7 +35,7 @@ TD 2 (03/10/2022)
 
 TD 3 (10/10/2022)
 : **Exercices :** [Bases de Gröbner](exercises#idéaux-monomiaux).
-<!--: Le [jupyter](misc/TD3.ipynb) de la séance. -->
+Le [jupyter](misc/TD3.ipynb) de la séance.
 
 TD 4 (17/10/2022)
 : [Structures de contrôle en Python](polytd#syntaxe-pythonsage),
