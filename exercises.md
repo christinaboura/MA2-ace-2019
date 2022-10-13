@@ -611,7 +611,7 @@ Soient $$2\le n'\le n$$.
   1. En déduire que $$(f,g)$$ est une base de Gröbner de $$I$$ si,
     et seulement si, $$\LT(f)$$ et $$\LT(g)$$ sont premiers entre eux.
   1. On pose $$f=hf'$$, $$g=hg'$$, où $$f'$$ et $$g'$$ n'ont pas de
-    facteur commun. Montrer que $$(f,g)$$ est une base lde Gröbner de
+    facteur commun. Montrer que $$(f,g)$$ est une base de Gröbner de
     $$I$$ si, et seulement si, $$(f',g')$$ est une base de Gröbner de
     l'idéal $$I'$$ engendré par $$f'$$ et $$g'$$.
   1. Donner une condition nécessaire et suffisante pour que
