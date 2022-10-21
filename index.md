@@ -38,12 +38,11 @@ TD 3 (10/10/2022)
 Le [jupyter](misc/TD3.ipynb) de la séance.
 
 TD 4 (17/10/2022)
-: [Structures de contrôle en Python](polytd#syntaxe-pythonsage),
-: **Exercices :** [Programmation Python/Sage](exercises#programmation-pythonsage).
-<!-- : Le [jupyter](misc/TD4.ipynb) de la séance. -->
+: **Exercices :** [Bases de Gröbner](exercises#calcul-de-bases-de-gröbner).
+: Le [jupyter](misc/TD4.ipynb) de la séance.
 
 TD 5 (24/10/2022)
-: **Exercices :** [Bases de Gröbner](exercises#calcul-de-bases-de-gröbner).
+: **Exercices :** [Élimination](exercises#résultants-et-élimination).
 <!-- : Le [jupyter](misc/TD5.ipynb) de la séance. -->
 
 TD 6 (07/11/2022)
@@ -52,6 +51,7 @@ TD 6 (07/11/2022)
 <!-- : Le [corrigé](misc/exo14_1.pdf) de l'exercice 14.1 -->
 
 TD 7 (14/11/2022)
+: 
 <!--: Le [jupyter](misc/TD7.ipynb) de la séance.-->
 <!-- : Le [corrigé](misc/exo14_3.pdf) de l'exercice 14.3 -->
 
