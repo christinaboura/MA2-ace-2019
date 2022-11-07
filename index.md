@@ -47,8 +47,8 @@ TD 5 (24/10/2022)
 
 TD 6 (07/11/2022)
 : **Exercices :** [Élimination](exercises#résultants-et-élimination).
-<!-- : Le [jupyter](misc/TD6.ipynb) de la séance. -->
-<!-- : Le [corrigé](misc/exo14_1.pdf) de l'exercice 14.1 -->
+: Le [jupyter](misc/TD6.ipynb) de la séance.
+: Le [corrigé](misc/exo14_1.pdf) de l'exercice 14.1.
 
 TD 7 (14/11/2022)
 : 
