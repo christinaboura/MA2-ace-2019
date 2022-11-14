@@ -1228,7 +1228,7 @@ Montrer que l'ensemble $$\operatorname{in}_{w'}(G)$$ est une base de Gröbner de
 
 **-**{:.exercise}
 
-Pour chacun des idéaux de l'exercice 14.1.1, effectuer une marche de Gröbner pour convertir la base de Gröbner marquée pour l'ordre degrevlex avec $$x>y>z$$ en celle pour l'ordre lexicographique avec $$z>y>x$$.
+Pour chacun des idéaux de l'exercice 14.1, effectuer une marche de Gröbner pour convertir la base de Gröbner marquée pour l'ordre lex avec $$x>y>z$$ en celle pour l'ordre lexicographique avec $$z>y>x$$.
 
 ## Polynômes symétriques et théorie des invariants
 
