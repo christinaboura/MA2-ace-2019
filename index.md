@@ -22,35 +22,35 @@
 
 ## Calendrier
 
-TD 1 (19/09/2022)
+TD 1 (18/09/2023)
 : [Introduction à l'environnement de travail et à SageMath](polytd#introduction-à-lenvironnemnt-de-travail-et-à-sagemath),
 : [Structures algébriques de base en SageMath](polytd#anneaux-corps-polynômes-expressions),
 : **Exercices :** [Manipuler les polynômes en SageMath](exercises#polynômes-à-une-variable)
-: Le [jupyter](misc/TD1.ipynb) de la séance.
+: <!-- Le [jupyter](misc/TD1.ipynb) de la séance. -->
 
-TD 2 (03/10/2022)
+TD 2 (25/09/2023)
 : [Théorème de Hilbert et idéaux monomiaux](polytd#théorème-de-hilbert),
 : **Exercices :** [Idéaux monomiaux](exercises#idéaux-monomiaux).
-: Le [jupyter](misc/TD2.ipynb) de la séance.
+: <!-- Le [jupyter](misc/TD2.ipynb) de la séance. -->
 
-TD 3 (10/10/2022)
+TD 3 (02/10/2023)
 : **Exercices :** [Bases de Gröbner](exercises#idéaux-monomiaux).
-: Le [jupyter](misc/TD3.ipynb) de la séance.
+: <!-- Le [jupyter](misc/TD3.ipynb) de la séance. -->
 
-TD 4 (17/10/2022)
+TD 4 (09/10/2023)
 : **Exercices :** [Bases de Gröbner](exercises#calcul-de-bases-de-gröbner).
-: Le [jupyter](misc/TD4.ipynb) de la séance.
+: <!-- Le [jupyter](misc/TD4.ipynb) de la séance. -->
 
-TD 5 (24/10/2022)
+TD 5 (23/10/2023)
 : **Exercices :** [Élimination](exercises#résultants-et-élimination).
-: Le [jupyter](misc/TD5.ipynb) de la séance.
+: <!-- Le [jupyter](misc/TD5.ipynb) de la séance. -->
 
-TD 6 (07/11/2022)
+TD 6 (06/11/2023)
 : **Exercices :** [Élimination](exercises#résultants-et-élimination).
 : Le [jupyter](misc/TD6.ipynb) de la séance.
-: Le [corrigé](misc/exo14_1.pdf) de l'exercice 14.1.
+: <!-- Le [corrigé](misc/exo14_1.pdf) de l'exercice 14.1. -->
 
-TD 7 (14/11/2022)
+TD 7 (13/11/2022)
 : 
 <!--: Le [jupyter](misc/TD7.ipynb) de la séance.-->
 <!-- : Le [corrigé](misc/exo14_3.pdf) de l'exercice 14.3 -->
