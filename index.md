@@ -10,7 +10,7 @@
 **TDs** les lundis de 13h40 à 16h50, avec [Christina Boura](https://christinaboura.wordpress.com/).
 
 **Serveur SageMath**
-
+- Serveur de Paris-Saclay <https://jupyterhub.ijclab.in2p3.fr/>.
 - Serveur de l'UFR <https://jupyter.ens.uvsq.fr/>.
 
 ## Matériel de cours
