@@ -223,8 +223,8 @@ Soit $$M$$ une matrice $$m\times n$$ à coefficients réels, et soient $$w_1, \l
     1. il est impossible d'avoir à la fois $$x^{\alpha} <_M x^{\beta}$$ et $$x^{\beta} <_M x^{\alpha}$$, et
     1. si $$\alpha \neq \beta$$, alors soit $$x^{\alpha} <_M x^{\beta}$$, soit $$x^{\beta} <_M x^{\alpha}$$.
     
-1. En plus de supposer que $\mathrm{ker}(M) \cap \mathbb{Z}^n = {0}$, supposons qu'il existe une matrice triangulaire inférieure 
-   $T \in \mathcal{M}_m(\mathbb{R})$ dont les coefficients diagonaux sont strictement positifs et telle que $TM \in \mathcal{M}_{m\times n}(\mathbb{R}_{\ge 0})$. Montrer que $<_M$ est un bon ordre.
+1. En plus de supposer que $$\mathrm{ker}(M) \cap \mathbb{Z}^n = {0}$$, supposons qu'il existe une matrice triangulaire inférieure 
+   $$T \in \mathcal{M}_m(\mathbb{R})$$ dont les coefficients diagonaux sont strictement positifs et telle que $$TM \in \mathcal{M}_{m\times n}(\mathbb{R}_{\ge 0})$$. Montrer que $$<_M$$ est un bon ordre.
 
 1. Exprimer les ordres monomiaux vus en cours sous la forme $$<_M$$.
 
