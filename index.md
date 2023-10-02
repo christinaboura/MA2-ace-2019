@@ -35,7 +35,7 @@ TD 2 (25/09/2023)
 
 TD 3 (02/10/2023)
 : **Exercices :** [Bases de Gröbner](exercises#idéaux-monomiaux).
-: <!-- Le [jupyter](misc/TD3.ipynb) de la séance. -->
+: Le [jupyter](misc/TD3.ipynb) de la séance.
 
 TD 4 (09/10/2023)
 : **Exercices :** [Bases de Gröbner](exercises#calcul-de-bases-de-gröbner).
