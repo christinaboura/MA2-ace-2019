@@ -39,7 +39,7 @@ TD 3 (02/10/2023)
 
 TD 4 (09/10/2023)
 : **Exercices :** [Bases de Gröbner](exercises#calcul-de-bases-de-gröbner).
-: <!-- Le [jupyter](misc/TD4.ipynb) de la séance. -->
+: Le [jupyter](misc/TD4.ipynb) de la séance.
 
 TD 5 (23/10/2023)
 : **Exercices :** [Élimination](exercises#résultants-et-élimination).
