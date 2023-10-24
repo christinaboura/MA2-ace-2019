@@ -582,7 +582,7 @@ Soient $$2\le n'\le n$$.
   1. Soient $$r\ge1$$ un entier et $$J=(m_1,\ldots,m_r)$$ un idéal
     monomial de $$k[X_1,\ldots,X_n]$$. Donner des générateurs de
     l'idéal $$J\cap (X_{n'},\ldots,X_n)$$.  Dans la suite on fixe sur
-    $$k[X_1,\ldots,X_n]$$ l'ordre lexicographique, on désigne
+    $$k[X_1,\ldots,X_n]$$ l'ordre degrevlex, on désigne
     par $$I$$ un idéal homogène non nul et par $$I'$$ l'intersection
     $$I'=I\cap (X_{n'},\ldots,X_n)$$.
   1. Montrer que $$\LT(I')=\LT(I) \cap (X_{n'},\ldots,X_n)$$.
