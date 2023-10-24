@@ -43,7 +43,7 @@ TD 4 (09/10/2023)
 
 TD 5 (23/10/2023)
 : **Exercices :** [Élimination](exercises#résultants-et-élimination).
-: <!-- Le [jupyter](misc/TD5.ipynb) de la séance. -->
+: Le [jupyter](misc/TD5.ipynb) de la séance.
 
 TD 6 (06/11/2023)
 : **Exercices :** [Élimination](exercises#résultants-et-élimination).
