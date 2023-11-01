@@ -1235,7 +1235,7 @@ Pour chacun des idéaux de l'exercice 14.1, effectuer une marche de Gröbner pou
 
 **-**{:.exercise}
 
-c  Montrer que l'anneau des polynômes $$C_3$$-invariants est égal à
+Montrer que l'anneau des polynômes $$C_3$$-invariants est égal à
 
 $$K[x_1, x_2, x_3]^{C_3} = K[\sigma_1, \sigma_2, \sigma_3, x_1x_2^2 + x_2x_3^2 + x_3x_1^2, x_1^2x_2 + x_2^2x_3 + x_3^2x_1]$$,
 
