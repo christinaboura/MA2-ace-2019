@@ -47,8 +47,8 @@ TD 5 (23/10/2023)
 
 TD 6 (06/11/2023)
 : **Exercices :** [Élimination](exercises#résultants-et-élimination).
-: <!-- Le [jupyter](misc/TD6.ipynb) de la séance. -->
-: <!-- Le [corrigé](misc/exo14_1.pdf) de l'exercice 14.1. -->
+: Le [jupyter](misc/TD6.ipynb) de la séance.
+: Le [corrigé](misc/exo14_1.pdf) de l'exercice 14.1.
 
 TD 7 (13/11/2023)
 : 
